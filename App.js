@@ -2,16 +2,29 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
+  TextInput,
   StyleSheet,
 } from 'react-native';
-// React Native中的Flexbox的工作原理和web上的CSS基本一致，当然也存在少许差异。首先是默认值不同：flexDirection的默认值是column而不是row，而flex也只能指定一个数字值。
-export default class FlexBox extends Component {
+
+export default class PizzaTranslator extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: '',
+    };
+  }
+  // 如果逻辑与是true，则返回前面的word，如果是false，则返回🍕
   render() {
     return (
       <View style={styles.container}>
-        <View style={[styles.box,styles.box1]}/>
-        <View style={[styles.box,styles.box2]}/>
-        <View style={[styles.box,styles.box3]}/>
+        <TextInput
+          style={[styles.textinput]}
+          placeholder='please input your name'
+          onChangeText={(text) => this.setState({text})}
+        />
+      <Text style={[styles.text]}>
+        {this.state.text.split('').map((word) => word && '🍕').join('')}
+      </Text>
       </View>
     );
   }
@@ -20,21 +33,13 @@ export default class FlexBox extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    padding: 10
   },
-  box: {
-    width: 50,
-    height: 50
+  textinput: {
+    height: 40,
   },
-  box1: {
-    backgroundColor: 'powderblue',
-  },
-  box2: {
-    backgroundColor: 'skyblue',
-  },
-  box3: {
-    backgroundColor: 'steelblue',
+  text: {
+    padding: 10,
+    fontSize: 42,
   }
 });
