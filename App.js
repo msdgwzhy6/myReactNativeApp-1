@@ -2,40 +2,23 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
-  Image,
   StyleSheet,
 } from 'react-native';
-export default class LotsOfStyle extends Component {
+// flex:1 === flex-grow:1;flex-shrink:1;flex-basis:0%;
+export default class flexBox extends Component {
   render() {
-    let pic = {
-      uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
-    };
     return (
       <View style={styles.container}>
-         <Text style={[styles.bigBlue,styles.red]}>just red</Text>
-         <Text style={[styles.bigBlue]}>React Native Text</Text>
-         <Image source={pic} style={{width: 193, height: 110}} />
-         <View style={styles.box}/>
+        <View style={{flex:2,backgroundColor: 'blue',}}/>
+        <View style={{flex:2,backgroundColor: 'skyblue',}}/>
+        <View style={{flex:4,backgroundColor: 'steelblue',}}/>
       </View>
     );
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'pink'
   },
-  box: {
-    width: 150,
-    height: 150,
-    backgroundColor: 'steelblue',
-  },
-  bigBlue: {
-    color: 'blue',
-    fontWeight: 'bold',
-    fontSize: 30
-  },
-  red: {
-    color: 'red',
-  }
 });
