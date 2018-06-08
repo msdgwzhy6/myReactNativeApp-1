@@ -4,14 +4,14 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
-// flex:1 === flex-grow:1;flex-shrink:1;flex-basis:0%;
-export default class flexBox extends Component {
+// React Native中的Flexbox的工作原理和web上的CSS基本一致，当然也存在少许差异。首先是默认值不同：flexDirection的默认值是column而不是row，而flex也只能指定一个数字值。
+export default class FlexBox extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{flex:2,backgroundColor: 'blue',}}/>
-        <View style={{flex:2,backgroundColor: 'skyblue',}}/>
-        <View style={{flex:4,backgroundColor: 'steelblue',}}/>
+        <View style={[styles.box,styles.box1]}/>
+        <View style={[styles.box,styles.box2]}/>
+        <View style={[styles.box,styles.box3]}/>
       </View>
     );
   }
@@ -20,5 +20,21 @@ export default class flexBox extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
+  box: {
+    width: 50,
+    height: 50
+  },
+  box1: {
+    backgroundColor: 'powderblue',
+  },
+  box2: {
+    backgroundColor: 'skyblue',
+  },
+  box3: {
+    backgroundColor: 'steelblue',
+  }
 });
