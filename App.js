@@ -15,6 +15,7 @@ export default class LotsOfStyle extends Component {
          <Text style={[styles.bigBlue,styles.red]}>just red</Text>
          <Text style={[styles.bigBlue]}>React Native Text</Text>
          <Image source={pic} style={{width: 193, height: 110}} />
+         <View style={styles.box}/>
       </View>
     );
   }
@@ -23,6 +24,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'pink'
+  },
+  box: {
+    width: 150,
+    height: 150,
+    backgroundColor: 'steelblue',
   },
   bigBlue: {
     color: 'blue',
