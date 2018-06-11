@@ -35,4 +35,20 @@ AV.init({
   appId: APP_ID,
   appKey: APP_KEY
 });
+
+// AV.setProduction(false) // 调用预备环境
+```
+
+### 测试代码
+
+> 代码来自官方文档，测试完请删除
+
+```js
+let TestObject = AV.Object.extend('TestObject');
+let testObject = new TestObject();
+testObject.save({
+  words: 'Hello World!'
+}).then(function(object) {
+  alert('LeanCloud Rocks!');
+})
 ```
