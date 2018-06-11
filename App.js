@@ -9,7 +9,9 @@ import {
   ActivityIndicator,
   StyleSheet,
 } from 'react-native';
-
+const handle = (prevState) => {
+  console.log({prevState},'sdsdsdsdsdd');
+}
 const onPressLearnMore = () => {
   Alert.alert('Button has been pressed!');
 }
@@ -50,6 +52,10 @@ export default class Fetch extends Component {
           onPress={onPressLearnMore}
           title="Learn More"
           color="yellowgreen"
+        />
+        <CheckBox
+          value={this.state.checkBoxValue}
+          onValueChange={handle}
         />
         <CheckBox
           value={this.state.checkBoxValue}
