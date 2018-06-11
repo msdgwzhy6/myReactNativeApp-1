@@ -8,13 +8,22 @@ export default class Article extends AV.Object {
   }
 
   // 保存文章
-  static async saveArticle(jsonParams) {
-    let obj = new AV.Object('Article')
+  static async saveArticle(jsonParams,id) {
+    let article = null
+    if (id) {
+      article = AV.Object.createWithoutData('Article',id)
+    } else {
+      article = new AV.Object('Article')
+    }
     try {
-      const savedObj = await obj.save(jsonParams)
+      let savedObj = await article.save(jsonParams)
       return savedObj
     } catch (err) {
       return err
     }
+  }
+
+  static async getArticles() {
+    let query = new AV.Query('Artices')
   }
 }
