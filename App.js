@@ -10,15 +10,6 @@ import {
   StyleSheet,
 } from 'react-native';
 
-const handleValueChange = (value,that) => {
-  that.setState({
-    checkBoxValue: prevState
-  })
-}
-const onPressLearnMore = () => {
-  Alert.alert('Button has been pressed!');
-}
-
 const getMoviesFromApiAsync = async() =>{
   try {
     let response = await fetch('https://cnodejs.org/api/v1/topics');
@@ -39,6 +30,16 @@ export default class Fetch extends Component {
     };
   }
 
+  handlePressLearnMore () {
+    Alert.alert('Button has been pressed!');
+  }
+
+  handleValueChange (newValue) {
+    this.setState({
+      checkBoxValue: newValue
+    })
+  }
+
   //在生命周期中执行该function
   componentWillMount() {
     getMoviesFromApiAsync().then(res => {
@@ -52,17 +53,13 @@ export default class Fetch extends Component {
     return (
       <View style={[styles.container]}>
         <Button
-          onPress={onPressLearnMore}
+          onPress={this.handlePressLearnMore}
           title="Learn More"
           color="yellowgreen"
         />
         <CheckBox
           value={this.state.checkBoxValue}
-          onValueChange={handle}
-        />
-        <CheckBox
-          value={this.state.checkBoxValue}
-          onValueChange={handleValueChange(value,this)}
+          onValueChange={(newValue) => this.handleValueChange(newValue)}
         />
         <FlatList
           // 接收一个数组
