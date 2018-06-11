@@ -10,6 +10,11 @@ import {
   StyleSheet,
 } from 'react-native';
 
+const handleValueChange = (value,that) => {
+  that.setState({
+    checkBoxValue: prevState
+  })
+}
 const onPressLearnMore = () => {
   Alert.alert('Button has been pressed!');
 }
@@ -53,12 +58,11 @@ export default class Fetch extends Component {
         />
         <CheckBox
           value={this.state.checkBoxValue}
-          onValueChange={(prevState) => {
-            console.log(this.state.checkBoxValue);
-            this.setState({
-              checkBoxValue: !this.state.checkBoxValue
-            })
-          }}
+          onValueChange={handle}
+        />
+        <CheckBox
+          value={this.state.checkBoxValue}
+          onValueChange={handleValueChange(value,this)}
         />
         <FlatList
           // 接收一个数组
