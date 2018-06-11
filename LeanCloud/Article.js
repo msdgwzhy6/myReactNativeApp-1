@@ -24,6 +24,16 @@ export default class Article extends AV.Object {
   }
 
   static async getArticles() {
-    let query = new AV.Query('Artices')
+    let query = new AV.Query('Article')
+    try {
+      let result = await query.find()
+      let data = []
+      result.forEach((item) => {
+        data.push(item.toJSON())
+      })
+      return data
+    } catch (err) {
+      return err
+    }
   }
 }
