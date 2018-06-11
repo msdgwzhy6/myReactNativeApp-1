@@ -7,12 +7,8 @@ export default class Article extends AV.Object {
     AV.Object.register(Article)
   }
 
-  /**
-   * 保存文章
-   * @type {AV}
-   */
+  // 保存文章
   static async saveArticle(jsonParams) {
-    return 'hahah';
     let obj = new AV.Object('Article')
     try {
       const savedObj = await obj.save(jsonParams)
@@ -21,5 +17,4 @@ export default class Article extends AV.Object {
       return err
     }
   }
-
 }

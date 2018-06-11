@@ -10,6 +10,8 @@ import {
   StyleSheet,
 } from 'react-native';
 
+import Article from './LeanCloud/Article.js'
+
 const getMoviesFromApiAsync = async() =>{
   try {
     let response = await fetch('https://cnodejs.org/api/v1/topics');
@@ -31,7 +33,12 @@ export default class Fetch extends Component {
   }
 
   handlePressLearnMore () {
-    Alert.alert('Button has been pressed!');
+    Article.saveArticle({
+      title: '标题',
+      content: '内容'
+    }).then(res => {
+      Alert.alert('保存成功')
+    })
   }
 
   handleValueChange (newValue) {
@@ -54,7 +61,7 @@ export default class Fetch extends Component {
       <View style={[styles.container]}>
         <Button
           onPress={this.handlePressLearnMore}
-          title="Learn More"
+          title="测试发布文章"
           color="yellowgreen"
         />
         <CheckBox
