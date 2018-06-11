@@ -21,13 +21,15 @@ $ npm install leancloud-storage --save
 然后在代码中通过 import 获得 SDK 的引用：
 
 ```js
-const AV = require('leancloud-storage/live-query');
+import AV from 'leancloud-storage/live-query';
 ```
+
+### 初始化 AV
 
 ```js
 import AV from 'leancloud-storage/live-query';
-const APP_ID = 'id';
-const APP_KEY = 'key';
+const APP_ID = 'your APP_ID';
+const APP_KEY = 'your APP_KEY';
 
 AV.init({
   appId: APP_ID,
