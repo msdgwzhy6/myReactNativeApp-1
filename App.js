@@ -34,9 +34,9 @@ export default class Fetch extends Component {
 
   handlePressLearnMore () {
     Article.saveArticle({
-      title: '标题',
-      content: '内容'
-    }).then(res => {
+      title: '标题标题',
+      content: '内容内容'
+    },'5b1e2ac017d009003b171ff9').then(res => {
       Alert.alert('保存成功')
     })
   }
