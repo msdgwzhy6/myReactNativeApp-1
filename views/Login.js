@@ -19,11 +19,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingTop: Theme.statusBarHeight + Theme.navBarContentHeight,
+    justifyContent: 'center',
+    // paddingTop: Theme.statusBarHeight + Theme.navBarContentHeight,
   },
-  content: {
-    paddingTop: 40,
-  },
+  // content: {
+  //   paddingTop: 40,
+  // },
   margin_10: {
     margin: 10,
   },
