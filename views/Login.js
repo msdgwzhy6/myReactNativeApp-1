@@ -30,9 +30,6 @@ const styles = StyleSheet.create({
   margin_top_0: {
     marginTop: 0,
   },
-  sishu_btn: {
-    backgroundColor: '#0099d9',
-  },
   navigationBar: {
     backgroundColor: '#0099d9',
   },
@@ -73,6 +70,7 @@ export default class Login extends Component {
           style={styles.navigationBar}
           type="ios"
           title="登录"
+          leftView={<NavigationBar.BackButton title={Theme.backButtonTitle} />}
         />
         <View style={[styles.content]}>
           <Input
@@ -90,7 +88,7 @@ export default class Login extends Component {
             onChangeText={text => this.setState({ password: text })}
           />
           <Button
-            style={[styles.sishu_btn, styles.margin_10]}
+            style={[styles.margin_10]}
             type="primary"
             size="lg"
             title="登录"
