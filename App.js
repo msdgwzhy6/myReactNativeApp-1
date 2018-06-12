@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
 })
 
 export default class Fetch extends Component {
+  // 一般来说，你需要在constructor中初始化state，然后在需要修改时调用setState方法
   constructor(props) {
     super(props)
     this.state = {
