@@ -4,15 +4,12 @@ import {
   ActivityIndicator,
   StyleSheet,
 } from 'react-native'
-
 import {
   Input,
   Button,
   Toast,
-  NavigationBar,
   Theme,
 } from 'teaset'
-
 import AV from 'leancloud-storage/live-query'
 
 const styles = StyleSheet.create({
@@ -20,19 +17,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     justifyContent: 'center',
-    // paddingTop: Theme.statusBarHeight + Theme.navBarContentHeight,
   },
-  // content: {
-  //   paddingTop: 40,
-  // },
   margin_10: {
     margin: 10,
   },
   margin_top_0: {
     marginTop: 0,
-  },
-  navigationBar: {
-    backgroundColor: '#0099d9',
   },
 })
 
@@ -52,6 +42,7 @@ export default class Login extends Component {
     })
     AV.User.logIn(this.state.username, this.state.password).then(() => {
       Toast.success('登录成功')
+      this.props.navigation.navigate('Home')
     }).catch((err) => {
       if (err.code == 210) {
         Toast.fail('用户名密码不匹配')
@@ -67,11 +58,6 @@ export default class Login extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <NavigationBar
-          style={styles.navigationBar}
-          type="ios"
-          title="私塾国际学府"
-        />
         <View style={[styles.content]}>
           <Input
             style={[styles.margin_10, styles.margin_top_0]}
