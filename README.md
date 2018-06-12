@@ -44,11 +44,11 @@ AV.init({
 > 代码来自官方文档，测试完请删除
 
 ```js
-let TestObject = AV.Object.extend('TestObject');
-let testObject = new TestObject();
+let TestObject = AV.Object.extend('TestObject')
+let testObject = new TestObject()
 testObject.save({
   words: 'Hello World!'
 }).then(function(object) {
-  alert('LeanCloud Rocks!');
+  alert('LeanCloud Rocks!')
 })
 ```
