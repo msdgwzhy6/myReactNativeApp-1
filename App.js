@@ -4,15 +4,17 @@ import {
   Text,
   FlatList,
   Alert,
-  Button,
   StyleSheet,
 } from 'react-native'
+
+import { Button } from 'teaset'
 
 import Article from './LeanCloud/Article'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#fff',
   },
   item: {
     paddingBottom: 10,
