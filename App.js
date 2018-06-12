@@ -31,9 +31,8 @@ export default class Fetch extends Component {
       articles: [],
     }
   }
-
-  // 在生命周期中执行该function
-  componentWillMount() {
+  // 组件已经加载到虚拟DOM，在render方法之后执行，整个生命周期只执行一次。通常在该方法中完成异步网络请求或者集成其他JavaScript库
+  componentDidMount() {
     Article.getArticles().then((articles) => {
       this.setState({
         articles,
