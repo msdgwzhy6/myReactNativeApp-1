@@ -9,6 +9,7 @@ import {
   Input,
   Button,
   Toast,
+  NavigationBar,
   Theme,
 } from 'teaset'
 
@@ -18,9 +19,22 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    paddingTop: Theme.statusBarHeight + Theme.navBarContentHeight,
+  },
+  content: {
+    paddingTop: 40,
   },
   margin_10: {
     margin: 10,
+  },
+  margin_top_0: {
+    marginTop: 0,
+  },
+  sishu_btn: {
+    backgroundColor: '#0099d9',
+  },
+  navigationBar: {
+    backgroundColor: '#0099d9',
   },
 })
 
@@ -55,27 +69,34 @@ export default class Login extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Input
-          style={[styles.margin_10]}
-          size="lg"
-          placeholder="请输入用户名"
-          value={this.state.username}
-          onChangeText={text => this.setState({ username: text })}
+        <NavigationBar
+          style={styles.navigationBar}
+          type="ios"
+          title="登录"
         />
-        <Input
-          style={[styles.margin_10]}
-          size="lg"
-          placeholder="请输入密码"
-          value={this.state.password}
-          onChangeText={text => this.setState({ password: text })}
-        />
-        <Button
-          style={[styles.margin_10]}
-          type="primary"
-          size="lg"
-          title="按钮"
-          onPress={() => this.login()}
-        />
+        <View style={[styles.content]}>
+          <Input
+            style={[styles.margin_10, styles.margin_top_0]}
+            size="lg"
+            placeholder="请输入用户名"
+            value={this.state.username}
+            onChangeText={text => this.setState({ username: text })}
+          />
+          <Input
+            style={[styles.margin_10]}
+            size="lg"
+            placeholder="请输入密码"
+            value={this.state.password}
+            onChangeText={text => this.setState({ password: text })}
+          />
+          <Button
+            style={[styles.sishu_btn, styles.margin_10]}
+            type="primary"
+            size="lg"
+            title="登录"
+            onPress={() => this.login()}
+          />
+        </View>
       </View>
     )
   }
