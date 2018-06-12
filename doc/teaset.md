@@ -4,3 +4,4 @@
 - [x] Input
 - [x] Toast
 - [x] NavigationBar
+- [x] Theme

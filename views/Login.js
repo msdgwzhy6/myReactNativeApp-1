@@ -69,8 +69,7 @@ export default class Login extends Component {
         <NavigationBar
           style={styles.navigationBar}
           type="ios"
-          title="登录"
-          leftView={<NavigationBar.BackButton title={Theme.backButtonTitle} />}
+          title="私塾国际学府"
         />
         <View style={[styles.content]}>
           <Input
