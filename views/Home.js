@@ -16,13 +16,9 @@ const styles = StyleSheet.create({
 })
 
 export default class HomeScreen extends Component {
-  static navigationOptions = ({ navigation, navigationOptions }) => ({
-    title: navigation.getParam('title', '首页'),
-    headerStyle: {
-      backgroundColor: navigationOptions.headerTintColor,
-    },
-    headerTintColor: navigationOptions.headerStyle.backgroundColor,
-  });
+  static navigationOptions = ({ navigation }) => ({
+    title: navigation.getParam('title', '微诗词'),
+  })
   constructor(props) {
     super(props)
     this.state = {}
@@ -32,17 +28,10 @@ export default class HomeScreen extends Component {
       <View style={[styles.container]}>
         <Button
           style={[styles.btn]}
-          type="default"
-          size="lg"
-          title="默认按钮"
-          onPress={() => this.props.navigation.push('Home')}
-        />
-        <Button
-          style={[styles.btn]}
           type="primary"
           size="lg"
-          title="主按钮"
-          onP
+          title="登录"
+          onPress={() => this.props.navigation.navigate('Login', { msg: '来自首页的消息' })}
         />
         <Button
           style={[styles.btn]}

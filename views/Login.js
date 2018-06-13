@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {
-  View,
+  Image,
   ActivityIndicator,
   StyleSheet,
 } from 'react-native'
@@ -10,13 +10,22 @@ import {
   Toast,
   Theme,
 } from 'teaset'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+
 import AV from 'leancloud-storage/live-query'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    justifyContent: 'center',
+  },
+  logo: {
+    marginTop: 20,
+    marginRight: 'auto',
+    marginBottom: 20,
+    marginLeft: 'auto',
+    width: 160,
+    height: 160,
   },
   margin_10: {
     margin: 10,
@@ -27,6 +36,10 @@ const styles = StyleSheet.create({
 })
 
 export default class Login extends Component {
+  static navigationOptions = ({ navigation }) => ({
+    title: navigation.getParam('title', '登录'),
+  })
+
   // 初始化及挂载阶段
   constructor(props) {
     super(props)
@@ -35,6 +48,10 @@ export default class Login extends Component {
       password: '',
     }
   }
+  componentDidMount() {
+    const { navigation } = this.props
+    Toast.message(navigation.getParam('msg'), 'short', 'center')
+  }
   login() {
     const loading = Toast.show({
       text: '登录中',
@@ -42,7 +59,9 @@ export default class Login extends Component {
     })
     AV.User.logIn(this.state.username, this.state.password).then(() => {
       Toast.success('登录成功')
-      this.props.navigation.navigate('Home')
+      this.props.navigation.navigate('Home', {
+        username: this.state.username,
+      })
     }).catch((err) => {
       if (err.code == 210) {
         Toast.fail('用户名密码不匹配')
@@ -57,31 +76,34 @@ export default class Login extends Component {
   }
   render() {
     return (
-      <View style={styles.container}>
-        <View style={[styles.content]}>
-          <Input
-            style={[styles.margin_10, styles.margin_top_0]}
-            size="lg"
-            placeholder="请输入用户名"
-            value={this.state.username}
-            onChangeText={text => this.setState({ username: text })}
-          />
-          <Input
-            style={[styles.margin_10]}
-            size="lg"
-            placeholder="请输入密码"
-            value={this.state.password}
-            onChangeText={text => this.setState({ password: text })}
-          />
-          <Button
-            style={[styles.margin_10]}
-            type="primary"
-            size="lg"
-            title="登录"
-            onPress={() => this.login()}
-          />
-        </View>
-      </View>
+      <KeyboardAwareScrollView style={styles.container}>
+        <Image
+          style={[styles.logo]}
+          source={{ uri: 'https://i.loli.net/2018/06/13/5b20cecfba791.png' }}
+        />
+        <Input
+          style={[styles.margin_10, styles.margin_top_0]}
+          size="lg"
+          placeholder="请输入用户名"
+          value={this.state.username}
+          onChangeText={text => this.setState({ username: text })}
+        />
+        <Input
+          style={[styles.margin_10]}
+          secureTextEntry
+          size="lg"
+          placeholder="请输入密码"
+          value={this.state.password}
+          onChangeText={text => this.setState({ password: text })}
+        />
+        <Button
+          style={[styles.margin_10]}
+          type="primary"
+          size="lg"
+          title="登录"
+          onPress={() => this.login()}
+        />
+      </KeyboardAwareScrollView>
     )
   }
 }
