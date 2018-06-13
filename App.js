@@ -5,6 +5,8 @@ import HomeScreen from './views/Home'
 import ArticleListScreen from './views/ArticleList'
 import { Alert } from 'react-native'
 import { Theme, Button } from 'teaset'
+import HeaderButtons from 'react-navigation-header-buttons'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 Theme.set(Theme.themes.poetry)
 
@@ -23,12 +25,23 @@ const RootStack = createStackNavigator(
       headerTintColor: 'rgb(255,255,255)',
       headerRight: (
         <Button
-          type="primary"
-          size="lg"
+          onPress={() => Alert.alert('This is a button!')}
           title="Info"
-          onPress={() => { Alert.alert('这是一个练习项目') }}
+          color="#fff"
         />
       ),
+      // headerRight: (
+      //   <HeaderButtons
+      //     IconComponent={Icon}
+      //     OverflowIcon={<Icon name="ios-more" size={23} color="blue" />}
+      //     iconSize={23}
+      //     color="blue"
+      //   >
+      //     <HeaderButtons.Item title="add" iconName="ios-search" onPress={() => console.warn('add')} />
+      //     <HeaderButtons.Item title="select" onPress={() => console.warn('edit')} />
+      //     <HeaderButtons.Item title="select" onPress={() => console.warn('edit')} />
+      //   </HeaderButtons>
+      // ),
     },
   },
 )
