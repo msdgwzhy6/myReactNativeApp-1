@@ -37,7 +37,8 @@ export default class HomeScreen extends Component {
           style={[styles.btn]}
           type="secondary"
           size="lg"
-          title="次按钮"
+          title="Header Button"
+          onPress={() => this.props.navigation.navigate('HeaderButtons')}
         />
         <Button
           style={[styles.btn]}
