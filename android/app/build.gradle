@@ -147,6 +147,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-vector-icons')
   compile fileTree(dir: "libs", include: ["*.jar"])
   compile "com.android.support:appcompat-v7:23.0.1"
   compile "com.facebook.react:react-native:+"  // From node_modules
@@ -158,3 +159,8 @@ task copyDownloadableDepsToLibs(type: Copy) {
   from configurations.compile
   into 'libs'
 }
+
+project.ext.vectoricons = [
+  iconFontNames: [ 'FontAwesome.ttf', 'Ionicons.ttf', 'Octicons' ] // 你想要复制的字体文件的名字
+]
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"

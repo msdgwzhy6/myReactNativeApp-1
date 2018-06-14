@@ -1,70 +1,86 @@
 import React, { Component } from 'react'
 import {
-  View,
-  Text,
-  FlatList,
-  Alert,
+  ScrollView,
   StyleSheet,
 } from 'react-native'
 import { Button } from 'teaset'
-import Article from '../LeanCloud/Article'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
   },
-  item: {
-    paddingBottom: 10,
-    paddingLeft: 10,
-    paddingRight: 10,
+  btn: {
+    margin: 10,
   },
 })
 
 export default class HomeScreen extends Component {
-  // 一般来说，你需要在constructor中初始化state，然后在需要修改时调用setState方法
+  static navigationOptions = ({ navigation }) => ({
+    title: navigation.getParam('title', '微诗词'),
+  })
   constructor(props) {
     super(props)
-    this.state = {
-      articles: [],
-    }
-  }
-  componentDidMount() {
-    Article.getArticles().then((articles) => {
-      this.setState({
-        articles,
-      })
-    })
-  }
-  handlePressLearnMore() {
-    Article.saveArticle({
-      title: '文章标题',
-      content: '文章内容',
-    }).then((res) => {
-      Alert.alert('保存成功！')
-      const articles = this.state.articles.concat(res.toJSON())
-      this.setState({
-        articles,
-      })
-    })
+    this.state = {}
   }
   render() {
     return (
-      <View style={[styles.container]}>
+      <ScrollView style={[styles.container]}>
         <Button
-          onPress={() => this.handlePressLearnMore()}
-          title="发布文章"
+          style={[styles.btn]}
+          size="lg"
+          title="登录"
+          onPress={() => this.props.navigation.navigate('Login', { msg: '来自首页的消息' })}
+        />
+        <Button
+          style={[styles.btn]}
           type="primary"
+          size="lg"
+          title="HeaderButtons"
+          onPress={() => this.props.navigation.navigate('HeaderButtons')}
         />
-        <FlatList
-          // 接收一个数组
-          data={this.state.articles}
-          // item渲染器
-          renderItem={({ item, index }) => <Text style={styles.item}>{index + 1}、{item.title}</Text>}
-          // key提取器
-          keyExtractor={(item, index) => index.toString()}
+        <Button
+          style={[styles.btn]}
+          type="secondary"
+          size="lg"
+          title="ActionPopover 操作气泡"
+          onPress={() => this.props.navigation.navigate('ActionPopover')}
         />
-      </View>
+        <Button
+          style={[styles.btn]}
+          type="danger"
+          size="lg"
+          title="ActionSheet 操作菜单"
+          onPress={() => this.props.navigation.navigate('ActionSheet')}
+        />
+        <Button
+          style={[styles.btn]}
+          size="lg"
+          title="AlbumView 相册视图"
+          onPress={() => this.props.navigation.navigate('AlbumView')}
+        />
+        <Button
+          style={[styles.btn]}
+          type="primary"
+          size="lg"
+          title="Badge 徽章"
+          onPress={() => this.props.navigation.navigate('Badge')}
+        />
+        <Button
+          style={[styles.btn]}
+          type="secondary"
+          size="lg"
+          title="Carousel 走马灯"
+          onPress={() => this.props.navigation.navigate('Carousel')}
+        />
+        <Button
+          style={[styles.btn]}
+          type="danger"
+          size="lg"
+          title="Drawer 抽屉"
+          onPress={() => this.props.navigation.navigate('Drawer')}
+        />
+      </ScrollView>
     )
   }
 }

@@ -68,11 +68,17 @@ import {
 
 ## 集成 react-navigation
 
-## 安装
+### 安装
 
 ```bash
 yarn add react-navigation
 ```
+
+## 插件
+
+- **native-echarts**：基于 React Native 和 Echarts 的图表插件
+- **react-native-keyboard-aware-scroll-view**：解决react-native软键盘弹出挡住输入框的问题
+- **react-navigation-header-buttons**：轻松渲染头部按钮的 react-navigation 扩展
 
 ## 资源
 
