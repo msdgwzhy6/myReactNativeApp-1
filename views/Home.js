@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {
-  View,
+  ScrollView,
   StyleSheet,
 } from 'react-native'
 import { Button } from 'teaset'
@@ -25,7 +25,7 @@ export default class HomeScreen extends Component {
   }
   render() {
     return (
-      <View style={[styles.container]}>
+      <ScrollView style={[styles.container]}>
         <Button
           style={[styles.btn]}
           type="primary"
@@ -37,22 +37,17 @@ export default class HomeScreen extends Component {
           style={[styles.btn]}
           type="secondary"
           size="lg"
-          title="Header Button"
+          title="HeaderButtons"
           onPress={() => this.props.navigation.navigate('HeaderButtons')}
         />
         <Button
           style={[styles.btn]}
           type="danger"
           size="lg"
-          title="危险按钮"
+          title="ActionPopover"
+          onPress={() => this.props.navigation.navigate('ActionPopover')}
         />
-        <Button
-          style={[styles.btn]}
-          type="link"
-          size="lg"
-          title="链接按钮"
-        />
-      </View>
+      </ScrollView>
     )
   }
 }

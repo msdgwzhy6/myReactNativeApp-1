@@ -4,6 +4,7 @@ import LoginScreen from './views/Login'
 import HomeScreen from './views/Home'
 import ArticleListScreen from './views/ArticleList'
 import HeaderButtonsScreen from './views/HeaderButtons'
+import ActionPopover from './views/teaset/ActionPopover'
 import { Theme } from 'teaset'
 
 Theme.set(Theme.themes.poetry)
@@ -14,9 +15,10 @@ const RootStack = createStackNavigator(
     Login: LoginScreen,
     ArticleList: ArticleListScreen,
     HeaderButtons: HeaderButtonsScreen,
+    ActionPopover,
   },
   {
-    initialRouteName: 'HeaderButtons',
+    initialRouteName: 'ActionPopover',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,
