@@ -9,6 +9,7 @@ import ActionSheet from './views/teaset/ActionSheet'
 import AlbumView from './views/teaset/AlbumView'
 import Badge from './views/teaset/Badge'
 import Carousel from './views/teaset/Carousel'
+import Drawer from './views/teaset/Drawer'
 
 import { Theme } from 'teaset'
 
@@ -25,9 +26,10 @@ const RootStack = createStackNavigator(
     AlbumView,
     Badge,
     Carousel,
+    Drawer,
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Drawer',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,

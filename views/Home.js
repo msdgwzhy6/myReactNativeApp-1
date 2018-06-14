@@ -73,6 +73,13 @@ export default class HomeScreen extends Component {
           title="Carousel 走马灯"
           onPress={() => this.props.navigation.navigate('Carousel')}
         />
+        <Button
+          style={[styles.btn]}
+          type="danger"
+          size="lg"
+          title="Drawer 抽屉"
+          onPress={() => this.props.navigation.navigate('Drawer')}
+        />
       </ScrollView>
     )
   }
