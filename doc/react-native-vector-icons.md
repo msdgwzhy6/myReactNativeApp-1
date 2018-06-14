@@ -17,7 +17,7 @@
 
 ### Android
 
-#### 1、配置 Gradle
+#### 1、使用Gradle管理（强烈推荐）
 
 编辑 `android/app/build.gradle` ( NOT android/build.gradle ) 并添加下面的代码:
 
@@ -33,3 +33,7 @@ project.ext.vectoricons = [
 ]
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 ```
+
+#### 2、手动管理
+
+复制 Fonts folder 文件夹下的内容 到 `android/app/src/main/assets/fonts` (注意是小写的文件夹名)
