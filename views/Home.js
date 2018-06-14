@@ -47,6 +47,20 @@ export default class HomeScreen extends Component {
           title="ActionPopover"
           onPress={() => this.props.navigation.navigate('ActionPopover')}
         />
+        <Button
+          style={[styles.btn]}
+          type="primary"
+          size="lg"
+          title="ActionSheet"
+          onPress={() => this.props.navigation.navigate('ActionSheet')}
+        />
+        <Button
+          style={[styles.btn]}
+          type="primary"
+          size="lg"
+          title="AlbumView"
+          onPress={() => this.props.navigation.navigate('AlbumView')}
+        />
       </ScrollView>
     )
   }

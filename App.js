@@ -1,24 +1,29 @@
 import React from 'react'
 import { createStackNavigator } from 'react-navigation'
-import LoginScreen from './views/Login'
-import HomeScreen from './views/Home'
-import ArticleListScreen from './views/ArticleList'
-import HeaderButtonsScreen from './views/HeaderButtons'
+import Login from './views/Login'
+import Home from './views/Home'
+import ArticleList from './views/ArticleList'
+import HeaderButtons from './views/HeaderButtons'
 import ActionPopover from './views/teaset/ActionPopover'
+import ActionSheet from './views/teaset/ActionSheet'
+import AlbumView from './views/teaset/AlbumView'
+
 import { Theme } from 'teaset'
 
 Theme.set(Theme.themes.poetry)
 
 const RootStack = createStackNavigator(
   {
-    Home: HomeScreen,
-    Login: LoginScreen,
-    ArticleList: ArticleListScreen,
-    HeaderButtons: HeaderButtonsScreen,
+    Home,
+    Login,
+    ArticleList,
+    HeaderButtons,
     ActionPopover,
+    ActionSheet,
+    AlbumView,
   },
   {
-    initialRouteName: 'ActionPopover',
+    initialRouteName: 'Home',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,

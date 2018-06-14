@@ -59,6 +59,7 @@ export default class Login extends Component {
     })
     AV.User.logIn(this.state.username, this.state.password).then(() => {
       Toast.success('登录成功')
+      Toast.hide(loading)
       this.props.navigation.navigate('Home', {
         username: this.state.username,
       })
@@ -70,7 +71,6 @@ export default class Login extends Component {
       } else if (err.code == 219) {
         Toast.fail('登录失败次数超过限制，请稍候再试')
       }
-    }).finally(() => {
       Toast.hide(loading)
     })
   }
