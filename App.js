@@ -8,6 +8,7 @@ import ActionPopover from './views/teaset/ActionPopover'
 import ActionSheet from './views/teaset/ActionSheet'
 import AlbumView from './views/teaset/AlbumView'
 import Badge from './views/teaset/Badge'
+import Carousel from './views/teaset/Carousel'
 
 import { Theme } from 'teaset'
 
@@ -23,9 +24,10 @@ const RootStack = createStackNavigator(
     ActionSheet,
     AlbumView,
     Badge,
+    Carousel,
   },
   {
-    initialRouteName: 'Badge',
+    initialRouteName: 'Home',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,

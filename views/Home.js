@@ -28,45 +28,50 @@ export default class HomeScreen extends Component {
       <ScrollView style={[styles.container]}>
         <Button
           style={[styles.btn]}
-          type="primary"
           size="lg"
           title="登录"
           onPress={() => this.props.navigation.navigate('Login', { msg: '来自首页的消息' })}
         />
         <Button
           style={[styles.btn]}
-          type="secondary"
+          type="primary"
           size="lg"
           title="HeaderButtons"
           onPress={() => this.props.navigation.navigate('HeaderButtons')}
         />
         <Button
           style={[styles.btn]}
+          type="secondary"
+          size="lg"
+          title="ActionPopover 操作气泡"
+          onPress={() => this.props.navigation.navigate('ActionPopover')}
+        />
+        <Button
+          style={[styles.btn]}
           type="danger"
           size="lg"
-          title="ActionPopover"
-          onPress={() => this.props.navigation.navigate('ActionPopover')}
+          title="ActionSheet 操作菜单"
+          onPress={() => this.props.navigation.navigate('ActionSheet')}
+        />
+        <Button
+          style={[styles.btn]}
+          size="lg"
+          title="AlbumView 相册视图"
+          onPress={() => this.props.navigation.navigate('AlbumView')}
         />
         <Button
           style={[styles.btn]}
           type="primary"
           size="lg"
-          title="ActionSheet"
-          onPress={() => this.props.navigation.navigate('ActionSheet')}
+          title="Badge 徽章"
+          onPress={() => this.props.navigation.navigate('Badge')}
         />
         <Button
           style={[styles.btn]}
           type="secondary"
           size="lg"
-          title="AlbumView"
-          onPress={() => this.props.navigation.navigate('AlbumView')}
-        />
-        <Button
-          style={[styles.btn]}
-          type="danger"
-          size="lg"
-          title="Badge"
-          onPress={() => this.props.navigation.navigate('Badge')}
+          title="Carousel 走马灯"
+          onPress={() => this.props.navigation.navigate('Carousel')}
         />
       </ScrollView>
     )
