@@ -25,7 +25,7 @@ const RootStack = createStackNavigator(
     Badge,
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Badge',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,
