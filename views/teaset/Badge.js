@@ -4,6 +4,7 @@ import {
   Text,
   StyleSheet,
 } from 'react-native'
+import { Badge } from 'teaset'
 
 const styles = StyleSheet.create({
   container: {
@@ -12,6 +13,9 @@ const styles = StyleSheet.create({
 })
 
 export default class BadgeScreen extends Component {
+  static navigationOptions = ({ navigation }) => ({
+    title: navigation.getParam('title', 'Badge'),
+  })
   constructor(props) {
     super(props)
     this.state = {}

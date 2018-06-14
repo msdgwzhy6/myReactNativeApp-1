@@ -7,6 +7,7 @@ import HeaderButtons from './views/HeaderButtons'
 import ActionPopover from './views/teaset/ActionPopover'
 import ActionSheet from './views/teaset/ActionSheet'
 import AlbumView from './views/teaset/AlbumView'
+import Badge from './views/teaset/Badge'
 
 import { Theme } from 'teaset'
 
@@ -21,6 +22,7 @@ const RootStack = createStackNavigator(
     ActionPopover,
     ActionSheet,
     AlbumView,
+    Badge,
   },
   {
     initialRouteName: 'Home',

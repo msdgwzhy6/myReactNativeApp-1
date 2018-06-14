@@ -56,10 +56,17 @@ export default class HomeScreen extends Component {
         />
         <Button
           style={[styles.btn]}
-          type="primary"
+          type="secondary"
           size="lg"
           title="AlbumView"
           onPress={() => this.props.navigation.navigate('AlbumView')}
+        />
+        <Button
+          style={[styles.btn]}
+          type="danger"
+          size="lg"
+          title="Badge"
+          onPress={() => this.props.navigation.navigate('Badge')}
         />
       </ScrollView>
     )
