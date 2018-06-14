@@ -29,7 +29,7 @@ const RootStack = createStackNavigator(
     Drawer,
   },
   {
-    initialRouteName: 'Drawer',
+    initialRouteName: 'Home',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,

@@ -60,6 +60,7 @@ export default class AlbumViewScreen extends Component {
             width,
             height,
           }}
+          ref={(c) => { this.state.fullImageView = c }}
         >
           <AlbumView
             style={{ flex: 1 }}
