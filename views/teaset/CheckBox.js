@@ -24,7 +24,11 @@ export default class CheckBoxScreen extends Component {
   }
   handleCheckedChange(checked) {
     const title = this.state.checkbox.props.title.props.children
-    Alert.alert(`${checked} ${title}`)
+    if (checked) {
+      Alert.alert(`天选之人 '${title}'`)
+    } else {
+      Alert.alert(`普通之人 '${title}'`)
+    }
   }
   render() {
     return (
@@ -34,7 +38,7 @@ export default class CheckBoxScreen extends Component {
           size="lg"
           ref={(c) => { this.state.checkbox = c }}
           title="杨俊宁"
-          onChange={checked => this.handleCheckedChange(checked)}
+          onChange={(checked) => { this.handleCheckedChange(checked) }}
         />
       </View>
     )
