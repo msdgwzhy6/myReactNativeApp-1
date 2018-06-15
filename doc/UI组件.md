@@ -34,7 +34,7 @@
 - [ ] [SegmentedBar](http://t.cn/RBCCYg9) - 分段工具条
 - [ ] [SegmentedView](http://t.cn/RBCCnaL) - 分段器
 - [x] [Select](http://t.cn/RBCNCVg) - 选择框
-- [ ] [Stepper](http://t.cn/RBCNWrV) - 步进器（计数器）
+- [x] [Stepper](http://t.cn/RBCNWrV) - 步进器（计数器）
 - [ ] [TabView](http://t.cn/RBCN8RX) - 标签页
 - [x] TeaNavigator：使用 react-navigation 代替
 - [x] [Theme](http://t.cn/RBS3Rhj) - 主题【API】

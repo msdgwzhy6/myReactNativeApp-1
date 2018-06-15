@@ -140,6 +140,13 @@ export default class HomeScreen extends Component {
           title="Select 选择框"
           onPress={() => this.props.navigation.navigate('Select')}
         />
+        <Button
+          style={[styles.btn]}
+          type="primary"
+          size="lg"
+          title="Stepper 步进器"
+          onPress={() => this.props.navigation.navigate('Stepper')}
+        />
       </ScrollView>
     )
   }

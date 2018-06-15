@@ -19,6 +19,7 @@ import PopoverPicker from './views/teaset/PopoverPicker'
 import Projector from './views/teaset/Projector'
 import SearchInput from './views/teaset/SearchInput'
 import Select from './views/teaset/Select'
+import Stepper from './views/teaset/Stepper'
 
 import { Theme } from 'teaset'
 
@@ -45,9 +46,10 @@ const RootStack = createStackNavigator(
     Projector,
     SearchInput,
     Select,
+    Stepper,
   },
   {
-    initialRouteName: 'Select',
+    initialRouteName: 'Stepper',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,
