@@ -100,6 +100,13 @@ export default class HomeScreen extends Component {
           title="Menu{} 菜单"
           onPress={() => this.props.navigation.navigate('Menu')}
         />
+        <Button
+          style={[styles.btn]}
+          type="danger"
+          size="lg"
+          title="Popover 气泡"
+          onPress={() => this.props.navigation.navigate('Popover')}
+        />
       </ScrollView>
     )
   }

@@ -26,4 +26,7 @@
 - [x] NavigationBar：使用 react-navigation 代替
 - [x] NavigationPage：使用 react-navigation 代替
 - [ ] [Overlay](http://t.cn/RB9YQGM) - 浮层【API】
+- [x] [Popover](http://t.cn/RB9kP79) - 气泡
+- [ ] [PullPicker](http://t.cn/RB9kyJl) - 上拉选择器【API】
+- [ ] [搜索输入框](http://t.cn/RB9kGsb)
 - [x] [Theme](http://t.cn/RBS3Rhj) - 主题【API】
