@@ -43,9 +43,9 @@ export default class Face extends Component {
       const response = await fetch(`${API.faceplusplus}detect`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/form-data',
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: `api_key=${Key.faceKey}&api_secret=${Key.faceSecret}&image_url=${this.state.img[2]}&return_landmark=1&return_attributes=${returnAttributes}`,
+        body: `api_key=${Key.faceKey}&api_secret=${Key.faceSecret}&image_url=${this.state.img[0]}&return_landmark=1&return_attributes=${returnAttributes}`,
       })
       const responseJson = response.json()
       return responseJson
@@ -56,6 +56,7 @@ export default class Face extends Component {
   detect() {
     ModalIndicator.show('识别中')
     this.detectFace().then((res) => {
+      console.log(res)
       ModalIndicator.hide()
       Toast.fail('恭喜你，识别成功')
       const attr = res.faces[0].attributes
@@ -72,7 +73,8 @@ export default class Face extends Component {
         beauty,
       }
       this.setState({ face })
-    }).catch(() => {
+    }).catch((err) => {
+      console.log(err)
       ModalIndicator.hide()
       Toast.fail('识别失败，请重试')
     })
@@ -81,7 +83,7 @@ export default class Face extends Component {
     return (
       <ScrollView style={styles.container}>
         <Image
-          source={{ uri: this.state.img[2] }}
+          source={{ uri: this.state.img[0] }}
           style={[styles.img]}
         />
         <ListRow
