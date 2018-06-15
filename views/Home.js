@@ -80,6 +80,12 @@ export default class HomeScreen extends Component {
           title="Drawer 抽屉"
           onPress={() => this.props.navigation.navigate('Drawer')}
         />
+        <Button
+          style={[styles.btn]}
+          size="lg"
+          title="Checkbox 复选框"
+          onPress={() => this.props.navigation.navigate('Checkbox')}
+        />
       </ScrollView>
     )
   }

@@ -10,6 +10,7 @@ import AlbumView from './views/teaset/AlbumView'
 import Badge from './views/teaset/Badge'
 import Carousel from './views/teaset/Carousel'
 import Drawer from './views/teaset/Drawer'
+import Checkbox from './views/teaset/CheckBox'
 
 import { Theme } from 'teaset'
 
@@ -27,9 +28,10 @@ const RootStack = createStackNavigator(
     Badge,
     Carousel,
     Drawer,
+    Checkbox,
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Checkbox',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,
