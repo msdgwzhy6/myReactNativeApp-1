@@ -127,6 +127,13 @@ export default class HomeScreen extends Component {
           title="Projector 幻灯机"
           onPress={() => this.props.navigation.navigate('Projector')}
         />
+        <Button
+          style={[styles.btn]}
+          type="danger"
+          size="lg"
+          title="SearchInput 搜索输入框"
+          onPress={() => this.props.navigation.navigate('SearchInput')}
+        />
       </ScrollView>
     )
   }

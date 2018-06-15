@@ -17,6 +17,7 @@ import Popover from './views/teaset/Popover'
 import PullPicker from './views/teaset/PullPicker'
 import PopoverPicker from './views/teaset/PopoverPicker'
 import Projector from './views/teaset/Projector'
+import SearchInput from './views/teaset/SearchInput'
 
 import { Theme } from 'teaset'
 
@@ -41,9 +42,10 @@ const RootStack = createStackNavigator(
     PopoverPicker,
     PullPicker,
     Projector,
+    SearchInput,
   },
   {
-    initialRouteName: 'Projector',
+    initialRouteName: 'SearchInput',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,
