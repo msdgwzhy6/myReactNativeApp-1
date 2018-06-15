@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import {
   Image,
-  ActivityIndicator,
   StyleSheet,
 } from 'react-native'
 import {
@@ -9,7 +8,6 @@ import {
   Button,
   ModalIndicator,
   Toast,
-  Theme,
 } from 'teaset'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
