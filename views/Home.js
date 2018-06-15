@@ -154,6 +154,13 @@ export default class HomeScreen extends Component {
           title="TabView 标签页"
           onPress={() => this.props.navigation.navigate('TabView')}
         />
+        <Button
+          style={[styles.btn]}
+          type="danger"
+          size="lg"
+          title="Wheel 滚轮"
+          onPress={() => this.props.navigation.navigate('Wheel')}
+        />
       </ScrollView>
     )
   }

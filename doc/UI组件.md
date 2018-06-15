@@ -40,4 +40,4 @@
 - [x] [Theme](http://t.cn/RBS3Rhj) - 主题【API】
 - [x] [Toast](http://t.cn/RBS3N1H)- 轻提示【API】
 - [x] TransformView - 可变视图 **(一般不直接使用)**
-- [ ] [Wheel](http://t.cn/RBCNsqp) - 滚轮
+- [x] [Wheel](http://t.cn/RBCNsqp) - 滚轮
