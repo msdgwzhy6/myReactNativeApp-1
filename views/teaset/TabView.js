@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet } from 'react-native'
 import { TabView } from 'teaset'
-import Login from '../Login'
+import Carousel from './Carousel'
 import ListRow from './ListRow'
 
 const styles = StyleSheet.create({
@@ -21,13 +21,13 @@ export default class TabViewScreen extends Component {
   componentDidMount() {}
   render() {
     return (
-      <TabView style={styles.container} type="projector">
+      <TabView style={styles.container} type="carousel">
         <TabView.Sheet
-          title="Login"
+          title="Carousel"
           icon={require('../../icons/home.png')}
           activeIcon={require('../../icons/home_active.png')}
         >
-          <Login />
+          <Carousel />
         </TabView.Sheet>
         <TabView.Sheet
           title="ListRow"
