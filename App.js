@@ -35,7 +35,7 @@ const RootStack = createStackNavigator(
     Menu,
   },
   {
-    initialRouteName: 'Menu',
+    initialRouteName: 'Home',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,

@@ -20,8 +20,8 @@
 - [x] [Input](http://t.cn/RBS3XTy) - 输入框
 - [x] [Label](http://t.cn/RBoAwiv) - 标签，一般为单行的少量文字
 - [x] [ListRow](http://t.cn/RBo2tmp) - 列表行
-- [ ] [Menu](http://t.cn/RB9Yhze) - 菜单【API】
-- [ ] [ModalIndicator](http://t.cn/RB9YcOv) - 模态指示器【API】
+- [x] [Menu](http://t.cn/RB9Yhze) - 菜单【API】
+- [x] [ModalIndicator](http://t.cn/RB9YcOv) - 模态指示器【API】
 - [x] [Toast](http://t.cn/RBS3N1H)- 轻提示【API】
 - [x] NavigationBar：使用 react-navigation 代替
 - [x] NavigationPage：使用 react-navigation 代替

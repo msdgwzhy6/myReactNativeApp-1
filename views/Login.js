@@ -7,6 +7,7 @@ import {
 import {
   Input,
   Button,
+  ModalIndicator,
   Toast,
   Theme,
 } from 'teaset'
@@ -53,13 +54,10 @@ export default class Login extends Component {
     Toast.message(navigation.getParam('msg'), 'short', 'center')
   }
   login() {
-    const loading = Toast.show({
-      text: '登录中',
-      icon: <ActivityIndicator size="large" color={Theme.toastIconTintColor} />,
-    })
+    ModalIndicator.show('登陆中')
     AV.User.logIn(this.state.username, this.state.password).then(() => {
       Toast.success('登录成功')
-      Toast.hide(loading)
+      ModalIndicator.hide()
       this.props.navigation.navigate('Home', {
         username: this.state.username,
       })
@@ -71,7 +69,7 @@ export default class Login extends Component {
       } else if (err.code == 219) {
         Toast.fail('登录失败次数超过限制，请稍候再试')
       }
-      Toast.hide(loading)
+      ModalIndicator.hide()
     })
   }
   render() {
