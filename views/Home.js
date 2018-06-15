@@ -120,6 +120,13 @@ export default class HomeScreen extends Component {
           title="PopoverPicker 气泡选择器"
           onPress={() => this.props.navigation.navigate('PopoverPicker')}
         />
+        <Button
+          style={[styles.btn]}
+          type="secondary"
+          size="lg"
+          title="Projector 幻灯机"
+          onPress={() => this.props.navigation.navigate('Projector')}
+        />
       </ScrollView>
     )
   }

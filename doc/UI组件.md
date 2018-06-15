@@ -27,8 +27,8 @@
 - [x] NavigationPage：使用 react-navigation 代替
 - [ ] [Overlay](http://t.cn/RB9YQGM) - 浮层【API】
 - [x] [Popover](http://t.cn/RB9kP79) - 气泡
-- [ ] [PopoverPicker](http://t.cn/RBCzN8u) - 气泡选择器【API】
+- [x] [PopoverPicker](http://t.cn/RBCzN8u) - 气泡选择器【API】
 - [x] [PullPicker](http://t.cn/RB9kyJl) - 上拉选择器【API】
-- [ ] [Projector](http://t.cn/RBCzEgx) - 幻灯机
+- [x] [Projector](http://t.cn/RBCzEgx) - 幻灯机
 - [ ] [SearchInput](http://t.cn/RB9kGsb) - 搜索输入框
 - [x] [Theme](http://t.cn/RBS3Rhj) - 主题【API】
