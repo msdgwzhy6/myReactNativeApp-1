@@ -161,6 +161,12 @@ export default class HomeScreen extends Component {
           title="Wheel 滚轮"
           onPress={() => this.props.navigation.navigate('Wheel')}
         />
+        <Button
+          style={[styles.btn]}
+          size="lg"
+          title="Echarts Bar 柱状图"
+          onPress={() => this.props.navigation.navigate('EchartsBar')}
+        />
       </ScrollView>
     )
   }

@@ -22,6 +22,7 @@ import Select from './views/teaset/Select'
 import Stepper from './views/teaset/Stepper'
 import TabView from './views/teaset/TabView'
 import Wheel from './views/teaset/Wheel'
+import EchartsBar from './views/echarts/Bar'
 
 import { Theme } from 'teaset'
 
@@ -51,9 +52,10 @@ const RootStack = createStackNavigator(
     Stepper,
     TabView,
     Wheel,
+    EchartsBar,
   },
   {
-    initialRouteName: 'Wheel',
+    initialRouteName: 'EchartsBar',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,
