@@ -134,6 +134,12 @@ export default class HomeScreen extends Component {
           title="SearchInput 搜索输入框"
           onPress={() => this.props.navigation.navigate('SearchInput')}
         />
+        <Button
+          style={[styles.btn]}
+          size="lg"
+          title="Select 选择框"
+          onPress={() => this.props.navigation.navigate('Select')}
+        />
       </ScrollView>
     )
   }
