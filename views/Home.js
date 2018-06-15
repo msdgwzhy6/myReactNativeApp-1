@@ -93,6 +93,13 @@ export default class HomeScreen extends Component {
           title="ListRow 列表行"
           onPress={() => this.props.navigation.navigate('ListRow')}
         />
+        <Button
+          style={[styles.btn]}
+          type="secondary"
+          size="lg"
+          title="Menu{} 菜单"
+          onPress={() => this.props.navigation.navigate('Menu')}
+        />
       </ScrollView>
     )
   }

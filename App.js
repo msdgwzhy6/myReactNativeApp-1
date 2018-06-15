@@ -12,6 +12,7 @@ import Carousel from './views/teaset/Carousel'
 import Drawer from './views/teaset/Drawer'
 import Checkbox from './views/teaset/CheckBox'
 import ListRow from './views/teaset/ListRow'
+import Menu from './views/teaset/Menu'
 
 import { Theme } from 'teaset'
 
@@ -31,9 +32,10 @@ const RootStack = createStackNavigator(
     Drawer,
     Checkbox,
     ListRow,
+    Menu,
   },
   {
-    initialRouteName: 'ListRow',
+    initialRouteName: 'Menu',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,
