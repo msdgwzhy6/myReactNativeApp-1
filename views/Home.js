@@ -86,6 +86,13 @@ export default class HomeScreen extends Component {
           title="Checkbox 复选框"
           onPress={() => this.props.navigation.navigate('Checkbox')}
         />
+        <Button
+          style={[styles.btn]}
+          type="primary"
+          size="lg"
+          title="ListRow 列表行"
+          onPress={() => this.props.navigation.navigate('ListRow')}
+        />
       </ScrollView>
     )
   }
