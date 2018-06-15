@@ -167,6 +167,13 @@ export default class HomeScreen extends Component {
           title="Echarts Bar 柱状图"
           onPress={() => this.props.navigation.navigate('EchartsBar')}
         />
+        <Button
+          style={[styles.btn]}
+          type="primary"
+          size="lg"
+          title="Face++"
+          onPress={() => this.props.navigation.navigate('Face')}
+        />
       </ScrollView>
     )
   }
