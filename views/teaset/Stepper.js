@@ -25,12 +25,6 @@ export default class StepperScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Stepper
-          defaultValue={0}
-          min={0}
-          max={10}
-          onChange={value => Alert.alert(`${value}`)}
-        />
         <ListRow
           title="橘子"
           detail={<Stepper />}

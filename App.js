@@ -20,6 +20,7 @@ import Projector from './views/teaset/Projector'
 import SearchInput from './views/teaset/SearchInput'
 import Select from './views/teaset/Select'
 import Stepper from './views/teaset/Stepper'
+import TabView from './views/teaset/TabView'
 
 import { Theme } from 'teaset'
 
@@ -47,9 +48,10 @@ const RootStack = createStackNavigator(
     SearchInput,
     Select,
     Stepper,
+    TabView,
   },
   {
-    initialRouteName: 'Stepper',
+    initialRouteName: 'TabView',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,

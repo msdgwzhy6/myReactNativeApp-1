@@ -147,6 +147,13 @@ export default class HomeScreen extends Component {
           title="Stepper 步进器"
           onPress={() => this.props.navigation.navigate('Stepper')}
         />
+        <Button
+          style={[styles.btn]}
+          type="secondary"
+          size="lg"
+          title="TabView 标签页"
+          onPress={() => this.props.navigation.navigate('TabView')}
+        />
       </ScrollView>
     )
   }

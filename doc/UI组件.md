@@ -28,14 +28,14 @@
 - [x] [Overlay](http://t.cn/RB9YQGM) - 浮层【API】**（一般不直接用）**
 - [x] [Popover](http://t.cn/RB9kP79) - 气泡
 - [x] [PopoverPicker](http://t.cn/RBCzN8u) - 气泡选择器【API】**（一般不直接用）**
-- [x] [Projector](http://t.cn/RBCzEgx) - 幻灯机
+- [x] [Projector](http://t.cn/RBCzEgx) - 幻灯机 **(一般不直接使用)**
 - [x] [PullPicker](http://t.cn/RB9kyJl) - 上拉选择器【API】**(一般不直接使用)**
 - [x] [SearchInput](http://t.cn/RB9kGsb) - 搜索输入框
 - [ ] [SegmentedBar](http://t.cn/RBCCYg9) - 分段工具条
 - [ ] [SegmentedView](http://t.cn/RBCCnaL) - 分段器
 - [x] [Select](http://t.cn/RBCNCVg) - 选择框
 - [x] [Stepper](http://t.cn/RBCNWrV) - 步进器（计数器）
-- [ ] [TabView](http://t.cn/RBCN8RX) - 标签页
+- [x] [TabView](http://t.cn/RBCN8RX) - 标签页
 - [x] TeaNavigator：使用 react-navigation 代替
 - [x] [Theme](http://t.cn/RBS3Rhj) - 主题【API】
 - [x] [Toast](http://t.cn/RBS3N1H)- 轻提示【API】
