@@ -43,7 +43,7 @@ export default class Face extends Component {
       const response = await fetch(`${API.faceplusplus}detect`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Type': 'application/form-data',
         },
         body: `api_key=${Key.faceKey}&api_secret=${Key.faceSecret}&image_url=${this.state.img[2]}&return_landmark=1&return_attributes=${returnAttributes}`,
       })
