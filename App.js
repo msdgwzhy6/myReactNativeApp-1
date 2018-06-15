@@ -15,6 +15,7 @@ import ListRow from './views/teaset/ListRow'
 import Menu from './views/teaset/Menu'
 import Popover from './views/teaset/Popover'
 import PullPicker from './views/teaset/PullPicker'
+import PopoverPicker from './views/teaset/PopoverPicker'
 
 import { Theme } from 'teaset'
 
@@ -36,10 +37,11 @@ const RootStack = createStackNavigator(
     ListRow,
     Menu,
     Popover,
+    PopoverPicker,
     PullPicker,
   },
   {
-    initialRouteName: 'PullPicker',
+    initialRouteName: 'PopoverPicker',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,
