@@ -4,7 +4,7 @@ import {
   Alert,
   StyleSheet,
 } from 'react-native'
-import Echarts from 'native-echarts'
+import Echarts from 'youngjuning-native-echarts'
 
 const styles = StyleSheet.create({
   container: {
