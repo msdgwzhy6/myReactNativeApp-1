@@ -78,8 +78,8 @@ const TeasetStack = createStackNavigator(
 )
 const EchartsStack = createStackNavigator(
   {
-    Echarts,
     EchartsBar,
+    Echarts,
   },
   {
     navigationOptions: {
@@ -98,7 +98,7 @@ export default createBottomTabNavigator(
     Echarts: EchartsStack,
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Echarts',
     tabBarOptions: {
       activeTintColor: Theme.primaryColor ? Theme.primaryColor : 'tomato',
       inactiveTintColor: 'gray',

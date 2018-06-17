@@ -4377,6 +4377,13 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
+prop-types@15.5.10:
+  version "15.5.10"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.3.1"
+
 prop-types@15.x, prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
@@ -4558,6 +4565,12 @@ react-native-safe-area-view@^0.8.0:
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.8.0.tgz#22d78cb8e8658d04a10cd53c1546e0bc86cb7aea"
   dependencies:
     hoist-non-react-statics "^2.3.1"
+
+react-native-secharts@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/react-native-secharts/-/react-native-secharts-1.4.1.tgz#b01a9a934d7991ba38f0b1cbc0934ec619d1a4e3"
+  dependencies:
+    prop-types "15.5.10"
 
 react-native-swipeout@^2.2.2:
   version "2.3.3"
@@ -5968,9 +5981,9 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-youngjuning-native-echarts@0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/youngjuning-native-echarts/-/youngjuning-native-echarts-0.2.1.tgz#ae923c802074aefaa7692a72bbae236fab23e11b"
+youngjuning-native-echarts@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/youngjuning-native-echarts/-/youngjuning-native-echarts-0.4.0.tgz#d95490aac09fbc159933cbf869dfe5d70c9a9012"
   dependencies:
     echarts "3.2.3"
 

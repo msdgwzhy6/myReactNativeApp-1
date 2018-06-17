@@ -38,18 +38,35 @@ export default class EchartsBar extends Component {
         type: 'bar',
         data: [5, 20, 36, 10, 10, 20],
       }],
-      'xAxis-axisLabel-interval': 0,
+    }
+    this.option1 = {
+      title: {
+        text: '冬季销量',
+      },
+      tooltip: {},
+      legend: {
+        data: ['销量'],
+      },
+      xAxis: {
+        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
+      },
+      yAxis: {},
+      series: [{
+        name: '销量',
+        type: 'bar',
+        data: [5, 20, 36, 10, 10, 20],
+      }],
     }
     this.state = {}
   }
-  componentDidMount() {}
   render() {
     return (
       <View style={styles.container}>
         <Echarts
+          ref={(c) => { this.bar = c }}
           option={this.option}
           height={250}
-          onPress={(param) => { Alert.alert('点击了图表', param.toString()) }}
+          onPress={(param) => { this.bar.setOption(this.option1) }}
         />
       </View>
     )
