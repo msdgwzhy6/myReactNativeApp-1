@@ -1,7 +1,6 @@
 import React from 'react'
 import { Theme } from 'teaset'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import EvilIcons from 'react-native-vector-icons/EvilIcons'
 
 import { createBottomTabNavigator, createStackNavigator } from 'react-navigation'
 import Home from './views/Home'
@@ -111,7 +110,7 @@ export default createBottomTabNavigator(
         if (routeName === 'Home') {
           iconName = 'home'
         } else if (routeName === 'AntDMobile') {
-          return <EvilIcons name="heart" size={25} color={tintColor} />
+          iconName = 'heart'
         } else if (routeName === 'Teaset') {
           iconName = 'thumbs-up'
         } else if (routeName === 'Echarts') {
