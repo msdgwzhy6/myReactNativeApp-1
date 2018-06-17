@@ -3,10 +3,15 @@ import { Theme } from 'teaset'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 import { createBottomTabNavigator, createStackNavigator } from 'react-navigation'
+// Home
 import Home from './views/Home'
 import ArticleList from './views/ArticleList'
 import Login from './views/Login'
 import HeaderButtons from './views/HeaderButtons'
+// AntDMobileRN
+import AntDMobileRN from './views/AntDMobileRN'
+import AntDDatePicker from './views/AntDMobileRN/DatePicker'
+// Teaset
 import Teaset from './views/Teaset'
 import ActionPopover from './views/teaset/ActionPopover'
 import ActionSheet from './views/teaset/ActionSheet'
@@ -26,10 +31,10 @@ import Select from './views/teaset/Select'
 import Stepper from './views/teaset/Stepper'
 import TabView from './views/teaset/TabView'
 import Wheel from './views/teaset/Wheel'
+// Echarts
 import Echarts from './views/Echarts'
 import EchartsBar from './views/Echarts/Bar'
-import AntDMobileRN from './views/AntDMobileRN'
-import AntDDatePicker from './views/AntDMobileRN/DatePicker'
+import SECharts from './views/Echarts/SEcharts'
 
 Theme.set(Theme.themes.poetry)
 
@@ -78,6 +83,7 @@ const TeasetStack = createStackNavigator(
 )
 const EchartsStack = createStackNavigator(
   {
+    SECharts,
     EchartsBar,
     Echarts,
   },
