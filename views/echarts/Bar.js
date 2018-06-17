@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import {
   View,
-  Alert,
   StyleSheet,
 } from 'react-native'
 import Echarts from 'youngjuning-native-echarts'
@@ -66,7 +65,7 @@ export default class EchartsBar extends Component {
           ref={(c) => { this.bar = c }}
           option={this.option}
           height={250}
-          onPress={(param) => { this.bar.setOption(this.option1) }}
+          onPress={() => { this.bar.setOption(this.option1) }}
         />
       </View>
     )

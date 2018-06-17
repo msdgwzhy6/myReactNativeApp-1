@@ -19,7 +19,7 @@
     "react-navigation": "^2.3.0",
     "react-navigation-header-buttons": "^1.0.0",
     "teaset": "^0.5.8",
-    "youngjuning-native-echarts": "0.4.0"
+    "youngjuning-native-echarts": "0.4.2"
   },
   "devDependencies": {
     "babel-jest": "23.0.1",
