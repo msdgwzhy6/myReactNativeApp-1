@@ -1,9 +1,14 @@
 import React from 'react'
-import { createStackNavigator } from 'react-navigation'
-import Login from './views/Login'
+import { Theme } from 'teaset'
+import Icon from 'react-native-vector-icons/FontAwesome'
+import EvilIcons from 'react-native-vector-icons/EvilIcons'
+
+import { createBottomTabNavigator, createStackNavigator } from 'react-navigation'
 import Home from './views/Home'
 import ArticleList from './views/ArticleList'
+import Login from './views/Login'
 import HeaderButtons from './views/HeaderButtons'
+import Teaset from './views/Teaset'
 import ActionPopover from './views/teaset/ActionPopover'
 import ActionSheet from './views/teaset/ActionSheet'
 import AlbumView from './views/teaset/AlbumView'
@@ -22,42 +27,21 @@ import Select from './views/teaset/Select'
 import Stepper from './views/teaset/Stepper'
 import TabView from './views/teaset/TabView'
 import Wheel from './views/teaset/Wheel'
-import EchartsBar from './views/echarts/Bar'
-import Face from './views/face++/Face'
-
-import { Theme } from 'teaset'
+import Echarts from './views/Echarts'
+import EchartsBar from './views/Echarts/Bar'
+import AntDMobileRN from './views/AntDMobileRN'
+import AntDDatePicker from './views/AntDMobileRN/DatePicker'
 
 Theme.set(Theme.themes.poetry)
 
-const RootStack = createStackNavigator(
+const HomeStack = createStackNavigator(
   {
     Home,
     Login,
-    ArticleList,
     HeaderButtons,
-    ActionPopover,
-    ActionSheet,
-    AlbumView,
-    Badge,
-    Carousel,
-    Drawer,
-    Checkbox,
-    ListRow,
-    Menu,
-    Popover,
-    PopoverPicker,
-    PullPicker,
-    Projector,
-    SearchInput,
-    Select,
-    Stepper,
-    TabView,
-    Wheel,
-    EchartsBar,
-    Face,
+    ArticleList,
   },
   {
-    initialRouteName: 'Home',
     navigationOptions: {
       headerStyle: {
         backgroundColor: Theme.primaryColor,
@@ -66,7 +50,75 @@ const RootStack = createStackNavigator(
     },
   },
 )
-
-export default () => (
-  <RootStack />
+const AntDMobileRNStack = createStackNavigator(
+  {
+    AntDMobileRN,
+    AntDDatePicker,
+  },
+  {
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: Theme.primaryColor,
+      },
+      headerTintColor: 'rgb(255,255,255)',
+    },
+  },
+)
+const TeasetStack = createStackNavigator(
+  {
+    Teaset, ActionPopover, ActionSheet, AlbumView, Badge, Carousel, Drawer, Checkbox, ListRow, Menu, Popover, PullPicker, PopoverPicker, Projector, SearchInput, Select, Stepper, TabView, Wheel,
+  },
+  {
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: Theme.primaryColor,
+      },
+      headerTintColor: 'rgb(255,255,255)',
+    },
+  },
+)
+const EchartsStack = createStackNavigator(
+  {
+    Echarts,
+    EchartsBar,
+  },
+  {
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: Theme.primaryColor,
+      },
+      headerTintColor: 'rgb(255,255,255)',
+    },
+  },
+)
+export default createBottomTabNavigator(
+  {
+    Home: HomeStack,
+    AntDMobile: AntDMobileRNStack,
+    Teaset: TeasetStack,
+    Echarts: EchartsStack,
+  },
+  {
+    initialRouteName: 'Home',
+    tabBarOptions: {
+      activeTintColor: Theme.primaryColor ? Theme.primaryColor : 'tomato',
+      inactiveTintColor: 'gray',
+    },
+    navigationOptions: ({ navigation }) => ({
+      tabBarIcon: ({ focused, tintColor }) => {
+        const { routeName } = navigation.state
+        let iconName
+        if (routeName === 'Home') {
+          iconName = 'home'
+        } else if (routeName === 'AntDMobile') {
+          return <EvilIcons name="heart" size={25} color={tintColor} />
+        } else if (routeName === 'Teaset') {
+          iconName = 'thumbs-up'
+        } else if (routeName === 'Echarts') {
+          iconName = 'area-chart'
+        }
+        return <Icon name={iconName} size={25} color={tintColor} />
+      },
+    }),
+  },
 )

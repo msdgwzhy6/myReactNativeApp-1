@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "antd-mobile-rn": "^2.2.0",
+    "babel-plugin-import": "^1.8.0",
+    "babel-plugin-module-resolver": "^3.1.1",
     "leancloud-storage": "^3.7.2",
     "native-echarts": "^0.4.0",
     "react": "16.3.1",
