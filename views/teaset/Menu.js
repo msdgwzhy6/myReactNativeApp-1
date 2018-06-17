@@ -6,7 +6,7 @@ import {
   Alert,
   StyleSheet,
 } from 'react-native'
-import { Menu, Button } from 'teaset'
+import { Menu, Button } from 'youngjuning-teaset'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 const styles = StyleSheet.create({

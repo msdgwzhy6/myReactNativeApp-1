@@ -6,7 +6,7 @@ import {
   Alert,
   StyleSheet,
 } from 'react-native'
-import { Button } from 'teaset'
+import { Button } from 'youngjuning-teaset'
 import Article from '../LeanCloud/Article'
 
 const styles = StyleSheet.create({

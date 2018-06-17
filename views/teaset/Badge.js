@@ -4,7 +4,7 @@ import {
   Text,
   StyleSheet,
 } from 'react-native'
-import { Badge } from 'teaset'
+import { Badge } from 'youngjuning-teaset'
 
 const styles = StyleSheet.create({
   container: {

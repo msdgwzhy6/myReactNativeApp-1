@@ -5,7 +5,7 @@ import {
   Alert,
   StyleSheet,
 } from 'react-native'
-import { Stepper, ListRow } from 'teaset'
+import { Stepper, ListRow } from 'youngjuning-teaset'
 
 const styles = StyleSheet.create({
   container: {

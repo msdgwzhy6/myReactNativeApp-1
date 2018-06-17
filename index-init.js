@@ -1,7 +1,7 @@
 import { YellowBox, AppRegistry } from 'react-native'
 import App from './App'
 import AV from 'leancloud-storage/live-query'
-import { Theme } from 'teaset'
+import { Theme } from 'youngjuning-teaset'
 
 // 设置默认主题
 Theme.set(Theme.themes.poetry)

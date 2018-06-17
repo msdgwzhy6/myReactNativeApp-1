@@ -63,7 +63,7 @@ import {
   Toast,
   NavigationBar,
   Theme,
-} from 'teaset'
+} from 'youngjuning-teaset'
 ```
 
 ## 集成 react-navigation

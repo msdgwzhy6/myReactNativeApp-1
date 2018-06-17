@@ -8,7 +8,7 @@ import {
   Button,
   Drawer,
   Theme,
-} from 'teaset'
+} from 'youngjuning-teaset'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 const styles = StyleSheet.create({

@@ -5,7 +5,7 @@ import {
   Text,
   StyleSheet,
 } from 'react-native'
-import { SearchInput } from 'teaset'
+import { SearchInput } from 'youngjuning-teaset'
 
 const styles = StyleSheet.create({
   container: {

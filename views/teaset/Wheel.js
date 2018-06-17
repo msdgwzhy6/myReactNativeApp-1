@@ -5,7 +5,7 @@ import {
   Alert,
   StyleSheet,
 } from 'react-native'
-import { Wheel } from 'teaset'
+import { Wheel } from 'youngjuning-teaset'
 
 const styles = StyleSheet.create({
   container: {

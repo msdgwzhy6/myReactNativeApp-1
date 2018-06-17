@@ -5,7 +5,7 @@ import {
   Button,
   StyleSheet,
 } from 'react-native'
-import { PullPicker } from 'teaset'
+import { PullPicker } from 'youngjuning-teaset'
 
 const styles = StyleSheet.create({
   container: {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet } from 'react-native'
-import { TabView } from 'teaset'
+import { TabView } from 'youngjuning-teaset'
 import Carousel from './Carousel'
 import ListRow from './ListRow'
 

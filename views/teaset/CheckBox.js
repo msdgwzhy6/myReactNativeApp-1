@@ -4,7 +4,7 @@ import {
   Alert,
   StyleSheet,
 } from 'react-native'
-import { Checkbox } from 'teaset'
+import { Checkbox } from 'youngjuning-teaset'
 
 const styles = StyleSheet.create({
   container: {

@@ -4,7 +4,7 @@ import {
   Image,
   StyleSheet,
 } from 'react-native'
-import { Button, ListRow, ModalIndicator, Toast } from 'teaset'
+import { Button, ListRow, ModalIndicator, Toast } from 'youngjuning-teaset'
 import Const from '../../Const'
 
 const Key = Const.Key

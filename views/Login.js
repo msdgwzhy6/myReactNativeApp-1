@@ -8,7 +8,7 @@ import {
   Button,
   ModalIndicator,
   Toast,
-} from 'teaset'
+} from 'youngjuning-teaset'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 import AV from 'leancloud-storage/live-query'

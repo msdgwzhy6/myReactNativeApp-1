@@ -5,7 +5,7 @@ import {
   Image,
   StyleSheet,
 } from 'react-native'
-import { Carousel } from 'teaset'
+import { Carousel } from 'youngjuning-teaset'
 
 const styles = StyleSheet.create({
   container: {

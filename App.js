@@ -1,5 +1,5 @@
 import React from 'react'
-import { Theme } from 'teaset'
+import { Theme } from 'youngjuning-teaset'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 import { createBottomTabNavigator, createStackNavigator } from 'react-navigation'

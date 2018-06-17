@@ -4,7 +4,7 @@ import {
   View,
   StyleSheet,
 } from 'react-native'
-import { PopoverPicker, Button } from 'teaset'
+import { PopoverPicker, Button } from 'youngjuning-teaset'
 
 const styles = StyleSheet.create({
   container: {
