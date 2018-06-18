@@ -29,8 +29,15 @@ export default class Echarts extends Component {
         <Button
           style={[styles.btn]}
           size="lg"
-          title="Echarts Bar 柱状图"
-          onPress={() => this.props.navigation.navigate('EchartsBar')}
+          title="youngjuning-native-echarts"
+          onPress={() => this.props.navigation.navigate('echarts')}
+        />
+        <Button
+          style={[styles.btn]}
+          type="primary"
+          size="lg"
+          title="react-native-secharts"
+          onPress={() => this.props.navigation.navigate('secharts')}
         />
       </ScrollView>
     )

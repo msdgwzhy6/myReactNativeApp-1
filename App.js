@@ -8,6 +8,7 @@ import Home from './views/Home'
 import ArticleList from './views/ArticleList'
 import Login from './views/Login'
 import HeaderButtons from './views/HeaderButtons'
+import Face from './views/face++/Face'
 // AntDMobileRN
 import AntDMobileRN from './views/AntDMobileRN'
 import AntDDatePicker from './views/AntDMobileRN/DatePicker'
@@ -31,10 +32,10 @@ import Select from './views/teaset/Select'
 import Stepper from './views/teaset/Stepper'
 import TabView from './views/teaset/TabView'
 import Wheel from './views/teaset/Wheel'
-// Echarts
-import Echarts from './views/Echarts'
-import EchartsBar from './views/Echarts/Bar'
-import SECharts from './views/Echarts/SEcharts'
+// Charts
+import Charts from './views/Charts'
+import echarts from './views/Charts/Echarts'
+import secharts from './views/Charts/SEcharts'
 
 Theme.set(Theme.themes.poetry)
 
@@ -44,6 +45,7 @@ const HomeStack = createStackNavigator(
     Login,
     HeaderButtons,
     ArticleList,
+    Face,
   },
   {
     navigationOptions: {
@@ -81,11 +83,11 @@ const TeasetStack = createStackNavigator(
     },
   },
 )
-const EchartsStack = createStackNavigator(
+const ChartsStack = createStackNavigator(
   {
-    SECharts,
-    EchartsBar,
-    Echarts,
+    Charts,
+    echarts,
+    secharts,
   },
   {
     navigationOptions: {
@@ -101,10 +103,10 @@ export default createBottomTabNavigator(
     Home: HomeStack,
     AntDMobile: AntDMobileRNStack,
     Teaset: TeasetStack,
-    Echarts: EchartsStack,
+    Charts: ChartsStack,
   },
   {
-    initialRouteName: 'Echarts',
+    initialRouteName: 'Home',
     tabBarOptions: {
       activeTintColor: Theme.primaryColor ? Theme.primaryColor : 'tomato',
       inactiveTintColor: 'gray',
@@ -119,7 +121,7 @@ export default createBottomTabNavigator(
           iconName = 'heart'
         } else if (routeName === 'Teaset') {
           iconName = 'thumbs-up'
-        } else if (routeName === 'Echarts') {
+        } else if (routeName === 'Charts') {
           iconName = 'area-chart'
         }
         return <Icon name={iconName} size={25} color={tintColor} />

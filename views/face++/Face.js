@@ -5,9 +5,7 @@ import {
   StyleSheet,
 } from 'react-native'
 import { Button, ListRow, ModalIndicator, Toast } from 'teaset'
-import { Key } from '../../Const'
-
-alert(Key.faceKey)
+import { Key, Api } from '../../Const'
 
 // const Key = Const.Key
 // const API = Const.API
@@ -33,16 +31,14 @@ export default class Face extends Component {
     this.state = {
       face: null,
       img: [
-        'https://i.loli.net/2018/06/15/5b23953562fe7.jpg',
-        'https://i.loli.net/2018/06/15/5b23972a3eb19.jpg',
-        'https://i.loli.net/2018/06/15/5b23974b2622a.jpg',
+        'https://i.loli.net/2018/06/18/5b271a7d6a81e.jpg',
       ],
     }
   }
   async detectFace() {
     const returnAttributes = 'gender,age,ethnicity,beauty'
     try {
-      const response = await fetch(`${API.faceplusplus}detect`, {
+      const response = await fetch(`${Api.faceplusplus}detect`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -58,7 +54,6 @@ export default class Face extends Component {
   detect() {
     ModalIndicator.show('识别中')
     this.detectFace().then((res) => {
-      console.log(res)
       ModalIndicator.hide()
       Toast.fail('恭喜你，识别成功')
       const attr = res.faces[0].attributes
@@ -76,7 +71,6 @@ export default class Face extends Component {
       }
       this.setState({ face })
     }).catch((err) => {
-      console.log(err)
       ModalIndicator.hide()
       Toast.fail('识别失败，请重试')
     })

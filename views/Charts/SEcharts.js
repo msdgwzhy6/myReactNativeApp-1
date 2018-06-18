@@ -2,14 +2,20 @@ import React, { Component } from 'react'
 import {
   ScrollView,
   StyleSheet,
-  Image,
   View,
+  Image,
 } from 'react-native'
 import { Echarts } from 'react-native-secharts'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  marginAuto: {
+    marginTop: 0,
+    marginRight: 'auto',
+    marginBottom: 0,
+    marginLeft: 'auto',
   },
 })
 
@@ -67,17 +73,20 @@ export default class SEcharts extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Echarts
-          option={this.option}
-          height={400}
-          ref={(c) => { this.echarts = c }}
-          onPress={() => { this.getImage() }}
-        />
-        <Image
-          source={{ uri: this.state.image ? this.state.image : null }}
-          resizeMode="contain"
-          style={{ height: 400, width: 400 }}
-        />
+        <View style={[styles.marginAuto]}>
+          <Echarts
+            option={this.option}
+            height={300}
+            width={300}
+            ref={(c) => { this.echarts = c }}
+            onPress={() => { this.getImage() }}
+          />
+          <Image
+            source={{ uri: this.state.image ? this.state.image : null }}
+            resizeMode="contain"
+            style={{ height: 300, width: 300 }}
+          />
+        </View>
       </ScrollView>
     )
   }

@@ -46,6 +46,13 @@ export default class Home extends Component {
           title="ArticleList"
           onPress={() => this.props.navigation.navigate('ArticleList')}
         />
+        <Button
+          style={[styles.btn]}
+          type="danger"
+          size="lg"
+          title="Face"
+          onPress={() => this.props.navigation.navigate('Face')}
+        />
       </ScrollView>
     )
   }
