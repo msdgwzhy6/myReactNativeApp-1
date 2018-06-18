@@ -23,11 +23,7 @@ const styles = StyleSheet.create({
 
 export default class ArticleListScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
-    headerTitle: navigation.getParam('title', '文章列表'),
-    headerStyle: {
-      backgroundColor: '',
-    },
-    headerTintColor: '',
+    headerTitle: navigation.getParam('headerTitle', '文章列表'),
   })
   constructor(props) {
     super(props)

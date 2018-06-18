@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 
 export default class EchartsBar extends Component {
   static navigationOptions = ({ navigation }) => ({
-    title: navigation.getParam('title', 'EchartsBar'),
+    title: navigation.getParam('title', 'Echarts'),
   })
   constructor(props) {
     super(props)

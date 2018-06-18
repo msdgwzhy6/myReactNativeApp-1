@@ -50,7 +50,7 @@ export default class Home extends Component {
           style={[styles.btn]}
           type="danger"
           size="lg"
-          title="Face"
+          title="Face++"
           onPress={() => this.props.navigation.navigate('Face')}
         />
       </ScrollView>

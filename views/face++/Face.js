@@ -5,10 +5,8 @@ import {
   StyleSheet,
 } from 'react-native'
 import { Button, ListRow, ModalIndicator, Toast } from 'teaset'
-import { Key, Api } from '../../Const'
+import { FacePlusPlus } from '../../Const'
 
-// const Key = Const.Key
-// const API = Const.API
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -38,12 +36,12 @@ export default class Face extends Component {
   async detectFace() {
     const returnAttributes = 'gender,age,ethnicity,beauty'
     try {
-      const response = await fetch(`${Api.faceplusplus}detect`, {
+      const response = await fetch(`${FacePlusPlus.BaseApi}detect`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: `api_key=${Key.faceKey}&api_secret=${Key.faceSecret}&image_url=${this.state.img[0]}&return_landmark=1&return_attributes=${returnAttributes}`,
+        body: `api_key=${FacePlusPlus.API_KEY}&api_secret=${FacePlusPlus.API_SECRET}&image_url=${this.state.img[0]}&return_landmark=1&return_attributes=${returnAttributes}`,
       })
       const responseJson = response.json()
       return responseJson

@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
 export default class AntDMobileRN extends Component {
   static navigationOptions = ({ navigation }) => ({
-    title: navigation.getParam('title', 'AntDMobileRN'),
+    headerTitle: navigation.getParam('headerTitle', 'AntDMobileRN'),
   })
   constructor(props) {
     super(props)

@@ -1,8 +1,10 @@
 import React from 'react'
 import { Theme } from 'teaset'
 import Icon from 'react-native-vector-icons/FontAwesome'
-
-import { createBottomTabNavigator, createStackNavigator } from 'react-navigation'
+import {
+  createBottomTabNavigator,
+  createStackNavigator,
+} from 'react-navigation'
 // Home
 import Home from './views/Home'
 import ArticleList from './views/ArticleList'
@@ -77,6 +79,7 @@ const TeasetStack = createStackNavigator(
   },
   {
     navigationOptions: {
+      headerTitle: 'Teaset',
       headerStyle: {
         backgroundColor: Theme.primaryColor,
       },
@@ -92,6 +95,7 @@ const ChartsStack = createStackNavigator(
   },
   {
     navigationOptions: {
+      headerTitle: '图表',
       headerStyle: {
         backgroundColor: Theme.primaryColor,
       },
@@ -109,7 +113,6 @@ export default createBottomTabNavigator(
   {
     initialRouteName: 'Home',
     tabBarOptions: {
-      swipeEnabled: true,
       activeTintColor: Theme.primaryColor ? Theme.primaryColor : 'tomato',
       inactiveTintColor: 'gray',
     },
