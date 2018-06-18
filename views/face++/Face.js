@@ -5,10 +5,12 @@ import {
   StyleSheet,
 } from 'react-native'
 import { Button, ListRow, ModalIndicator, Toast } from 'youngjuning-teaset'
-import Const from '../../Const'
+import { Key } from '../../Const'
 
-const Key = Const.Key
-const API = Const.API
+alert(Key.faceKey)
+
+// const Key = Const.Key
+// const API = Const.API
 const styles = StyleSheet.create({
   container: {
     flex: 1,
