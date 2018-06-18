@@ -2,17 +2,15 @@ import { YellowBox, AppRegistry } from 'react-native'
 import App from './App'
 import AV from 'leancloud-storage/live-query'
 import { Theme } from 'teaset'
+import { Leancloud } from './Const'
 
 // 设置默认主题
 Theme.set(Theme.themes.poetry)
 
 // 初始化leancloud
-const APP_ID = 'your APP_ID'
-const APP_KEY = 'your APP_KEY'
-
 AV.init({
-  appId: APP_ID,
-  appKey: APP_KEY,
+  appId: Leancloud.APP_ID,
+  appKey: Leancloud.APP_KEY,
 })
 
 // YellowBox
