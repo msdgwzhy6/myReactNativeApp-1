@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
 export default class Home extends Component {
   static navigationOptions = ({ navigation }) => ({
-    title: navigation.getParam('title', 'Teaset'),
+    headerTitle: navigation.getParam('headerTitle', '首页'),
   })
   constructor(props) {
     super(props)

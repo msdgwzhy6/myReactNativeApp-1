@@ -49,7 +49,6 @@ const HomeStack = createStackNavigator(
   {
     initialRouteName: 'Home',
     navigationOptions: {
-      headerTitle: '首页',
       headerStyle: {
         backgroundColor: Theme.primaryColor,
       },
@@ -65,7 +64,6 @@ const AntDMobileRNStack = createStackNavigator(
   {
     initialRouteName: 'AntDMobileRN',
     navigationOptions: {
-      headerTitle: 'AntDMobileRN',
       headerStyle: {
         backgroundColor: Theme.primaryColor,
       },
@@ -79,7 +77,6 @@ const TeasetStack = createStackNavigator(
   },
   {
     navigationOptions: {
-      headerTitle: 'Teaset',
       headerStyle: {
         backgroundColor: Theme.primaryColor,
       },
@@ -95,11 +92,7 @@ const ChartsStack = createStackNavigator(
   },
   {
     navigationOptions: {
-      headerTitle: '图表',
-      headerStyle: {
-        backgroundColor: Theme.primaryColor,
-      },
-      headerTintColor: 'rgb(255,255,255)',
+      header: null,
     },
   },
 )
