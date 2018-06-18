@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
 
 export default class HeaderButton extends Component {
   static navigationOptions = ({ navigation }) => ({
-    title: navigation.getParam('title', 'HeaderButtons'),
+    headerTitle: navigation.getParam('title', 'HeaderButtons'),
     headerRight: (
       <HeaderButtons
         IconComponent={Icon}

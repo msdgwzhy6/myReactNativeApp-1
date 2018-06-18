@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
 
 export default class Login extends Component {
   static navigationOptions = ({ navigation }) => ({
-    title: navigation.getParam('title', '登录'),
+    headerTitle: navigation.getParam('title', '登录'),
   })
 
   // 初始化及挂载阶段

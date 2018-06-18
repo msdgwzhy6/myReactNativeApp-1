@@ -109,13 +109,6 @@ export default class Teaset extends Component {
         />
         <Button
           style={[styles.btn]}
-          type="secondary"
-          size="lg"
-          title="Projector 幻灯机"
-          onPress={() => this.props.navigation.navigate('Projector')}
-        />
-        <Button
-          style={[styles.btn]}
           type="danger"
           size="lg"
           title="SearchInput 搜索输入框"
@@ -133,20 +126,6 @@ export default class Teaset extends Component {
           size="lg"
           title="Stepper 步进器"
           onPress={() => this.props.navigation.navigate('Stepper')}
-        />
-        <Button
-          style={[styles.btn]}
-          type="secondary"
-          size="lg"
-          title="TabView 标签页"
-          onPress={() => this.props.navigation.navigate('TabView')}
-        />
-        <Button
-          style={[styles.btn]}
-          type="danger"
-          size="lg"
-          title="Wheel 滚轮"
-          onPress={() => this.props.navigation.navigate('Wheel')}
         />
       </ScrollView>
     )

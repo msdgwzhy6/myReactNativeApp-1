@@ -26,12 +26,9 @@ import Menu from './views/teaset/Menu'
 import Popover from './views/teaset/Popover'
 import PullPicker from './views/teaset/PullPicker'
 import PopoverPicker from './views/teaset/PopoverPicker'
-import Projector from './views/teaset/Projector'
 import SearchInput from './views/teaset/SearchInput'
 import Select from './views/teaset/Select'
 import Stepper from './views/teaset/Stepper'
-import TabView from './views/teaset/TabView'
-import Wheel from './views/teaset/Wheel'
 // Charts
 import Charts from './views/Charts'
 import echarts from './views/Charts/Echarts'
@@ -48,7 +45,9 @@ const HomeStack = createStackNavigator(
     Face,
   },
   {
+    initialRouteName: 'Home',
     navigationOptions: {
+      headerTitle: '首页',
       headerStyle: {
         backgroundColor: Theme.primaryColor,
       },
@@ -62,7 +61,9 @@ const AntDMobileRNStack = createStackNavigator(
     AntDDatePicker,
   },
   {
+    initialRouteName: 'AntDMobileRN',
     navigationOptions: {
+      headerTitle: 'AntDMobileRN',
       headerStyle: {
         backgroundColor: Theme.primaryColor,
       },
@@ -72,7 +73,7 @@ const AntDMobileRNStack = createStackNavigator(
 )
 const TeasetStack = createStackNavigator(
   {
-    Teaset, ActionPopover, ActionSheet, AlbumView, Badge, Carousel, Drawer, Checkbox, ListRow, Menu, Popover, PullPicker, PopoverPicker, Projector, SearchInput, Select, Stepper, TabView, Wheel,
+    Teaset, ActionPopover, ActionSheet, AlbumView, Badge, Carousel, Drawer, Checkbox, ListRow, Menu, Popover, PullPicker, PopoverPicker, SearchInput, Select, Stepper,
   },
   {
     navigationOptions: {
@@ -108,6 +109,7 @@ export default createBottomTabNavigator(
   {
     initialRouteName: 'Home',
     tabBarOptions: {
+      swipeEnabled: true,
       activeTintColor: Theme.primaryColor ? Theme.primaryColor : 'tomato',
       inactiveTintColor: 'gray',
     },

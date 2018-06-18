@@ -22,7 +22,13 @@ const styles = StyleSheet.create({
 })
 
 export default class ArticleListScreen extends Component {
-  // 一般来说，你需要在constructor中初始化state，然后在需要修改时调用setState方法
+  static navigationOptions = ({ navigation }) => ({
+    headerTitle: navigation.getParam('title', '文章列表'),
+    headerStyle: {
+      backgroundColor: '',
+    },
+    headerTintColor: '',
+  })
   constructor(props) {
     super(props)
     this.state = {

@@ -24,15 +24,15 @@ export default class TabViewScreen extends Component {
       <TabView style={styles.container} type="carousel">
         <TabView.Sheet
           title="Carousel"
-          icon={require('../../icons/home.png')}
-          activeIcon={require('../../icons/home_active.png')}
+          icon={require('../../assets/icons/home.png')}
+          activeIcon={require('../../assets/icons/home_active.png')}
         >
           <Carousel />
         </TabView.Sheet>
         <TabView.Sheet
           title="ListRow"
-          icon={require('../../icons/me.png')}
-          activeIcon={require('../../icons/me_active.png')}
+          icon={require('../../assets/icons/me.png')}
+          activeIcon={require('../../assets/icons/me_active.png')}
           badge={1}
         >
           <ListRow />

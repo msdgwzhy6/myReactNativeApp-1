@@ -12,6 +12,9 @@ const styles = StyleSheet.create({
 })
 
 export default class DatePickerScreen extends Component {
+  static navigationOptions = ({ navigation }) => ({
+    headerTitle: navigation.getParam('headerTitle', 'Datetime'),
+  })
   constructor(props) {
     super(props)
     this.state = {}

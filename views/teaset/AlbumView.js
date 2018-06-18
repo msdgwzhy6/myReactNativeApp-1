@@ -32,16 +32,16 @@ export default class AlbumViewScreen extends Component {
     super(props)
     this.state = {
       images: [
-        require('../../images/teaset1.jpg'),
-        require('../../images/teaset2.jpg'),
-        require('../../images/teaset3.jpg'),
-        require('../../images/faircup.jpg'),
+        require('../../assets/images/teaset1.jpg'),
+        require('../../assets/images/teaset2.jpg'),
+        require('../../assets/images/teaset3.jpg'),
+        require('../../assets/images/faircup.jpg'),
       ],
       thumbs: [
-        require('../../images/teaset1_s.jpg'),
-        require('../../images/teaset2_s.jpg'),
-        require('../../images/teaset3_s.jpg'),
-        require('../../images/faircup_s.jpg'),
+        require('../../assets/images/teaset1_s.jpg'),
+        require('../../assets/images/teaset2_s.jpg'),
+        require('../../assets/images/teaset3_s.jpg'),
+        require('../../assets/images/faircup_s.jpg'),
       ],
     }
   }

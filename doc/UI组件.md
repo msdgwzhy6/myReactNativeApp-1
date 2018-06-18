@@ -1,4 +1,4 @@
-## 原生组件
+# 原生组件
 
 - View
 - ScrollView
@@ -7,16 +7,16 @@
 - Text
 - Image
 
-## teaset组件
+# teaset组件
 
-### 实用组件
+## 实用组件
 
 - [x] [ActionPopover](http://t.cn/RBau8Wj) - 操作气泡【API】
 - [x] [ActionSheet](http://t.cn/RBauuct) - 操作选单【API】
 - [x] [AlbumView](http://t.cn/RBaurNM) - 相册视图
 - [x] [Badge](http://t.cn/RBS9a7P) - 徽章
 - [x] [Button](http://t.cn/RBS3J7j) - 按钮
-- [x] [Carousel](http://t.cn/RBS9j2X) - 走马灯
+- [x] [Carousel](http://t.cn/RBS9j2X) - 走马灯（轮播图）
 - [x] [Checkbox](http://t.cn/RBS1Lzp) - 复选框
 - [x] [Drawer](http://t.cn/RBS1tII) - 抽屉【API】
 - [x] [Input](http://t.cn/RBS3XTy) - 输入框
@@ -33,7 +33,7 @@
 - [x] [Theme](http://t.cn/RBS3Rhj) - 主题【API】
 - [x] [Toast](http://t.cn/RBS3N1H)- 轻提示【API】
 
-### 一般用不到的组件
+## 一般用不到的组件
 
 - [x] [PopoverPicker](http://t.cn/RBCzN8u) - 气泡选择器【API】**（一般不直接用）**
 - [x] [Projector](http://t.cn/RBCzEgx) - 幻灯机 **(一般不直接使用)**
@@ -43,7 +43,7 @@
 - [x] BasePage：基础页面，用不到
 - [x] [Wheel](http://t.cn/RBCNsqp) - 滚轮 **(一般不直接使用)**
 
-### 使用 react-navigation 代替的组件
+## 使用 react-navigation 代替的组件
 
 - [x] NavigationBar：**使用 react-navigation 代替**
 - [x] NavigationPage：**使用 react-navigation 代替**
