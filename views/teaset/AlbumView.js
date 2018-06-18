@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native'
-import { AlbumView, Overlay } from 'youngjuning-teaset'
+import { AlbumView, Overlay } from 'teaset'
 
 const styles = StyleSheet.create({
   container: {

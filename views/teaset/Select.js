@@ -4,7 +4,7 @@ import {
   View,
   StyleSheet,
 } from 'react-native'
-import { Select } from 'youngjuning-teaset'
+import { Select } from 'teaset'
 
 const styles = StyleSheet.create({
   container: {

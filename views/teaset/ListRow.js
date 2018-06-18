@@ -5,7 +5,7 @@ import {
   Alert,
   StyleSheet,
 } from 'react-native'
-import { ListRow, Theme } from 'youngjuning-teaset'
+import { ListRow, Theme } from 'teaset'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 const styles = StyleSheet.create({

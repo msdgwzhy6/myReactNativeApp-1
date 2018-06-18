@@ -5,7 +5,7 @@ import {
   ScrollView,
   StyleSheet,
 } from 'react-native'
-import { Projector, Label, Input, Button, ListRow } from 'youngjuning-teaset'
+import { Projector, Label, Input, Button, ListRow } from 'teaset'
 
 const styles = StyleSheet.create({
   container: {

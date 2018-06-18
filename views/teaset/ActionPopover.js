@@ -6,7 +6,7 @@ import {
   StyleSheet,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import { ActionPopover, Button } from 'youngjuning-teaset'
+import { ActionPopover, Button } from 'teaset'
 
 const styles = StyleSheet.create({
   container: {

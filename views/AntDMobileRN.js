@@ -3,7 +3,7 @@ import {
   ScrollView,
   StyleSheet,
 } from 'react-native'
-import { Button } from 'youngjuning-teaset'
+import { Button } from 'teaset'
 
 const styles = StyleSheet.create({
   container: {

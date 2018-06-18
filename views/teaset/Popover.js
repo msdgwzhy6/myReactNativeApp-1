@@ -4,7 +4,7 @@ import {
   View,
   StyleSheet,
 } from 'react-native'
-import { Popover, Label } from 'youngjuning-teaset'
+import { Popover, Label } from 'teaset'
 
 const styles = StyleSheet.create({
   container: {
