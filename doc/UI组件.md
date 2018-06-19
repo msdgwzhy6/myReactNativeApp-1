@@ -26,8 +26,6 @@
 - [x] [ModalIndicator](http://t.cn/RB9YcOv) - 模态指示器【API】
 - [x] [Popover](http://t.cn/RB9kP79) - 气泡
 - [x] [SearchInput](http://t.cn/RB9kGsb) - 搜索输入框
-- [ ] [SegmentedBar](http://t.cn/RBCCYg9) - 分段工具条
-- [ ] [SegmentedView](http://t.cn/RBCCnaL) - 分段器
 - [x] [Select](http://t.cn/RBCNCVg) - 选择框
 - [x] [Stepper](http://t.cn/RBCNWrV) - 步进器（计数器）
 - [x] [Theme](http://t.cn/RBS3Rhj) - 主题【API】
@@ -45,7 +43,8 @@
 
 ## 使用 react-navigation 代替的组件
 
-- [x] NavigationBar：**使用 react-navigation 代替**
-- [x] NavigationPage：**使用 react-navigation 代替**
-- [x] TabView：**使用 react-navigation 代替**
-- [x] TeaNavigator：**使用 react-navigation 代替**
+- [x] NavigationBar
+- [x] NavigationPage
+- [x] TabView
+- [x] TeaNavigator
+- [ ] SegmentedBar + SegmentedView
