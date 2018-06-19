@@ -32,7 +32,16 @@ export default class Home extends Component {
           titlePlace="top"
           topSeparator="none"
           bottomSeparator="indent"
-          onPress={(indicator) => { this.props.navigation.navigate('ReactNativePicker') }}
+          accessory="indicator"
+          onPress={() => { this.props.navigation.navigate('ReactNativePicker') }}
+        />
+        <ListRow
+          title="react-native-modal-datetime-picker"
+          titlePlace="top"
+          detail="A React-Native datetime-picker for Android and iOS"
+          accessory="indicator"
+          bottomSeparator="full"
+          onPress={() => { this.props.navigation.navigate('ReactNativeModalDatetimePicker') }}
         />
       </ScrollView>
     )
