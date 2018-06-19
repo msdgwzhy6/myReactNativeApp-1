@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {
   View,
+  Text,
   StyleSheet,
 } from 'react-native'
 import Echarts from 'youngjuning-native-echarts'
@@ -12,9 +13,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  center: {
+    alignSelf: 'center',
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
 })
 
-export default class EchartsBar extends Component {
+export default class EchartsScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('title', 'Echarts'),
   })
@@ -61,7 +67,9 @@ export default class EchartsBar extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Text style={[styles.center]}>作者本人不维护了，该插件又特别臃肿，持续关注</Text>
         <Echarts
+          style={[styles.center]}
           ref={(c) => { this.bar = c }}
           option={this.option}
           height={250}

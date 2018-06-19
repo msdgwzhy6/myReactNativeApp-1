@@ -4,6 +4,7 @@ import {
   StyleSheet,
   View,
   Image,
+  Text,
 } from 'react-native'
 import { Echarts } from 'react-native-secharts'
 
@@ -44,24 +45,6 @@ export default class SEcharts extends Component {
         data: [5, 20, 36, 10, 10, 20],
       }],
     }
-    this.option1 = {
-      title: {
-        text: '冬季销量',
-      },
-      tooltip: {},
-      legend: {
-        data: ['销量'],
-      },
-      xAxis: {
-        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
-      },
-      yAxis: {},
-      series: [{
-        name: '销量',
-        type: 'bar',
-        data: [5, 20, 36, 10, 10, 20],
-      }],
-    }
     this.state = {}
   }
   getImage() {
@@ -74,6 +57,8 @@ export default class SEcharts extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
+        <Text style={{ alignSelf: 'center', paddingTop: 20, paddingBottom: 20 }}>目前最好用的 echarts native
+        </Text>
         <View style={[styles.marginAuto]}>
           <Echarts
             option={this.option}

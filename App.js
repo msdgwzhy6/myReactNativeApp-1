@@ -105,7 +105,7 @@ const ChartsStack = createMaterialTopTabNavigator(
     secharts,
   },
   {
-    initialRouteName: 'echarts',
+    initialRouteName: 'secharts',
     navigationOptions: {
       header: null,
     },
