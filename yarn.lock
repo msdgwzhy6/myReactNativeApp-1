@@ -5985,9 +5985,9 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-youngjuning-native-echarts@0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/youngjuning-native-echarts/-/youngjuning-native-echarts-0.4.2.tgz#ecd45523f38724a308553b1f8c7332c5be3353a4"
+youngjuning-native-echarts@0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/youngjuning-native-echarts/-/youngjuning-native-echarts-0.4.4.tgz#752b64494103818a047f221fec6a71009830359a"
   dependencies:
     echarts "3.2.3"
 
