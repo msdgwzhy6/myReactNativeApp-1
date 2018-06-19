@@ -40,8 +40,15 @@ export default class Home extends Component {
           titlePlace="top"
           detail="A React-Native datetime-picker for Android and iOS"
           accessory="indicator"
-          bottomSeparator="full"
           onPress={() => { this.props.navigation.navigate('ReactNativeModalDatetimePicker') }}
+        />
+        <ListRow
+          title="react-native-calendars"
+          detail="React Native Calendar Components 📆"
+          titlePlace="top"
+          bottomSeparator="full"
+          accessory="indicator"
+          onPress={() => { this.props.navigation.navigate('ReactNativeCalendars') }}
         />
       </ScrollView>
     )
