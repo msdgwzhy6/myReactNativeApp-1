@@ -114,7 +114,7 @@ const ChartsStack = createMaterialTopTabNavigator(
     },
   },
 )
-const Stacks = [HomeStack, AntDMobileRNStack, TeasetStack]
+const Stacks = [HomeStack, AntDMobileRNStack, TeasetStack, PluginsStack, ChartsStack]
 Stacks.forEach((item) => {
   item.navigationOptions = ({ navigation }) => {
     let tabBarVisible = true
