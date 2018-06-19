@@ -34,6 +34,7 @@ import Select from './views/Teaset/Select'
 import Stepper from './views/Teaset/Stepper'
 // Plugins
 import Plugins from './views/Plugins'
+import ReactNativePicker from './views/Plugins/ReactNativePicker'
 // Charts
 import echarts from './views/Charts/Echarts'
 import secharts from './views/Charts/SEcharts'
@@ -88,7 +89,7 @@ const TeasetStack = createStackNavigator(
 )
 const PluginsStack = createStackNavigator(
   {
-    Plugins,
+    Plugins, ReactNativePicker,
   },
   {
     navigationOptions: {

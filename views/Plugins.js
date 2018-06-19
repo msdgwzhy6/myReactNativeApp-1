@@ -27,11 +27,12 @@ export default class Home extends Component {
     return (
       <ScrollView style={[styles.container]}>
         <ListRow
-          title="Title"
-          detail="detail"
+          title="react-native-picker"
+          detail="A Native Picker with high performance."
+          titlePlace="top"
           topSeparator="none"
-          bottomSeparator="full"
-          onPress={(indicator) => { }}
+          bottomSeparator="indent"
+          onPress={(indicator) => { this.props.navigation.navigate('ReactNativePicker') }}
         />
       </ScrollView>
     )

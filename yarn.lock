@@ -1558,6 +1558,10 @@ charenc@~0.0.1:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
 
+china-area-data@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/china-area-data/-/china-area-data-4.0.0.tgz#95c27bf4dff8b99ee92f972b1739d551da7f303b"
+
 chownr@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.0.1.tgz#e2a75042a9551908bebd25b8523d5f9769d79181"
@@ -4549,6 +4553,10 @@ react-native-menu@^0.23.0:
     create-react-class "^15.6.0"
     prop-types "^15.5.10"
     react-timer-mixin "^0.13.3"
+
+react-native-picker-area-json@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-picker-area-json/-/react-native-picker-area-json-1.0.0.tgz#a93393ceb43c5633779e34142340439c4ae64d84"
 
 react-native-picker@^4.3.7:
   version "4.3.7"
