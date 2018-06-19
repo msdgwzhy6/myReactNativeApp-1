@@ -129,8 +129,8 @@ export default createBottomTabNavigator(
     Home: HomeStack,
     AntDMobile: AntDMobileRNStack,
     Teaset: TeasetStack,
-    Charts: ChartsStack,
     Plugins: PluginsStack,
+    Charts: ChartsStack,
   },
   {
     initialRouteName: 'Home',
@@ -148,6 +148,8 @@ export default createBottomTabNavigator(
           iconName = 'heart'
         } else if (routeName === 'Teaset') {
           iconName = 'thumbs-up'
+        } else if (routeName === 'Plugins') {
+          iconName = 'th-list'
         } else if (routeName === 'Charts') {
           iconName = 'area-chart'
         }

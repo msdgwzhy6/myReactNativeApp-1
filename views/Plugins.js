@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
 export default class Home extends Component {
   static navigationOptions = ({ navigation }) => ({
-    headerTitle: navigation.getParam('headerTitle', '首页'),
+    headerTitle: navigation.getParam('headerTitle', '第三方插件'),
   })
   constructor(props) {
     super(props)
@@ -31,11 +31,6 @@ export default class Home extends Component {
           detail="detail"
           topSeparator="none"
           bottomSeparator="full"
-          onPress={(indicator) => { }}
-        />
-        <ListRow
-          title="Title"
-          detail="detail"
           onPress={(indicator) => { }}
         />
       </ScrollView>
