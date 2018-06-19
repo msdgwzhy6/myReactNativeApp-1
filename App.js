@@ -135,7 +135,7 @@ export default createBottomTabNavigator(
     Charts: ChartsStack,
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Plugins',
     tabBarOptions: {
       activeTintColor: Theme.primaryColor ? Theme.primaryColor : 'tomato',
       inactiveTintColor: 'gray',
