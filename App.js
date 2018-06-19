@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import {
   createBottomTabNavigator,
   createStackNavigator,
+  createMaterialTopTabNavigator,
 } from 'react-navigation'
 // Home
 import Home from './views/Home'
@@ -31,8 +32,9 @@ import PopoverPicker from './views/Teaset/PopoverPicker'
 import SearchInput from './views/Teaset/SearchInput'
 import Select from './views/Teaset/Select'
 import Stepper from './views/Teaset/Stepper'
+// Plugins
+import Plugins from './views/Plugins'
 // Charts
-import Charts from './views/Charts'
 import echarts from './views/Charts/Echarts'
 import secharts from './views/Charts/SEcharts'
 
@@ -84,13 +86,26 @@ const TeasetStack = createStackNavigator(
     },
   },
 )
-const ChartsStack = createStackNavigator(
+const PluginsStack = createStackNavigator(
   {
-    Charts,
+    Plugins,
+  },
+  {
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: Theme.primaryColor,
+      },
+      headerTintColor: 'rgb(255,255,255)',
+    },
+  },
+)
+const ChartsStack = createMaterialTopTabNavigator(
+  {
     echarts,
     secharts,
   },
   {
+    initialRouteName: 'echarts',
     navigationOptions: {
       header: null,
     },
@@ -115,6 +130,7 @@ export default createBottomTabNavigator(
     AntDMobile: AntDMobileRNStack,
     Teaset: TeasetStack,
     Charts: ChartsStack,
+    Plugins: PluginsStack,
   },
   {
     initialRouteName: 'Home',

@@ -10,6 +10,7 @@ import { Echarts } from 'react-native-secharts'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#ffffff',
   },
   marginAuto: {
     marginTop: 0,
