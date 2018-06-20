@@ -4599,6 +4599,10 @@ react-native-modal@^5.4.0:
     prop-types "^15.6.1"
     react-native-animatable "^1.2.4"
 
+react-native-netease-im@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/react-native-netease-im/-/react-native-netease-im-2.0.8.tgz#14a060940c6431788d8831efd2c79c4824713bca"
+
 react-native-picker-area-json@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-native-picker-area-json/-/react-native-picker-area-json-1.0.0.tgz#a93393ceb43c5633779e34142340439c4ae64d84"
