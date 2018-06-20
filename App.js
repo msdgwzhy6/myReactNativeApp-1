@@ -34,7 +34,6 @@ import Select from './views/Teaset/Select'
 import Stepper from './views/Teaset/Stepper'
 // Plugins
 import Plugins from './views/Plugins'
-import ReactNativePicker from './views/Plugins/ReactNativePicker'
 import ReactNativeModalDatetimePicker from './views/Plugins/ReactNativeModalDatetimePicker'
 import ReactNativeCalendars from './views/Plugins/ReactNativeCalendars'
 // Charts
@@ -91,7 +90,7 @@ const TeasetStack = createStackNavigator(
 )
 const PluginsStack = createStackNavigator(
   {
-    Plugins, ReactNativePicker, ReactNativeModalDatetimePicker, ReactNativeCalendars,
+    Plugins, ReactNativeModalDatetimePicker, ReactNativeCalendars,
   },
   {
     navigationOptions: {
