@@ -31,6 +31,7 @@ export default class Home extends Component {
           titlePlace="top"
           detail="A Native Picker with high performance."
           accessory="indicator"
+          topSeparator="full"
           onPress={() => { this.props.navigation.navigate('ReactNativePicker') }}
         />
         <ListRow
@@ -46,6 +47,14 @@ export default class Home extends Component {
           titlePlace="top"
           accessory="indicator"
           onPress={() => { this.props.navigation.navigate('ReactNativeCalendars') }}
+        />
+        <ListRow
+          title="react-native-amap3d"
+          detail="react-native 高德地图组件，使用最新 3D SDK，支持 Android + iOS"
+          titlePlace="top"
+          bottomSeparator="full"
+          accessory="indicator"
+          onPress={() => { this.props.navigation.navigate('ReactNativeAmap3d') }}
         />
       </ScrollView>
     )
