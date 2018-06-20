@@ -1558,10 +1558,6 @@ charenc@~0.0.1:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
 
-china-area-data@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/china-area-data/-/china-area-data-4.0.0.tgz#95c27bf4dff8b99ee92f972b1739d551da7f303b"
-
 chownr@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.0.1.tgz#e2a75042a9551908bebd25b8523d5f9769d79181"
@@ -4598,10 +4594,6 @@ react-native-modal@^5.4.0:
   dependencies:
     prop-types "^15.6.1"
     react-native-animatable "^1.2.4"
-
-react-native-netease-im@^2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/react-native-netease-im/-/react-native-netease-im-2.0.8.tgz#14a060940c6431788d8831efd2c79c4824713bca"
 
 react-native-picker-area-json@^1.0.0:
   version "1.0.0"
