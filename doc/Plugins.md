@@ -13,5 +13,7 @@ $ yarn add react-native-picker
 ## link
 
 ```
-$ react-native link
+$ react-native link react-native-picker
 ```
+
+> 链接完需要重新编译才会生效

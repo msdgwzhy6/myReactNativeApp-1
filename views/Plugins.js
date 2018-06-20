@@ -27,6 +27,13 @@ export default class Home extends Component {
     return (
       <ScrollView style={[styles.container]}>
         <ListRow
+          title="ReactNativePicker"
+          titlePlace="top"
+          detail="A Native Picker with high performance."
+          accessory="indicator"
+          onPress={() => { this.props.navigation.navigate('ReactNativePicker') }}
+        />
+        <ListRow
           title="react-native-modal-datetime-picker"
           titlePlace="top"
           detail="A React-Native datetime-picker for Android and iOS"
