@@ -16,4 +16,4 @@ $ yarn add react-native-picker
 $ react-native link react-native-picker
 ```
 
-> 链接完需要重新编译才会生效
+> 链接完需要重新编译才会生效，这个插件经常导致编译失败，慎用

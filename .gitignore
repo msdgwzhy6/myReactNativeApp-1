@@ -1,6 +1,3 @@
-# KEY
-#
-
 # OSX
 #
 .DS_Store
@@ -42,7 +39,7 @@ yarn-error.log
 # BUCK
 buck-out/
 \.buckd/
-*.keystore
+# *.keystore
 
 # fastlane
 #

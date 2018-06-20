@@ -117,6 +117,15 @@ android {
   //   }
   // }
 
+  signingConfigs {
+    release {
+      storeFile file("my-release-key.keystore")
+      storePassword "jun19931129"
+      keyAlias "my-key-alias"
+      keyPassword "jun19931129"
+    }
+  }
+
   splits {
     abi {
       reset()
@@ -129,7 +138,7 @@ android {
     release {
       minifyEnabled enableProguardInReleaseBuilds
       proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-      // signingConfig signingConfigs.release
+      signingConfig signingConfigs.release
     }
   }
   // applicationVariants are e.g. debug, release
@@ -147,6 +156,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-baidu-map')
     compile project(':react-native-picker')
     compile project(':react-native-vector-icons')
   compile fileTree(dir: "libs", include: ["*.jar"])

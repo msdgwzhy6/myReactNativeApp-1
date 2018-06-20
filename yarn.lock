@@ -4516,6 +4516,10 @@ react-native-animatable@^1.2.4:
   dependencies:
     prop-types "^15.5.10"
 
+react-native-baidu-map@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-baidu-map/-/react-native-baidu-map-0.6.0.tgz#cb4937181e8e0cd2125d347a5b87ca13971647dd"
+
 react-native-calendars@^1.19.3:
   version "1.19.3"
   resolved "https://registry.yarnpkg.com/react-native-calendars/-/react-native-calendars-1.19.3.tgz#4a9a6ec9d695b9f5f6003d80fe6c0930453e89eb"

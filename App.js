@@ -37,6 +37,7 @@ import ReactNativePicker from './views/Plugins/ReactNativePicker'
 import Plugins from './views/Plugins'
 import ReactNativeModalDatetimePicker from './views/Plugins/ReactNativeModalDatetimePicker'
 import ReactNativeCalendars from './views/Plugins/ReactNativeCalendars'
+import ReactNativeBaiduMap from './views/Plugins/ReactNativeBaiduMap'
 // Charts
 import echarts from './views/Charts/Echarts'
 import secharts from './views/Charts/SEcharts'
@@ -91,7 +92,7 @@ const TeasetStack = createStackNavigator(
 )
 const PluginsStack = createStackNavigator(
   {
-    Plugins, ReactNativePicker, ReactNativeModalDatetimePicker, ReactNativeCalendars,
+    Plugins, ReactNativePicker, ReactNativeModalDatetimePicker, ReactNativeCalendars, ReactNativeBaiduMap,
   },
   {
     navigationOptions: {
