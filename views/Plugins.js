@@ -47,14 +47,6 @@ export default class Home extends Component {
           accessory="indicator"
           onPress={() => { this.props.navigation.navigate('ReactNativeCalendars') }}
         />
-        <ListRow
-          title="react-native-baidu-map"
-          detail="百度地图相关模块和视图，支持react native 0.40+"
-          titlePlace="top"
-          bottomSeparator="full"
-          accessory="indicator"
-          onPress={() => { this.props.navigation.navigate('ReactNativeBaiduMap') }}
-        />
       </ScrollView>
     )
   }
