@@ -52,9 +52,16 @@ export default class Home extends Component {
           title="react-native-amap3d"
           detail="react-native 高德地图组件，使用最新 3D SDK，支持 Android + iOS"
           titlePlace="top"
-          bottomSeparator="full"
           accessory="indicator"
           onPress={() => { this.props.navigation.navigate('ReactNativeAmap3d') }}
+        />
+        <ListRow
+          title="react-native-gifted-chat"
+          detail="💬 The most complete chat UI for React Native"
+          titlePlace="top"
+          bottomSeparator="full"
+          accessory="indicator"
+          onPress={() => { this.props.navigation.navigate('GiftedChat') }}
         />
       </ScrollView>
     )

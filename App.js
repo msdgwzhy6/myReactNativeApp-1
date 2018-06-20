@@ -38,6 +38,7 @@ import Plugins from './views/Plugins'
 import ReactNativeModalDatetimePicker from './views/Plugins/ReactNativeModalDatetimePicker'
 import ReactNativeCalendars from './views/Plugins/ReactNativeCalendars'
 import ReactNativeAmap3d from './views/Plugins/ReactNativeAmap3d'
+import GiftedChat from './views/Plugins/GiftedChat'
 // Charts
 import echarts from './views/Charts/Echarts'
 import secharts from './views/Charts/SEcharts'
@@ -92,7 +93,7 @@ const TeasetStack = createStackNavigator(
 )
 const PluginsStack = createStackNavigator(
   {
-    Plugins, ReactNativePicker, ReactNativeModalDatetimePicker, ReactNativeCalendars, ReactNativeAmap3d,
+    Plugins, ReactNativePicker, ReactNativeModalDatetimePicker, ReactNativeCalendars, ReactNativeAmap3d, GiftedChat,
   },
   {
     navigationOptions: {
