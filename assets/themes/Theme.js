@@ -1,6 +1,5 @@
 // Theme.js
 
-
 import { Platform, Dimensions, NativeModules, DeviceInfo, StatusBar } from 'react-native'
 
 import ThemeDefault from './ThemeDefault'

@@ -1,5 +1,17 @@
 # myReactNativeApp
 
+## 切换
+
+默认是基于 antd-react-native 的，切换的换请修改 index.js 中的代码
+
+```js
+...
+// import TeasetApp from './App-teaset'
+import AntdApp from './App-antd'
+...
+AppRegistry.registerComponent('myReactNativeApp', () => AntdApp)
+```
+
 ## 插件
 
 - **native-echarts**：基于 React Native 和 Echarts 的图表插件

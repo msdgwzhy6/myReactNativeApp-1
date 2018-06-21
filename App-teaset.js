@@ -6,6 +6,8 @@ import {
   createStackNavigator,
   createMaterialTopTabNavigator,
 } from 'react-navigation'
+import AV from 'leancloud-storage/live-query'
+import { Leancloud } from './assets/Const'
 // Home
 import Home from './views/Home'
 import ArticleList from './views/ArticleList'
@@ -43,6 +45,12 @@ import GiftedChat from './views/Plugins/GiftedChat'
 import echarts from './views/Charts/Echarts'
 import secharts from './views/Charts/SEcharts'
 
+// 初始化leancloud
+AV.init({
+  appId: Leancloud.APP_ID,
+  appKey: Leancloud.APP_KEY,
+})
+// 设置teaset主题
 Theme.set(Theme.themes.poetry)
 
 const HomeStack = createStackNavigator(
