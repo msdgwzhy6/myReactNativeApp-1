@@ -1,7 +1,7 @@
 import React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import Theme from './assets/Theme'
 import {
-  createBottomTabNavigator,
   createStackNavigator,
   createMaterialTopTabNavigator,
 } from 'react-navigation'
@@ -37,6 +37,7 @@ AV.init({
   appKey: Leancloud.APP_KEY,
 })
 
+// 首页页面栈
 const HomeStack = createStackNavigator(
   {
     Home,
@@ -48,12 +49,13 @@ const HomeStack = createStackNavigator(
     initialRouteName: 'Home',
     navigationOptions: {
       headerStyle: {
-        backgroundColor: '#694fad',
+        backgroundColor: 'rgb(255,255,255)',
       },
-      headerTintColor: 'rgb(255,255,255)',
+      headerTintColor: Theme.primaryColor,
     },
   },
 )
+// antd-mobile-rn 页面栈
 const AntDMobileRNStack = createStackNavigator(
   {
     AntDMobileRN,
@@ -63,12 +65,13 @@ const AntDMobileRNStack = createStackNavigator(
     initialRouteName: 'AntDMobileRN',
     navigationOptions: {
       headerStyle: {
-        backgroundColor: '#694fad',
+        backgroundColor: 'rgb(255,255,255)',
       },
-      headerTintColor: 'rgb(255,255,255)',
+      headerTintColor: Theme.primaryColor,
     },
   },
 )
+// 插件页面栈
 const PluginsStack = createStackNavigator(
   {
     Plugins, ReactNativePicker, ReactNativeModalDatetimePicker, ReactNativeCalendars, ReactNativeAmap3d, GiftedChat,
@@ -76,12 +79,13 @@ const PluginsStack = createStackNavigator(
   {
     navigationOptions: {
       headerStyle: {
-        backgroundColor: '#694fad',
+        backgroundColor: 'rgb(255,255,255)',
       },
-      headerTintColor: 'rgb(255,255,255)',
+      headerTintColor: Theme.primaryColor,
     },
   },
 )
+// 图表页面栈
 const ChartsStack = createMaterialTopTabNavigator(
   {
     echarts,
@@ -90,10 +94,8 @@ const ChartsStack = createMaterialTopTabNavigator(
   {
     initialRouteName: 'secharts',
     tabBarOptions: {
-      activeTintColor: '#e91e63',
-      activeBackgroundColor: '#e91e63',
       style: {
-        backgroundColor: '#694fad',
+        backgroundColor: Theme.primaryColor,
       },
     },
     navigationOptions: {
@@ -101,6 +103,7 @@ const ChartsStack = createMaterialTopTabNavigator(
     },
   },
 )
+
 // 打开全屏模式的页面栈
 const NavigationStack = createStackNavigator(
   {
@@ -113,12 +116,13 @@ const NavigationStack = createStackNavigator(
     navigationOptions: {
       headerTitle: 'React Navigation',
       headerStyle: {
-        backgroundColor: '#694fad',
+        backgroundColor: 'rgb(255,255,255)',
       },
-      headerTintColor: 'rgb(255,255,255)',
+      headerTintColor: Theme.primaryColor,
     },
   },
 )
+
 // 指定页面隐藏header
 const Stacks = [HomeStack, AntDMobileRNStack, PluginsStack, NavigationStack]
 Stacks.forEach((item) => {
@@ -133,6 +137,7 @@ Stacks.forEach((item) => {
   }
 })
 
+// 构建材料设计的底部导航
 export default createMaterialBottomTabNavigator(
   {
     Home: HomeStack,
@@ -142,13 +147,13 @@ export default createMaterialBottomTabNavigator(
     Navigation: NavigationStack,
   },
   {
-    initialRouteName: 'AntDMobile',
-    activeTintColor: '#f0edf6',
-    inactiveTintColor: '#3e2465',
-    barStyle: { backgroundColor: '#694fad' },
+    initialRouteName: 'Plugins',
+    activeTintColor: Theme.primaryColor,
+    inactiveTintColor: 'gray',
+    barStyle: { backgroundColor: '#fff' },
     labeled: true,
     navigationOptions: ({ navigation }) => ({
-      tabBarIcon: ({ focused, tintColor }) => {
+      tabBarIcon: ({ tintColor }) => {
         const { routeName } = navigation.state
         let iconName
         if (routeName === 'Home') {
