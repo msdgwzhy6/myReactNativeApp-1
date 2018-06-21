@@ -5,7 +5,7 @@ import {
   StyleSheet,
 } from 'react-native'
 import { Button, ListRow, ModalIndicator, Toast } from 'teaset'
-import { FacePlusPlus } from '../../Const'
+import { FacePlusPlus } from '../../assets/Const'
 
 const styles = StyleSheet.create({
   container: {

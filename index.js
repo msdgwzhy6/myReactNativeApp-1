@@ -2,7 +2,7 @@ import { YellowBox, AppRegistry } from 'react-native'
 import App from './App'
 import AV from 'leancloud-storage/live-query'
 import { Theme } from 'teaset'
-import { Leancloud } from './Const'
+import { Leancloud } from './assets/Const'
 
 // 设置默认主题
 Theme.set(Theme.themes.poetry)
