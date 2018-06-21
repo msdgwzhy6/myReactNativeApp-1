@@ -20,4 +20,7 @@ const RocketStack = createMaterialTopTabNavigator({
   SEcharts,
 }, {
   initialRouteName: 'Echarts',
+  tabBarOptions: {
+    scrollEnabled: true,
+  },
 })
