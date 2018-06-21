@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, Dimensions } from 'react-native'
+import { View, Alert, StyleSheet } from 'react-native'
 
 import { GiftedChat, Bubble } from 'react-native-gifted-chat'
-import ImageViewer from 'react-native-image-zoom-viewer'
 
 const styles = StyleSheet.create({
   container: {
@@ -18,7 +17,6 @@ export default class GiftedChatScreen extends Component {
     super(props)
     this.state = {
       messages: [],
-      visible: false,
     }
   }
   componentWillMount() {
@@ -64,7 +62,7 @@ export default class GiftedChatScreen extends Component {
         <GiftedChat
           messages={this.state.messages}
           onSend={messages => this.onSend(messages)}
-          onPressAvatar={() => this.showModal()}
+          onPressAvatar={() => Alert.alert('点击了头像')}
           user={{
             _id: 1,
             avatar: 'https://placeimg.com/140/140/any',
@@ -72,15 +70,6 @@ export default class GiftedChatScreen extends Component {
           renderBubble={this.renderBubble}
           showUserAvatar
           showAvatarForEveryMessage
-        />
-        <ImageViewer
-          visible={this.state.visible}
-          imageUrls={[{ url: 'https://placeimg.com/140/140/any' }]}
-          failImageSource={{
-            url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460',
-            width: Dimensions.get('window').width,
-            height: Dimensions.get('window').width,
-          }}
         />
       </View>
     )
