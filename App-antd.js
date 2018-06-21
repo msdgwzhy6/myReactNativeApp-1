@@ -1,10 +1,7 @@
 import React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Theme from './assets/Theme'
-import {
-  createStackNavigator,
-  createMaterialTopTabNavigator,
-} from 'react-navigation'
+import { createStackNavigator } from 'react-navigation'
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs'
 import AV from 'leancloud-storage/live-query'
 import { Leancloud } from './assets/Dictionary'
@@ -23,13 +20,12 @@ import ReactNativeModalDatetimePicker from './views/Plugins/ReactNativeModalDate
 import ReactNativeCalendars from './views/Plugins/ReactNativeCalendars'
 import ReactNativeAmap3d from './views/Plugins/ReactNativeAmap3d'
 import GiftedChat from './views/Plugins/GiftedChat'
-// ReactNavigation
-import Navigation from './views/Navigation'
-import HeaderButtons from './views/ReactNavigation/HeaderButtons'
-import Modal from './views/ReactNavigation/Modal'
-// Charts
-import echarts from './views/Charts/Echarts'
-import secharts from './views/Charts/SEcharts'
+import ReactNativeSwiper from './views/Plugins/ReactNativeSwiper'
+import echarts from './views/Plugins/Charts/Echarts'
+import secharts from './views/Plugins/Charts/SEcharts'
+import HeaderButtons from './views/Plugins/ReactNavigation/HeaderButtons'
+import Modal from './views/Plugins/ReactNavigation/Modal'
+import MaterialTopTabNavigator from './views/Plugins/ReactNavigation/MaterialTopTabNavigator'
 
 // 初始化leancloud
 AV.init({
@@ -74,47 +70,10 @@ const AntDMobileRNStack = createStackNavigator(
 // 插件页面栈
 const PluginsStack = createStackNavigator(
   {
-    Plugins, ReactNativePicker, ReactNativeModalDatetimePicker, ReactNativeCalendars, ReactNativeAmap3d, GiftedChat,
+    Plugins, ReactNativePicker, ReactNativeModalDatetimePicker, ReactNativeCalendars, ReactNativeAmap3d, GiftedChat, ReactNativeSwiper, HeaderButtons, Modal, MaterialTopTabNavigator,
   },
   {
     navigationOptions: {
-      headerStyle: {
-        backgroundColor: 'rgb(255,255,255)',
-      },
-      headerTintColor: Theme.primaryColor,
-    },
-  },
-)
-// 图表页面栈
-const ChartsStack = createMaterialTopTabNavigator(
-  {
-    echarts,
-    secharts,
-  },
-  {
-    initialRouteName: 'secharts',
-    tabBarOptions: {
-      style: {
-        backgroundColor: Theme.primaryColor,
-      },
-    },
-    navigationOptions: {
-      header: null,
-    },
-  },
-)
-
-// 打开全屏模式的页面栈
-const NavigationStack = createStackNavigator(
-  {
-    Navigation,
-    HeaderButtons,
-    Modal,
-  },
-  {
-    initialRouteName: 'Navigation',
-    navigationOptions: {
-      headerTitle: 'React Navigation',
       headerStyle: {
         backgroundColor: 'rgb(255,255,255)',
       },
@@ -124,7 +83,7 @@ const NavigationStack = createStackNavigator(
 )
 
 // 指定页面隐藏header
-const Stacks = [HomeStack, AntDMobileRNStack, PluginsStack, NavigationStack]
+const Stacks = [HomeStack, AntDMobileRNStack]
 Stacks.forEach((item) => {
   item.navigationOptions = ({ navigation }) => {
     let tabBarVisible = true
@@ -143,8 +102,6 @@ export default createMaterialBottomTabNavigator(
     Home: HomeStack,
     AntDMobile: AntDMobileRNStack,
     Plugins: PluginsStack,
-    Charts: ChartsStack,
-    Navigation: NavigationStack,
   },
   {
     initialRouteName: 'Plugins',
@@ -164,10 +121,6 @@ export default createMaterialBottomTabNavigator(
           iconName = 'thumbs-up'
         } else if (routeName === 'Plugins') {
           iconName = 'th-list'
-        } else if (routeName === 'Charts') {
-          iconName = 'area-chart'
-        } else if (routeName === 'Navigation') {
-          iconName = 'rocket'
         }
         return <Icon name={iconName} size={25} color={tintColor} />
       },

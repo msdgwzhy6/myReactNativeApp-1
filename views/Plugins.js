@@ -28,6 +28,32 @@ export default class Home extends Component {
   render() {
     return (
       <ScrollView style={[styles.container]}>
+        <List renderHeader="React Navigation">
+          <Item
+            arrow="horizontal"
+            align="bottom"
+            onClick={() => this.props.navigation.navigate('HeaderButtons')}
+          >
+            react-navigation-header-buttons
+            <Brief>Easily render header buttons for react-navigation.</Brief>
+          </Item>
+          <Item
+            arrow="horizontal"
+            align="bottom"
+            onClick={() => this.props.navigation.navigate('Modal')}
+          >
+            打开全屏模式
+            <Brief>通过创建一个modal堆栈，来打开全屏模式</Brief>
+          </Item>
+          <Item
+            arrow="horizontal"
+            align="bottom"
+            onClick={() => this.props.navigation.navigate('MaterialTopTabNavigator')}
+          >
+            createMaterialTopTabNavigator
+            <Brief>屏幕顶部的材料设计主题标签栏, 可通过点击路线或水平滑动来切换不同的路由</Brief>
+          </Item>
+        </List>
         <List renderHeader="Picker">
           <Item
             arrow="horizontal"
@@ -67,6 +93,31 @@ export default class Home extends Component {
           >
             react-native-amap3d
             <Brief>react-native 高德地图组件，使用最新 3D SDK，支持 Android + iOS</Brief>
+          </Item>
+        </List>
+        <List renderHeader="Swiper">
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('ReactNativeSwiper')}
+          >
+            react-native-swiper
+            <Brief>The best Swiper component for React Native.</Brief>
+          </Item>
+        </List>
+        <List renderHeader="Data Visualization">
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('echarts')}
+          >
+            youngjuning-native-echarts
+            <Brief>修复了 native-echarts 部分BUG</Brief>
+          </Item>
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('echarts')}
+          >
+            react-native-secharts
+            <Brief>目前最好用的图标插件</Brief>
           </Item>
         </List>
       </ScrollView>

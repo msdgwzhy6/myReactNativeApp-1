@@ -28,7 +28,7 @@ export default class HeaderButton extends Component {
       <HeaderButtons
         IconComponent={Icon}
         iconSize={23}
-        color="#fff"
+        color="#1890ff"
       >
         <HeaderButtons.Item title="select" iconName="edit" onPress={() => Alert.alert('我是顶部编辑按钮')} />
         <HeaderButtons.Item title="select" iconName="search" onPress={() => Alert.alert('我是顶部搜索按钮')} />
