@@ -7,7 +7,7 @@ import {
   createMaterialTopTabNavigator,
 } from 'react-navigation'
 import AV from 'leancloud-storage/live-query'
-import { Leancloud } from './assets/Const'
+import { Leancloud } from './assets/Dictionary'
 // Home
 import Home from './views/Home'
 import ArticleList from './views/ArticleList'

@@ -7,7 +7,7 @@ import {
   createMaterialTopTabNavigator,
 } from 'react-navigation'
 import AV from 'leancloud-storage/live-query'
-import { Leancloud } from './assets/Const'
+import { Leancloud } from './assets/Dictionary'
 // Home
 import Home from './views/Home'
 import ArticleList from './views/ArticleList'
@@ -17,23 +17,6 @@ import Face from './views/Face++/Face'
 // AntDMobileRN
 import AntDMobileRN from './views/AntDMobileRN'
 import AntDDatePicker from './views/AntDMobileRN/DatePicker'
-// Teaset
-import Teaset from './views/Teaset'
-import ActionPopover from './views/Teaset/ActionPopover'
-import ActionSheet from './views/Teaset/ActionSheet'
-import AlbumView from './views/Teaset/AlbumView'
-import Badge from './views/Teaset/Badge'
-import Carousel from './views/Teaset/Carousel'
-import Drawer from './views/Teaset/Drawer'
-import Checkbox from './views/Teaset/CheckBox'
-import ListRow from './views/Teaset/ListRow'
-import Menu from './views/Teaset/Menu'
-import Popover from './views/Teaset/Popover'
-import PullPicker from './views/Teaset/PullPicker'
-import PopoverPicker from './views/Teaset/PopoverPicker'
-import SearchInput from './views/Teaset/SearchInput'
-import Select from './views/Teaset/Select'
-import Stepper from './views/Teaset/Stepper'
 // Plugins
 import ReactNativePicker from './views/Plugins/ReactNativePicker'
 import Plugins from './views/Plugins'
@@ -85,19 +68,6 @@ const AntDMobileRNStack = createStackNavigator(
     },
   },
 )
-const TeasetStack = createStackNavigator(
-  {
-    Teaset, ActionPopover, ActionSheet, AlbumView, Badge, Carousel, Drawer, Checkbox, ListRow, Menu, Popover, PullPicker, PopoverPicker, SearchInput, Select, Stepper,
-  },
-  {
-    navigationOptions: {
-      headerStyle: {
-        backgroundColor: Theme.primaryColor,
-      },
-      headerTintColor: 'rgb(255,255,255)',
-    },
-  },
-)
 const PluginsStack = createStackNavigator(
   {
     Plugins, ReactNativePicker, ReactNativeModalDatetimePicker, ReactNativeCalendars, ReactNativeAmap3d, GiftedChat,
@@ -123,7 +93,7 @@ const ChartsStack = createMaterialTopTabNavigator(
     },
   },
 )
-const Stacks = [HomeStack, AntDMobileRNStack, TeasetStack, PluginsStack, ChartsStack]
+const Stacks = [HomeStack, AntDMobileRNStack, PluginsStack]
 Stacks.forEach((item) => {
   item.navigationOptions = ({ navigation }) => {
     let tabBarVisible = true
@@ -140,12 +110,11 @@ export default createBottomTabNavigator(
   {
     Home: HomeStack,
     AntDMobile: AntDMobileRNStack,
-    Teaset: TeasetStack,
     Plugins: PluginsStack,
     Charts: ChartsStack,
   },
   {
-    initialRouteName: 'Plugins',
+    initialRouteName: 'AntDMobile',
     tabBarOptions: {
       activeTintColor: Theme.primaryColor ? Theme.primaryColor : 'tomato',
       inactiveTintColor: 'gray',
