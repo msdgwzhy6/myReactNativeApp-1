@@ -53,7 +53,7 @@ export default class Face extends Component {
     ModalIndicator.show('识别中')
     this.detectFace().then((res) => {
       ModalIndicator.hide()
-      Toast.fail('恭喜你，识别成功')
+      Toast.success('恭喜你，识别成功')
       const attr = res.faces[0].attributes
       let beauty = null
       if (attr.gender.value == 'Male') {
