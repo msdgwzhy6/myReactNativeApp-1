@@ -73,6 +73,7 @@ const PluginsStack = createStackNavigator(
     Plugins, ReactNativePicker, ReactNativeModalDatetimePicker, ReactNativeCalendars, ReactNativeAmap3d, GiftedChat, ReactNativeSwiper, HeaderButtons, Modal, MaterialTopTabNavigator,
   },
   {
+    initialRouteName: 'ReactNativeSwiper',
     navigationOptions: {
       headerStyle: {
         backgroundColor: 'rgb(255,255,255)',
@@ -108,7 +109,6 @@ export default createMaterialBottomTabNavigator(
     activeTintColor: Theme.primaryColor,
     inactiveTintColor: 'gray',
     barStyle: { backgroundColor: '#fff' },
-    labeled: true,
     navigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ tintColor }) => {
         const { routeName } = navigation.state
