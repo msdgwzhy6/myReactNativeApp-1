@@ -34,13 +34,6 @@ export default class Home extends Component {
         />
         <Button
           style={[styles.btn]}
-          type="primary"
-          size="lg"
-          title="HeaderButtons"
-          onPress={() => this.props.navigation.navigate('HeaderButtons')}
-        />
-        <Button
-          style={[styles.btn]}
           type="secondary"
           size="lg"
           title="ArticleList"
