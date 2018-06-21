@@ -73,7 +73,7 @@ const PluginsStack = createStackNavigator(
     Plugins, ReactNativePicker, ReactNativeModalDatetimePicker, ReactNativeCalendars, ReactNativeAmap3d, GiftedChat, ReactNativeSwiper, HeaderButtons, Modal, MaterialTopTabNavigator,
   },
   {
-    initialRouteName: 'ReactNativeSwiper',
+    initialRouteName: 'Plugins',
     navigationOptions: {
       headerStyle: {
         backgroundColor: 'rgb(255,255,255)',
