@@ -18,7 +18,13 @@ import Drawer from './views/AntDMobileRN/Drawer'
 import Popover from './views/AntDMobileRN/Popover'
 import Pagination from './views/AntDMobileRN/Pagination'
 import SegmentedControl from './views/AntDMobileRN/SegmentedControl'
+import Button from './views/AntDMobileRN/Button'
+import Checkbox from './views/AntDMobileRN/Checkbox'
 import DatePicker from './views/AntDMobileRN/DatePicker'
+import DatePickerView from './views/AntDMobileRN/DatePickerView'
+import InputItem from './views/AntDMobileRN/InputItem'
+import Picker from './views/AntDMobileRN/Picker'
+import PickerView from './views/AntDMobileRN/PickerView'
 // Plugins
 import ReactNativePicker from './views/Plugins/ReactNativePicker'
 import Plugins from './views/Plugins'
@@ -68,7 +74,13 @@ const AntDMobileRNStack = createStackNavigator(
     Popover,
     Pagination,
     SegmentedControl,
+    Button,
+    Checkbox,
     DatePicker,
+    DatePickerView,
+    InputItem,
+    Picker,
+    PickerView,
   },
   {
     initialRouteName: 'AntDMobileRN',

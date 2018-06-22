@@ -85,10 +85,59 @@ export default class AntDMobileRN extends Component {
         <List renderHeader="Data Entry 数据输入">
           <Item
             arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('Button')}
+          >
+            Button
+            <Brief>点击后会触发一个操作</Brief>
+          </Item>
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('Checkbox')}
+          >
+            Checkbox
+            <Brief>复选框</Brief>
+          </Item>
+          <Item
+            arrow="horizontal"
             onClick={() => this.props.navigation.navigate('DatePicker')}
           >
             DatePicker
             <Brief>日期时间选择</Brief>
+          </Item>
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('DatePickerView')}
+          >
+            DatePickerView
+            <Brief>atePickerView 的功能类似于 DatePicker ，但它是直接渲染在区域中，而不是弹出窗口</Brief>
+          </Item>
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('InputItem')}
+          >
+            InputItem
+            <Brief>用于接受单行文本</Brief>
+          </Item>
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('ImagePicker')}
+          >
+            ImagePicker
+            <Brief>注意：只是图片选择器，一般用于上传图片前的文件选择操作，但不包括图片上传的功能</Brief>
+          </Item>
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('Picker')}
+          >
+            Picker
+            <Brief>在一组预设数据中进行选择，e.g. 省市区选择</Brief>
+          </Item>
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('PickerView')}
+          >
+            PickerView
+            <Brief>PickerView 的功能类似于 Picker ，但它是直接渲染在区域中，而不是弹出窗口</Brief>
           </Item>
         </List>
       </ScrollView>
