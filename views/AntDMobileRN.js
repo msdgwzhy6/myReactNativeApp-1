@@ -74,6 +74,13 @@ export default class AntDMobileRN extends Component {
             Pagination
             <Brief>分隔长列表，每次只加载一个页面。当加载/渲染所有数据将花费很多时间或者流量时使用</Brief>
           </Item>
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('SegmentedControl')}
+          >
+            SegmentedControl
+            <Brief>由至少 2 个分段控件组成，用作不同视图的显示；是 iOS 的推荐组件。</Brief>
+          </Item>
         </List>
         <List renderHeader="Data Entry 数据输入">
           <Item

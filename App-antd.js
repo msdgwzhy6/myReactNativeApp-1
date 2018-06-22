@@ -18,6 +18,7 @@ import WhiteSpace from './views/AntDMobileRN/WhiteSpace'
 import Drawer from './views/AntDMobileRN/Drawer'
 import Popover from './views/AntDMobileRN/Popover'
 import Pagination from './views/AntDMobileRN/Pagination'
+import SegmentedControl from './views/AntDMobileRN/SegmentedControl'
 import DatePicker from './views/AntDMobileRN/DatePicker'
 // Plugins
 import ReactNativePicker from './views/Plugins/ReactNativePicker'
@@ -67,6 +68,7 @@ const AntDMobileRNStack = createStackNavigator(
     Drawer,
     Popover,
     Pagination,
+    SegmentedControl,
     DatePicker,
   },
   {
