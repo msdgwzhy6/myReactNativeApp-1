@@ -68,7 +68,7 @@ export default class Face extends Component {
         beauty,
       }
       this.setState({ face })
-    }).catch((err) => {
+    }).catch(() => {
       ModalIndicator.hide()
       Toast.fail('识别失败，请重试')
     })
