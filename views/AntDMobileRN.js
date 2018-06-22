@@ -52,13 +52,20 @@ export default class AntDMobileRN extends Component {
             <Brief>上下留白</Brief>
           </Item>
         </List>
-        <List>
+        <List renderHeader="Navigation 导航">
           <Item
             arrow="horizontal"
             onClick={() => this.props.navigation.navigate('Drawer')}
           >
-            Drawer - 一个页面只能存在一个
+            Drawer
             <Brief>用于在屏幕边缘显示应用导航等内容的面板，是 Android 推荐的导航方式，常见于该平台应用</Brief>
+          </Item>
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('Popover')}
+          >
+            Popover 气泡
+            <Brief>在点击控件或者某个区域后，浮出一个气泡菜单来做更多的操作。 如果设置了遮罩层，建议通过点击遮罩层的任一位置，进行退出。</Brief>
           </Item>
         </List>
         <List renderHeader="Data Entry 数据输入">

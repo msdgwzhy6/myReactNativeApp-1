@@ -13,6 +13,9 @@ const styles = StyleSheet.create({
   },
 })
 export default class DrawerScreen extends Component {
+  static navigationOptions = {
+    headerTitle: 'Popover',
+  }
   constructor(props) {
     super(props)
     this.state = {}
