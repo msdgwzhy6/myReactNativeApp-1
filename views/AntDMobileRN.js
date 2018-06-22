@@ -37,6 +37,29 @@ export default class AntDMobileRN extends Component {
             Flex
             <Brief>Flex布局</Brief>
           </Item>
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('WhingBlank')}
+          >
+            WhingBlank
+            <Brief>两翼留白</Brief>
+          </Item>
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('WhiteSpace')}
+          >
+            WhiteSpace
+            <Brief>上下留白</Brief>
+          </Item>
+        </List>
+        <List>
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('Drawer')}
+          >
+            Drawer - 一个页面只能存在一个
+            <Brief>用于在屏幕边缘显示应用导航等内容的面板，是 Android 推荐的导航方式，常见于该平台应用</Brief>
+          </Item>
         </List>
         <List renderHeader="Data Entry 数据输入">
           <Item

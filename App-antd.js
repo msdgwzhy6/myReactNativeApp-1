@@ -13,6 +13,9 @@ import Face from './views/Face++/Face'
 // AntDMobileRN
 import AntDMobileRN from './views/AntDMobileRN'
 import Flex from './views/AntDMobileRN/Flex'
+import WhingBlank from './views/AntDMobileRN/WingBlank'
+import WhiteSpace from './views/AntDMobileRN/WhiteSpace'
+import Drawer from './views/AntDMobileRN/Drawer'
 import DatePicker from './views/AntDMobileRN/DatePicker'
 // Plugins
 import ReactNativePicker from './views/Plugins/ReactNativePicker'
@@ -57,6 +60,9 @@ const AntDMobileRNStack = createStackNavigator(
   {
     AntDMobileRN,
     Flex,
+    WhingBlank,
+    WhiteSpace,
+    Drawer,
     DatePicker,
   },
   {
