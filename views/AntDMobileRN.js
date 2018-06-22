@@ -64,8 +64,15 @@ export default class AntDMobileRN extends Component {
             arrow="horizontal"
             onClick={() => this.props.navigation.navigate('Popover')}
           >
-            Popover 气泡
+            Popover
             <Brief>在点击控件或者某个区域后，浮出一个气泡菜单来做更多的操作。 如果设置了遮罩层，建议通过点击遮罩层的任一位置，进行退出。</Brief>
+          </Item>
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('Pagination')}
+          >
+            Pagination
+            <Brief>分隔长列表，每次只加载一个页面。当加载/渲染所有数据将花费很多时间或者流量时使用</Brief>
           </Item>
         </List>
         <List renderHeader="Data Entry 数据输入">
