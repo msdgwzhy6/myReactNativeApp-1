@@ -12,7 +12,8 @@ import Login from './views/Login'
 import Face from './views/Face++/Face'
 // AntDMobileRN
 import AntDMobileRN from './views/AntDMobileRN'
-import AntDDatePicker from './views/AntDMobileRN/DatePicker'
+import Flex from './views/AntDMobileRN/Flex'
+import DatePicker from './views/AntDMobileRN/DatePicker'
 // Plugins
 import ReactNativePicker from './views/Plugins/ReactNativePicker'
 import Plugins from './views/Plugins'
@@ -55,7 +56,8 @@ const HomeStack = createStackNavigator(
 const AntDMobileRNStack = createStackNavigator(
   {
     AntDMobileRN,
-    AntDDatePicker,
+    Flex,
+    DatePicker,
   },
   {
     initialRouteName: 'AntDMobileRN',
@@ -70,7 +72,18 @@ const AntDMobileRNStack = createStackNavigator(
 // 插件页面栈
 const PluginsStack = createStackNavigator(
   {
-    Plugins, ReactNativePicker, ReactNativeModalDatetimePicker, ReactNativeCalendars, ReactNativeAmap3d, GiftedChat, ReactNativeSwiper, HeaderButtons, Modal, MaterialTopTabNavigator,
+    Plugins,
+    ReactNativePicker,
+    ReactNativeModalDatetimePicker,
+    ReactNativeCalendars,
+    ReactNativeAmap3d,
+    GiftedChat,
+    ReactNativeSwiper,
+    HeaderButtons,
+    Modal,
+    MaterialTopTabNavigator,
+    echarts,
+    secharts,
   },
   {
     initialRouteName: 'Plugins',
@@ -84,7 +97,7 @@ const PluginsStack = createStackNavigator(
 )
 
 // 指定页面隐藏header
-const Stacks = [HomeStack, AntDMobileRNStack]
+const Stacks = [HomeStack, AntDMobileRNStack, PluginsStack]
 Stacks.forEach((item) => {
   item.navigationOptions = ({ navigation }) => {
     let tabBarVisible = true
@@ -105,7 +118,7 @@ export default createMaterialBottomTabNavigator(
     Plugins: PluginsStack,
   },
   {
-    initialRouteName: 'Plugins',
+    initialRouteName: 'AntDMobile',
     activeTintColor: Theme.primaryColor,
     inactiveTintColor: 'gray',
     barStyle: { backgroundColor: '#fff' },

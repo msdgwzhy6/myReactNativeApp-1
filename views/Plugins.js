@@ -114,7 +114,7 @@ export default class Home extends Component {
           </Item>
           <Item
             arrow="horizontal"
-            onClick={() => this.props.navigation.navigate('echarts')}
+            onClick={() => this.props.navigation.navigate('secharts')}
           >
             react-native-secharts
             <Brief>目前最好用的图标插件</Brief>
