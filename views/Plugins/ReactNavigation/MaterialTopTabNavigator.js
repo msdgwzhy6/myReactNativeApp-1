@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { createMaterialTopTabNavigator } from 'react-navigation'
 import Echarts from '../Charts/Echarts'
 import SEcharts from '../Charts/SEcharts'
+import GiftedChat from '../GiftedChat'
 
 export default class MyComponent extends Component {
   static navigationOptions = {
@@ -18,6 +19,7 @@ export default class MyComponent extends Component {
 const RocketStack = createMaterialTopTabNavigator({
   Echarts,
   SEcharts,
+  GiftedChat,
 }, {
   initialRouteName: 'Echarts',
   tabBarOptions: {

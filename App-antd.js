@@ -1,8 +1,7 @@
 import React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Theme from './assets/Theme'
-import { createStackNavigator } from 'react-navigation'
-import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs'
+import { createStackNavigator, createBottomTabNavigator } from 'react-navigation'
 import AV from 'leancloud-storage/live-query'
 import { Leancloud } from './assets/Dictionary'
 // Home
@@ -52,9 +51,9 @@ const HomeStack = createStackNavigator(
     initialRouteName: 'Home',
     navigationOptions: {
       headerStyle: {
-        backgroundColor: 'rgb(255,255,255)',
+        backgroundColor: Theme.primaryColor,
       },
-      headerTintColor: Theme.primaryColor,
+      headerTintColor: 'rgb(255,255,255)',
     },
   },
 )
@@ -75,9 +74,9 @@ const AntDMobileRNStack = createStackNavigator(
     initialRouteName: 'AntDMobileRN',
     navigationOptions: {
       headerStyle: {
-        backgroundColor: 'rgb(255,255,255)',
+        backgroundColor: Theme.primaryColor,
       },
-      headerTintColor: Theme.primaryColor,
+      headerTintColor: 'rgb(255,255,255)',
     },
   },
 )
@@ -101,9 +100,9 @@ const PluginsStack = createStackNavigator(
     initialRouteName: 'Plugins',
     navigationOptions: {
       headerStyle: {
-        backgroundColor: 'rgb(255,255,255)',
+        backgroundColor: Theme.primaryColor,
       },
-      headerTintColor: Theme.primaryColor,
+      headerTintColor: 'rgb(255,255,255)',
     },
   },
 )
@@ -123,7 +122,7 @@ Stacks.forEach((item) => {
 })
 
 // 构建材料设计的底部导航
-export default createMaterialBottomTabNavigator(
+export default createBottomTabNavigator(
   {
     Home: HomeStack,
     AntDMobile: AntDMobileRNStack,
@@ -131,9 +130,10 @@ export default createMaterialBottomTabNavigator(
   },
   {
     initialRouteName: 'AntDMobile',
-    activeTintColor: Theme.primaryColor,
-    inactiveTintColor: 'gray',
-    barStyle: { backgroundColor: '#fff' },
+    tabBarOptions: {
+      activeTintColor: Theme.primaryColor,
+      inactiveTintColor: 'gray',
+    },
     navigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ tintColor }) => {
         const { routeName } = navigation.state
