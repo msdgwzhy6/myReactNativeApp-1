@@ -23,6 +23,7 @@ import Checkbox from './views/AntDMobileRN/Checkbox'
 import DatePicker from './views/AntDMobileRN/DatePicker'
 import DatePickerView from './views/AntDMobileRN/DatePickerView'
 import InputItem from './views/AntDMobileRN/InputItem'
+import ImagePicker from './views/AntDMobileRN/ImagePicker'
 import Picker from './views/AntDMobileRN/Picker'
 import PickerView from './views/AntDMobileRN/PickerView'
 // Plugins
@@ -79,6 +80,7 @@ const AntDMobileRNStack = createStackNavigator(
     DatePicker,
     DatePickerView,
     InputItem,
+    ImagePicker,
     Picker,
     PickerView,
   },
