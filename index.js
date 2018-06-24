@@ -7,6 +7,7 @@ YellowBox.ignoreWarnings([
   'Warning: isMounted(...) is deprecated',
   'Module RCTImageLoader',
   'Remote debugger',
+  '',
 ])
 
 AppRegistry.registerComponent('myReactNativeApp', () => AntdApp)
