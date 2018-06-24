@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   },
 })
 
-export default class MyComponent extends Component {
+export default class CheckboxScreen extends Component {
   static navigationOptions = {
     headerTitle: 'CheckBox',
   }
@@ -44,7 +44,6 @@ export default class MyComponent extends Component {
     this.setState({
       agree: checked,
     })
-    console.log(checked)
   }
   render() {
     return (
