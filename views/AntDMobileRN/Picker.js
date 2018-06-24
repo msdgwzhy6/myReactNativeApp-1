@@ -21,13 +21,17 @@ export default class MyComponent extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      data: [],
+      pc: [],
+      pca: [],
+      pcas: [],
       value: [],
+      pcaValue: [],
+      pcasValue: [],
     }
   }
   onClick = () => {
     setTimeout(() => {
-      this.setState({ data: pc })
+      this.setState({ pc })
     }, 500)
   }
   onChange = (value) => {
@@ -38,7 +42,7 @@ export default class MyComponent extends Component {
       <View style={styles.container}>
         <List>
           <Picker
-            data={this.state.data}
+            data={this.state.pc}
             cols={2}
             value={this.state.value}
             onChange={this.onChange}
@@ -50,11 +54,21 @@ export default class MyComponent extends Component {
           <Picker
             data={this.state.pca}
             cols={3}
-            value={this.state.value}
-            onChange={() => {}}
+            value={this.state.pcaValue}
+            onChange={(value) => { this.setState({ pcaValue: value }) }}
           >
             <Item arrow="horizontal" last onClick={() => this.setState({ pca })}>
-              省市区选择(异步加载)
+              省市区
+            </Item>
+          </Picker>
+          <Picker
+            data={this.state.pcas}
+            cols={4}
+            value={this.state.pcasValue}
+            onChange={(value) => { this.setState({ pcasValue: value }) }}
+          >
+            <Item arrow="horizontal" last onClick={() => this.setState({ pcas })}>
+              省市区街道
             </Item>
           </Picker>
         </List>
