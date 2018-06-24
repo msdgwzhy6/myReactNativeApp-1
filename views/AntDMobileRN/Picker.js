@@ -1,10 +1,13 @@
+// yarn add antd-mobile-demo-data
 import React, { Component } from 'react'
 import {
   View,
-  Text,
   StyleSheet,
 } from 'react-native'
+import { Picker, List } from 'antd-mobile-rn'
+import { pc, pca, pcas } from 'antd-mobile-area-data'
 
+const Item = List.Item
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -12,15 +15,49 @@ const styles = StyleSheet.create({
 })
 
 export default class MyComponent extends Component {
+  static navigationOptions = {
+    headerTitle: 'Picker',
+  }
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      data: [],
+      value: [],
+    }
   }
-  componentDidMount() {}
+  onClick = () => {
+    setTimeout(() => {
+      this.setState({ data: pc })
+    }, 500)
+  }
+  onChange = (value) => {
+    this.setState({ value })
+  }
   render() {
     return (
       <View style={styles.container}>
-        <Text>I am the MyComponent component</Text>
+        <List>
+          <Picker
+            data={this.state.data}
+            cols={2}
+            value={this.state.value}
+            onChange={this.onChange}
+          >
+            <Item arrow="horizontal" last onClick={this.onClick}>
+              省市选择(异步加载)
+            </Item>
+          </Picker>
+          <Picker
+            data={this.state.pca}
+            cols={3}
+            value={this.state.value}
+            onChange={() => {}}
+          >
+            <Item arrow="horizontal" last onClick={() => this.setState({ pca })}>
+              省市区选择(异步加载)
+            </Item>
+          </Picker>
+        </List>
       </View>
     )
   }

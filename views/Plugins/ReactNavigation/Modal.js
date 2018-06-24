@@ -15,13 +15,6 @@ const styles = StyleSheet.create({
 })
 
 class Modal extends Component {
-  static navigationOptions = {
-    headerTitle: 'React Navigation Modal',
-  }
-  constructor(props) {
-    super(props)
-    this.state = {}
-  }
   render() {
     return (
       <WingBlank style={[styles.container]} size="sm">
@@ -61,6 +54,15 @@ const RootStack = createStackNavigator(
     headerMode: 'none',
   },
 )
-export default () => (
-  <RootStack />
-)
+
+export default class MyComponent extends Component {
+  static navigationOptions = {
+    headerTitle: '全屏模式',
+    // header: null,
+  }
+  render() {
+    return (
+      <RootStack />
+    )
+  }
+}
