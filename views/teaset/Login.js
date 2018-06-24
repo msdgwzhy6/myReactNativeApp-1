@@ -4,8 +4,12 @@ import {
   ScrollView,
   StyleSheet,
 } from 'react-native'
-import { ModalIndicator } from 'teaset'
-import { InputItem, List, Button, Toast } from 'antd-mobile-rn'
+import {
+  ModalIndicator,
+  Toast,
+  Input,
+  Button,
+} from 'teaset'
 import AV from 'leancloud-storage/live-query'
 
 const styles = StyleSheet.create({
@@ -20,6 +24,12 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     width: 160,
     height: 160,
+  },
+  margin_10: {
+    margin: 10,
+  },
+  margin_top_0: {
+    marginTop: 0,
   },
 })
 
@@ -36,12 +46,8 @@ export default class Login extends Component {
       password: '',
     }
   }
-  componentDidMount() {
-    const { navigation } = this.props
-    Toast.info(navigation.getParam('msg'), 2)
-  }
   login() {
-    Toast.loading('登陆中')
+    ModalIndicator.show('登陆中')
     AV.User.logIn(this.state.username, this.state.password).then(() => {
       Toast.success('登录成功')
       ModalIndicator.hide()
@@ -56,7 +62,7 @@ export default class Login extends Component {
       } else if (err.code == 219) {
         Toast.fail('登录失败次数超过限制，请稍候再试')
       }
-      Toast.hide()
+      ModalIndicator.hide()
     })
   }
   render() {
@@ -66,29 +72,28 @@ export default class Login extends Component {
           style={[styles.logo]}
           source={{ uri: 'https://i.loli.net/2018/06/13/5b20cecfba791.png' }}
         />
-        <List>
-          <InputItem
-            value={this.state.username}
-            placeholder="请输入用户名"
-            onChange={(value) => { this.setState({ username: value }) }}
-          >用户名
-          </InputItem>
-          <InputItem
-            type="password"
-            value={this.state.password}
-            placeholder="请输入密码"
-            onChange={(value) => { this.setState({ password: value }) }}
-            onBlur={() => this.login()}
-          >用户名
-          </InputItem>
-        </List>
+        <Input
+          style={[styles.margin_10, styles.margin_top_0]}
+          size="lg"
+          placeholder="请输入用户名"
+          value={this.state.username}
+          onChangeText={text => this.setState({ username: text })}
+        />
+        <Input
+          style={[styles.margin_10]}
+          secureTextEntry
+          size="lg"
+          placeholder="请输入密码"
+          value={this.state.password}
+          onChangeText={text => this.setState({ password: text })}
+        />
         <Button
-          style={{ marginTop: 10 }}
+          style={[styles.margin_10]}
           type="primary"
-          size="large"
-          onClick={() => { this.login() }}
-        >登录
-        </Button>
+          size="lg"
+          title="登录"
+          onPress={() => this.login()}
+        />
       </ScrollView>
     )
   }

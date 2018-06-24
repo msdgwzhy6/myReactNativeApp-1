@@ -9,6 +9,7 @@ import AV from 'leancloud-storage/live-query'
 import { Leancloud } from './assets/Dictionary'
 // Teaset
 import Teaset from './views/Teaset'
+import tLogin from './views/Teaset/Login'
 import ActionPopover from './views/Teaset/ActionPopover'
 import ActionSheet from './views/Teaset/ActionSheet'
 import AlbumView from './views/Teaset/AlbumView'
@@ -36,7 +37,7 @@ Theme.set(Theme.themes.poetry)
 // Teaset页面栈
 const TeasetStack = createStackNavigator(
   {
-    Teaset, ActionPopover, ActionSheet, AlbumView, Badge, Carousel, Drawer, Checkbox, ListRow, Menu, Popover, PullPicker, PopoverPicker, SearchInput, Select, Stepper,
+    Teaset, tLogin, ActionPopover, ActionSheet, AlbumView, Badge, Carousel, Drawer, Checkbox, ListRow, Menu, Popover, PullPicker, PopoverPicker, SearchInput, Select, Stepper,
   },
   {
     navigationOptions: {

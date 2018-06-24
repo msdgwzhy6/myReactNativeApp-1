@@ -28,6 +28,13 @@ export default class Teaset extends Component {
       <ScrollView style={[styles.container]}>
         <Button
           style={[styles.btn]}
+          type="primary"
+          size="lg"
+          title="teaset 登录页"
+          onPress={() => this.props.navigation.navigate('tLogin')}
+        />
+        <Button
+          style={[styles.btn]}
           type="secondary"
           size="lg"
           title="ActionPopover 操作气泡"
