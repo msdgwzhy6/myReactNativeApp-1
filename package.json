@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "antd-mobile-area-data": "1.0.0",
+    "antd-mobile-area-data": "1.1.0",
     "antd-mobile-demo-data": "^0.2.0",
     "antd-mobile-rn": "^2.2.0",
     "babel-plugin-import": "^1.8.0",

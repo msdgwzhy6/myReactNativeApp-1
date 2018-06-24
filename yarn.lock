@@ -560,9 +560,9 @@ ansi@^0.3.0, ansi@~0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/ansi/-/ansi-0.3.1.tgz#0c42d4fb17160d5a9af1e484bace1c66922c1b21"
 
-antd-mobile-area-data@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/antd-mobile-area-data/-/antd-mobile-area-data-1.0.0.tgz#662b8c8a1e0ecd687a0073806f852053503b3735"
+antd-mobile-area-data@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/antd-mobile-area-data/-/antd-mobile-area-data-1.1.0.tgz#9c255b951d3d513f5fa8aca31d68dfe41c09b247"
 
 antd-mobile-demo-data@^0.2.0:
   version "0.2.0"
