@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
-import { View, Dimensions, StyleSheet } from 'react-native'
-import { Drawer, Flex, Button, WhiteSpace } from 'antd-mobile-rn'
+import { View, StyleSheet } from 'react-native'
+import { Drawer, Flex, Button } from 'antd-mobile-rn'
+import SideBar from './SideBar'
 
-const { height } = Dimensions.get('window')
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  sidebar: {
-    flex: 1,
-    height,
   },
 })
 export default class DrawerScreen extends Component {
@@ -19,37 +16,26 @@ export default class DrawerScreen extends Component {
   constructor(props) {
     super(props)
     this.state = {}
+    this.handleCloseDrawer = this.handleCloseDrawer.bind(this)
   }
-  onOpenChange = (isOpen) => {
-    console.log('是否打开了 Drawer', isOpen.toString())
+  handleCloseDrawer() {
+    this.leftDrawer.closeDrawer()
   }
   render() {
-    const sideBar = (
-      <Flex justify="center" align="center" style={[styles.sidebar]}>
-        <Button
-          type="warning"
-          onClick={() => this.leftDrawer.closeDrawer()}
-        >
-          Close Drawer
-        </Button>
-      </Flex>
-    )
     return (
       <View style={[styles.container]}>
         <Drawer
-          sidebar={sideBar}
+          sidebar={<SideBar closeDrawer={this.handleCloseDrawer} />}
           position="right"
           open={false}
           drawerRef={(el) => { this.leftDrawer = el }}
-          onOpenChange={this.onOpenChange}
           drawerBackgroundColor="rgb(145, 238, 249)"
         >
           <Flex style={{ flex: 1 }} justify="center" align="center">
             <Button
               type="primary"
               onClick={() => this.leftDrawer.openDrawer()}
-            >
-              Open drawer
+            >Open drawer
             </Button>
           </Flex>
         </Drawer>
