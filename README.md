@@ -2,7 +2,7 @@
 
 ## 切换
 
-默认是基于 antd-react-native 的，切换的换请修改 index.js 中的代码
+默认是基于 antd-react-native 的，切换的话请修改 index.js 中的代码
 
 ```js
 ...
