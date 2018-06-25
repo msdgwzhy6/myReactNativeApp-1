@@ -11,3 +11,7 @@ $ react-native link react-native-camera
 ```
 
 > PS：如果 link 没有成功，会报错。如果没有自动 link，可以手动 link，手动link请参考 react-native-camera 文档
+
+## 升级 gradle 到 3.1.0
+
+> 我是用模版创建的项目，gradle版本比较低，但是 react-native-camera 使用的是 3.0 以上的，会报 [Gradle DSL method not found: 'google()'](https://github.com/react-native-community/react-native-camera/issues/1577) 的错误，官方给了修复该bug的方法：http://t.cn/RrIrHb5
