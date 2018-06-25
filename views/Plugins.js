@@ -54,6 +54,15 @@ export default class Home extends Component {
             <Brief>屏幕顶部的材料设计主题标签栏, 可通过点击路线或水平滑动来切换不同的路由</Brief>
           </Item>
         </List>
+        <List renderHeader="QrCode 二维码扫描">
+          <Item
+            arrow="horizontal"
+            onClick={() => this.props.navigation.navigate('acQrcode')}
+          >
+            ac-qrcode
+            <Brief>A highly customizable QR code scanning component for React Native</Brief>
+          </Item>
+        </List>
         <List renderHeader="Picker">
           <Item
             arrow="horizontal"

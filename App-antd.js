@@ -45,6 +45,7 @@ import secharts from './views/Plugins/Charts/SEcharts'
 import HeaderButtons from './views/Plugins/ReactNavigation/HeaderButtons'
 import Modal from './views/Plugins/ReactNavigation/Modal'
 import MaterialTopTabNavigator from './views/Plugins/ReactNavigation/MaterialTopTabNavigator'
+import acQrcode from './views/Plugins/Qrcode/acQrcode'
 
 // 初始化leancloud
 AV.init({
@@ -121,6 +122,7 @@ const PluginsStack = createStackNavigator(
     MaterialTopTabNavigator,
     echarts,
     secharts,
+    acQrcode,
   },
   {
     initialRouteName: 'Plugins',

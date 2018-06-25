@@ -51,7 +51,7 @@
 		6C48B04FA3584E13AFC928E3 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BEF54876406C4593AEF169CD /* Zocial.ttf */; };
 		F2F049B2DA94426DB2323C1A /* libRCTBEEPickerManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A14CAECC2E9F490ABFB566E4 /* libRCTBEEPickerManager.a */; };
 		0262AA8C396C45E4A343CB39 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FFDF1C3CD864D4DA67A6529 /* libSplashScreen.a */; };
-		6D3E9454CBFC485380B80A3B /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2ED65A3E4B5457A976C1F8F /* libRNCamera.a */; };
+		F282E0FE451B4162AD594760 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 122A2780AE2544119C8545FD /* libRNCamera.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -374,8 +374,8 @@
 		A14CAECC2E9F490ABFB566E4 /* libRCTBEEPickerManager.a */ = {isa = PBXFileReference; name = "libRCTBEEPickerManager.a"; path = "libRCTBEEPickerManager.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		415F70067AC04D1FA2D548CA /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; name = "SplashScreen.xcodeproj"; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		1FFDF1C3CD864D4DA67A6529 /* libSplashScreen.a */ = {isa = PBXFileReference; name = "libSplashScreen.a"; path = "libSplashScreen.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		80067773A7D041589819AC88 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; name = "RNCamera.xcodeproj"; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		D2ED65A3E4B5457A976C1F8F /* libRNCamera.a */ = {isa = PBXFileReference; name = "libRNCamera.a"; path = "libRNCamera.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		24229970DF26445C9A2C2429 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; name = "RNCamera.xcodeproj"; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		122A2780AE2544119C8545FD /* libRNCamera.a */ = {isa = PBXFileReference; name = "libRNCamera.a"; path = "libRNCamera.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,7 +407,7 @@
 				AD16315EF1B04872883CB5FA /* libRNVectorIcons.a in Frameworks */,
 				F2F049B2DA94426DB2323C1A /* libRCTBEEPickerManager.a in Frameworks */,
 				0262AA8C396C45E4A343CB39 /* libSplashScreen.a in Frameworks */,
-				6D3E9454CBFC485380B80A3B /* libRNCamera.a in Frameworks */,
+				F282E0FE451B4162AD594760 /* libRNCamera.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,7 +597,7 @@
 				44855C2A6E564B24949D4D04 /* RNVectorIcons.xcodeproj */,
 				9A3F56E12DB7499DACFAF263 /* RCTBEEPickerManager.xcodeproj */,
 				415F70067AC04D1FA2D548CA /* SplashScreen.xcodeproj */,
-				80067773A7D041589819AC88 /* RNCamera.xcodeproj */,
+				24229970DF26445C9A2C2429 /* RNCamera.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1256,7 +1256,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1284,7 +1283,6 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myReactNativeApp.app/myReactNativeApp";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
@@ -1372,7 +1370,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1410,7 +1407,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1447,7 +1443,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1483,7 +1478,6 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
