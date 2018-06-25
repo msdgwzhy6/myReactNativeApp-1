@@ -26,6 +26,12 @@ import InputItem from './views/AntDMobileRN/InputItem'
 import ImagePicker from './views/AntDMobileRN/ImagePicker'
 import Picker from './views/AntDMobileRN/Picker'
 import PickerView from './views/AntDMobileRN/PickerView'
+import Radio from './views/AntDMobileRN/Radio'
+import SearchBar from './views/AntDMobileRN/SearchBar'
+import Slider from './views/AntDMobileRN/Slider'
+import Stepper from './views/AntDMobileRN/Stepper'
+import Switch from './views/AntDMobileRN/Switch'
+import TextareaItem from './views/AntDMobileRN/TextareaItem'
 // Plugins
 import ReactNativePicker from './views/Plugins/ReactNativePicker'
 import Plugins from './views/Plugins'
@@ -83,6 +89,12 @@ const AntDMobileRNStack = createStackNavigator(
     ImagePicker,
     Picker,
     PickerView,
+    Radio,
+    SearchBar,
+    Slider,
+    Stepper,
+    Switch,
+    TextareaItem,
   },
   {
     initialRouteName: 'AntDMobileRN',
