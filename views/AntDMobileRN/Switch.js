@@ -1,26 +1,50 @@
 import React, { Component } from 'react'
-import {
-  View,
-  Text,
-  StyleSheet,
-} from 'react-native'
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-})
+import { List, Switch } from 'antd-mobile-rn'
 
 export default class SwitchScreen extends Component {
+  static navigationOptions = {
+    headerTitle: 'Switch',
+  }
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      checked: false,
+    }
+  }
+  onSwitchChange = (value: any) => {
+    this.setState({
+      checked: value,
+    })
   }
   render() {
     return (
-      <View style={styles.container}>
-        <Text>I am the SwitchScreen component</Text>
-      </View>
+      <List style={{ marginTop: 20 }}>
+        <List.Item
+          extra={<Switch checked />}
+        >On(controlled)
+        </List.Item>
+        <List.Item
+          extra={<Switch />}
+        >Off(controlled)
+        </List.Item>
+        <List.Item
+          extra={
+            <Switch
+              checked={this.state.checked}
+              onChange={this.onSwitchChange}
+            />
+          }
+        >onChange event, switch status: {this.state.checked ? 'open' : 'close'}
+        </List.Item>
+        <List.Item
+          extra={<Switch disabled />}
+        >disabled
+        </List.Item>
+        <List.Item
+          extra={<Switch color="red" checked />}
+        >color
+        </List.Item>
+      </List>
     )
   }
 }
