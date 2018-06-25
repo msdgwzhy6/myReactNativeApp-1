@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
 })
 export default class DrawerScreen extends Component {
   static navigationOptions = {
-    headerTitle: 'Popover',
+    headerTitle: 'Drawer',
   }
   constructor(props) {
     super(props)
@@ -34,22 +34,11 @@ export default class DrawerScreen extends Component {
         </Button>
       </Flex>
     )
-    const sideBar1 = (
-      <Flex justify="center" align="center" style={[styles.sidebar]}>
-        <Button
-          type="warning"
-          onClick={() => this.rightDrawer.closeDrawer()}
-        >
-          Close Drawer
-        </Button>
-      </Flex>
-    )
     return (
       <View style={[styles.container]}>
-        <WhiteSpace size="xl" />
         <Drawer
           sidebar={sideBar}
-          position="left"
+          position="right"
           open={false}
           drawerRef={(el) => { this.leftDrawer = el }}
           onOpenChange={this.onOpenChange}
@@ -59,24 +48,6 @@ export default class DrawerScreen extends Component {
             <Button
               type="primary"
               onClick={() => this.leftDrawer.openDrawer()}
-            >
-              Open drawer
-            </Button>
-          </Flex>
-        </Drawer>
-        <WhiteSpace size="xl" />
-        <Drawer
-          sidebar={sideBar1}
-          position="right"
-          open={false}
-          drawerRef={(el) => { this.rightDrawer = el }}
-          onOpenChange={this.onOpenChange}
-          drawerBackgroundColor="rgb(145, 238, 249)"
-        >
-          <Flex style={{ flex: 1 }} justify="center" align="center">
-            <Button
-              type="primary"
-              onClick={() => this.rightDrawer.openDrawer()}
             >
               Open drawer
             </Button>
