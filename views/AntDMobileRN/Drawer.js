@@ -25,7 +25,7 @@ export default class DrawerScreen extends Component {
     return (
       <View style={[styles.container]}>
         <Drawer
-          sidebar={<SideBar closeDrawer={this.handleCloseDrawer} />}
+          sidebar={<SideBar closeDrawer={this.handleCloseDrawer} ref={(c) => { this.sideBar = c }} />}
           position="right"
           open={false}
           drawerRef={(el) => { this.leftDrawer = el }}
