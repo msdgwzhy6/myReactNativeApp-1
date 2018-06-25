@@ -108,3 +108,7 @@ SplashScreen.show(this, R.style.SplashScreenTheme)
 ## 构建失败解决办法
 
 1. [Execution failed for task ':app:processDebugResources'](http://t.cn/RrIaWii)
+
+## 参考
+
+- [react-native-splash-screen集成实践（ios & android）](https://zhuanlan.zhihu.com/p/29495955)

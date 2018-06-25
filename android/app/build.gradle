@@ -163,6 +163,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-camera')
     compile project(':react-native-splash-screen')
   compile project(':react-native-amap3d')
   compile project(':react-native-picker')
