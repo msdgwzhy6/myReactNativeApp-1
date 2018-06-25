@@ -4,6 +4,7 @@ import {
   StyleSheet,
 } from 'react-native'
 import { Button } from 'teaset'
+import SplashScreen from 'react-native-splash-screen'
 
 const styles = StyleSheet.create({
   container: {
@@ -22,6 +23,11 @@ export default class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {}
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      SplashScreen.hide()
+    }, 3000)
   }
   render() {
     return (

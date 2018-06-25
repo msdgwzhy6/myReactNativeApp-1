@@ -155,7 +155,7 @@ export default createBottomTabNavigator(
     Plugins: PluginsStack,
   },
   {
-    initialRouteName: 'AntDMobile',
+    initialRouteName: 'Home',
     tabBarOptions: {
       activeTintColor: Theme.primaryColor,
       inactiveTintColor: 'gray',
