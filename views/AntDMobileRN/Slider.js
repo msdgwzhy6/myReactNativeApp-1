@@ -15,13 +15,15 @@ const styles = StyleSheet.create({
 })
 
 export default class SliderScreen extends Component {
+  static navigationOptions = {
+    headerTitle: 'Slider',
+  }
   constructor(props) {
     super(props)
     this.state = {
       changingValue: 0.25,
       changedValue: 0.15,
       minMaxValue: 0,
-      slideCompletionCount: 0,
     }
   }
   onAfterChange = (value) => {
