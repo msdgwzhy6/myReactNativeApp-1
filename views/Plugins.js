@@ -33,24 +33,21 @@ export default class Home extends Component {
             arrow="horizontal"
             align="bottom"
             onClick={() => this.props.navigation.navigate('HeaderButtons')}
-          >
-            react-navigation-header-buttons
+          >react-navigation-header-buttons
             <Brief>Easily render header buttons for react-navigation.</Brief>
           </Item>
           <Item
             arrow="horizontal"
             align="bottom"
             onClick={() => this.props.navigation.navigate('Modal')}
-          >
-            打开全屏模式
+          >打开全屏模式
             <Brief>通过创建一个modal堆栈，来打开全屏模式</Brief>
           </Item>
           <Item
             arrow="horizontal"
             align="bottom"
             onClick={() => this.props.navigation.navigate('MaterialTopTabNavigator')}
-          >
-            createMaterialTopTabNavigator
+          >createMaterialTopTabNavigator
             <Brief>屏幕顶部的材料设计主题标签栏, 可通过点击路线或水平滑动来切换不同的路由</Brief>
           </Item>
         </List>
@@ -58,8 +55,7 @@ export default class Home extends Component {
           <Item
             arrow="horizontal"
             onClick={() => this.props.navigation.navigate('acQrcode')}
-          >
-            ac-qrcode
+          >ac-qrcode
             <Brief>A highly customizable QR code scanning component for React Native</Brief>
           </Item>
         </List>
@@ -67,22 +63,19 @@ export default class Home extends Component {
           <Item
             arrow="horizontal"
             onClick={() => { this.props.navigation.navigate('ReactNativePicker') }}
-          >
-            ReactNativePicker
+          >ReactNativePicker
             <Brief>A Native Picker with high performance.</Brief>
           </Item>
           <Item
             arrow="horizontal"
             onClick={() => this.props.navigation.navigate('ReactNativeModalDatetimePicker')}
-          >
-            react-native-modal-datetime-picker
+          >react-native-modal-datetime-picker
             <Brief>A React-Native datetime-picker for Android and iOS</Brief>
           </Item>
           <Item
             arrow="horizontal"
             onClick={() => this.props.navigation.navigate('ReactNativeCalendars')}
-          >
-            react-native-calendars
+          >react-native-calendars
             <Brief>React Native Calendar Components 📆</Brief>
           </Item>
         </List>
@@ -90,8 +83,7 @@ export default class Home extends Component {
           <Item
             arrow="horizontal"
             onClick={() => this.props.navigation.navigate('GiftedChat')}
-          >
-            react-native-gifted-chat
+          >react-native-gifted-chat
             <Brief>💬 The most complete chat UI for React Native</Brief>
           </Item>
         </List>
@@ -99,8 +91,7 @@ export default class Home extends Component {
           <Item
             arrow="horizontal"
             onClick={() => this.props.navigation.navigate('ReactNativeAmap3d')}
-          >
-            react-native-amap3d
+          >react-native-amap3d
             <Brief>react-native 高德地图组件，使用最新 3D SDK，支持 Android + iOS</Brief>
           </Item>
         </List>
@@ -108,8 +99,7 @@ export default class Home extends Component {
           <Item
             arrow="horizontal"
             onClick={() => this.props.navigation.navigate('ReactNativeSwiper')}
-          >
-            react-native-swiper
+          >react-native-swiper
             <Brief>The best Swiper component for React Native.</Brief>
           </Item>
         </List>
@@ -117,15 +107,13 @@ export default class Home extends Component {
           <Item
             arrow="horizontal"
             onClick={() => this.props.navigation.navigate('echarts')}
-          >
-            youngjuning-native-echarts
+          >youngjuning-native-echarts
             <Brief>修复了 native-echarts 部分BUG</Brief>
           </Item>
           <Item
             arrow="horizontal"
             onClick={() => this.props.navigation.navigate('secharts')}
-          >
-            react-native-secharts
+          >react-native-secharts
             <Brief>目前最好用的图标插件</Brief>
           </Item>
         </List>
