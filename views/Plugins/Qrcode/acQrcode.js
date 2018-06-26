@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text } from 'react-native'
-import { QRScannerView } from 'ac-qrcode'
+import { QRScannerView } from 'ac-qrcode-rn'
 import { Toast } from 'antd-mobile-rn'
 
 export default class AcQrcode extends Component {

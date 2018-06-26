@@ -96,7 +96,6 @@ def enableProguardInReleaseBuilds = false
 android {
   compileSdkVersion 26
   buildToolsVersion "26.0.2"
-  aaptOptions.cruncherEnabled = false
   defaultConfig {
     applicationId "com.myreactnativeapp"
     minSdkVersion 16
