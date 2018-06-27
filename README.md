@@ -4,7 +4,7 @@
 
 ## 构建命令
 
-> 为了加快开发流程，我设置了npm 脚本来代替繁琐的命令行。如果使用 yarn，把 **npm** 换成 **npm** 即可
+> 为了加快开发流程，我设置了npm 脚本来代替繁琐的命令行。如果使用 yarn，把 **npm** 换成 **yarn** 即可
 
 - android debug：`npm run-android`
 - android release：`npm release`
