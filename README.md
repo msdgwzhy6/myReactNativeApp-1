@@ -11,8 +11,8 @@
 > 5、6、7 需要用到 java jdk自带的工具，请参考 https://github.com/youngjuning/issue-blog/issues/92 正确配置你的java环境
 
 1. `yarn debug`：等于 `react-native run-android` 命令
-2. `yarn release`：用于打包 Android apk
-3. `yarn install`：用于打包 Android apk 并立即安装到手机上
+2. `yarn assembleRelease`：用于打包 Android apk
+3. `yarn installRelease`：用于打包 Android apk 并立即安装到手机上
 4. `yarn clean`：项目切换时可能需要执行以清理 gradle 构建缓存
 5. `yarn keygen`：生成 Android key 的命令较长，执行这个快速生成
 6. `yarn key-debug`：获取调试版本下的签名信息
