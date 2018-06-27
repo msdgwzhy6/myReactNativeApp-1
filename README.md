@@ -14,13 +14,13 @@
 2. `yarn release`：用于打包 Android apk
 3. `yarn install`：用于打包 Android apk 并立即安装到手机上
 4. `yarn clean`：项目切换时可能需要执行以清理 gradle 构建缓存
-5. `yarn key`：生成 Android key 的命令较长，执行这个快速生成
-6. `yarn debug-sha1`：获取调试版本下的 SHA1
-7. `yarn release-sha1`：获取发布版本下的 SHA1
+5. `yarn keygen`：生成 Android key 的命令较长，执行这个快速生成
+6. `yarn key-debug`：获取调试版本下的签名信息
+7. `yarn key-release`：获取发布版本下的签名信息
 
 ### Ios
 
-- `yarn ios-debug`：等于 `react-native run-ios` 命令
+- `yarn debug-ios`：等于 `react-native run-ios` 命令
 
 ## 资源
 
