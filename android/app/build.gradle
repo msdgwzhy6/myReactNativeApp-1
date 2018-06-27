@@ -107,12 +107,6 @@ android {
   }
 
   signingConfigs {
-    debug {
-      storeFile file("my-release-key.keystore")
-      storePassword "jun19931129"
-      keyAlias "my-key-alias"
-      keyPassword "jun19931129"
-    }
     release {
       storeFile file("my-release-key.keystore")
       storePassword "jun19931129"

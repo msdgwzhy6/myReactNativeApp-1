@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "run-android": "react-native run-android",
+    "test": "jest",
+    "debug": "react-native run-android",
     "release": "cd android && gradlew assembleRelease",
     "install": "cd android && gradlew installRelease",
-    "clean": "cd android && gradlew clean",
-    "test": "jest"
+    "clean": "cd android && gradlew clean"
   },
   "dependencies": {
     "ac-qrcode-rn": "^0.1.0",

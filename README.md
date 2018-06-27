@@ -9,7 +9,7 @@
 - android debug：`npm run-android`
 - android release：`npm release`
 - android installRelease：`npm install`
-- gradle clean：`npm clean`
+- gradle clean：`npm clean`（多个项目切换开发时需要用到）
 - test：`npm jest`
 
 ## 资源
