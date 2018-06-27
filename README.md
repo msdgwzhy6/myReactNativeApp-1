@@ -1,23 +1,3 @@
-# myReactNativeApp
-
-## 切换
-
-默认是基于 antd-react-native 的，切换的话请修改 index.js 中的代码
-
-```js
-...
-// import TeasetApp from './App-teaset'
-import AntdApp from './App-antd'
-...
-AppRegistry.registerComponent('myReactNativeApp', () => AntdApp)
-```
-
-## 插件
-
-- **native-echarts**：基于 React Native 和 Echarts 的图表插件
-- **react-native-keyboard-aware-scroll-view**：解决react-native软键盘弹出挡住输入框的问题
-- **react-navigation-header-buttons**：轻松渲染头部按钮的 react-navigation 扩展
-
 ## 资源
 
 ### 学习资料
