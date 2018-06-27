@@ -8,7 +8,8 @@
     "debug": "react-native run-android",
     "release": "cd android && gradlew assembleRelease",
     "install": "cd android && gradlew installRelease",
-    "clean": "cd android && gradlew clean"
+    "clean": "cd android && gradlew clean",
+    "key": "keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000"
   },
   "dependencies": {
     "ac-qrcode-rn": "^0.1.0",

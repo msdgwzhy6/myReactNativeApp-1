@@ -100,21 +100,11 @@ android {
     minSdkVersion 16
     targetSdkVersion 22
     versionCode 1
-    versionName "0.1"
+    versionName "0.0.2"
     ndk {
       abiFilters "armeabi-v7a", "x86"
     }
   }
-
-  signingConfigs {
-    release {
-      storeFile file("my-release-key.keystore")
-      storePassword "jun19931129"
-      keyAlias "my-key-alias"
-      keyPassword "jun19931129"
-    }
-  }
-
   splits {
     abi {
       reset()
@@ -123,11 +113,28 @@ android {
       include "armeabi-v7a", "x86"
     }
   }
+  signingConfigs {
+    release {
+      storeFile file("my-release-key.keystore")
+      storePassword "jun19931129"
+      keyAlias "my-key-alias"
+      keyPassword "jun19931129"
+    }
+  }
   buildTypes {
+    debug {
+      // 为您的调试构建停用 Crashlytics http://t.cn/RrKtC4X
+      ext.enableCrashlytics = false
+    }
     release {
       aaptOptions.cruncherEnabled=false
-      minifyEnabled enableProguardInReleaseBuilds
+      // 启用 Android 插件压缩器
+      useProguard false
+      // 启用代码压缩
+      minifyEnabled true
+      // 启用代码混淆
       proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+      // 启用 release 签名配置
       signingConfig signingConfigs.release
     }
   }
