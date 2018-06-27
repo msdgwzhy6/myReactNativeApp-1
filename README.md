@@ -6,11 +6,21 @@
 
 > 为了加快开发流程，我设置了npm 脚本来代替繁琐的命令行。如果使用 yarn，把 **npm** 换成 **yarn** 即可
 
-- android debug：`npm run-android`
-- android release：`npm release`
-- android installRelease：`npm install`
-- gradle clean：`npm clean`（多个项目切换开发时需要用到）
-- test：`npm jest`
+### Android
+
+> 5、6、7 需要用到 java jdk自带的工具，请参考 https://github.com/youngjuning/issue-blog/issues/92 正确配置你的java环境
+
+1. `yarn debug`：等于 `react-native run-android` 命令
+2. `yarn release`：用于打包 Android apk
+3. `yarn install`：用于打包 Android apk 并立即安装到手机上
+4. `yarn clean`：项目切换时可能需要执行以清理 gradle 构建缓存
+5. `yarn key`：生成 Android key 的命令较长，执行这个快速生成
+6. `yarn debug-sha1`：获取调试版本下的 SHA1
+7. `yarn release-sha1`：获取发布版本下的 SHA1
+
+### Ios
+
+- `yarn ios-debug`：等于 `react-native run-ios` 命令
 
 ## 资源
 

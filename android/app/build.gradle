@@ -127,8 +127,9 @@ android {
       ext.enableCrashlytics = false
     }
     release {
-      // 禁用 PNG 检查
-      aaptOptions.cruncherEnabled=false
+      aaptOptions.cruncherEnabled=false // 禁用 PNG 检查
+      zipAlignEnabled true // 对包进行压缩
+      useProguard false // 启用 Android 插件压缩器
       minifyEnabled enableProguardInReleaseBuilds
       proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
       signingConfig signingConfigs.release

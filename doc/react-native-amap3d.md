@@ -1,5 +1,7 @@
 react-native 高德地图组件，使用最新 3D SDK，支持 Android + iOS
 
+> https://github.com/qiuxiang/react-native-amap3d
+
 _注意：RN v0.53+ 存在一些 bug（主要影响 iOS 自定义 View），建议使用 RN v0.52。_
 
 # 安装
