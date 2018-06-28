@@ -171,6 +171,6 @@ task copyDownloadableDepsToLibs(type: Copy) {
 }
 
 project.ext.vectoricons = [
-iconFontNames: [ 'FontAwesome.ttf', 'Ionicons.ttf', 'Octicons' ] // 你想要复制的字体文件的名字
+iconFontNames: [ 'FontAwesome.ttf' ] // 你想要复制的字体文件的名字 'Ionicons.ttf', 'Octicons' 
 ]
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"

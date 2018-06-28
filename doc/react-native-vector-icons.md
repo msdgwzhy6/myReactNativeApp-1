@@ -31,7 +31,7 @@
 ### 2、使用 `react-native link`
 
 ```bash
-$ react-native link
+$ react-native link react-native-vector-icons
 ```
 
 > 注意： 一些用户使用这个方法的时候会有麻烦，如果你也遇到了同样的问题，那么尝试使用其他方法
@@ -50,7 +50,7 @@ apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 ```gradle
 project.ext.vectoricons = [
-  iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' ] // 你想要复制的字体文件的名字
+  iconFontNames: [ 'MaterialIcons.ttf', 'Fontawesome.ttf' ] // 你想要复制的字体文件的名字
 ]
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 ```
