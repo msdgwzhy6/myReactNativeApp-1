@@ -39,6 +39,10 @@ const constructNormalMessage = () => {
 }
 
 export default class MyComponent extends Component {
+  static navigationOptions = {
+    headerTitle: 'aurora imui',
+  }
+
   constructor(props) {
     super(props)
     this.state = {}

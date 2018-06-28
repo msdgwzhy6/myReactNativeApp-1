@@ -127,7 +127,7 @@ android {
     ...
     minSdkVersion 21
     targetSdkVersion 26
-    multiDexEnabled true
+    multiDexEnabled true // here
   }
   ...
 }
