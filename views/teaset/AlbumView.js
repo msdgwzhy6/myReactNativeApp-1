@@ -28,6 +28,7 @@ export default class AlbumViewScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('title', 'AlbumView'),
   })
+
   constructor(props) {
     super(props)
     this.state = {
@@ -45,8 +46,11 @@ export default class AlbumViewScreen extends Component {
       ],
     }
   }
+
   showAlbumView(index) {
-    const curImg = this.state.curImg
+    const {
+      curImg, images, thumbs, fullImageView,
+    } = this.state
     curImg.measure((x, y, width, height, pageX, pageY) => {
       const overlayView = (
         <Overlay.PopView
@@ -65,21 +69,23 @@ export default class AlbumViewScreen extends Component {
           <AlbumView
             style={{ flex: 1 }}
             control
-            images={this.state.images}
-            thumbs={this.state.thumbs}
+            images={images}
+            thumbs={thumbs}
             defaultIndex={index}
-            onPress={() => this.state.fullImageView && this.state.fullImageView.close()}
+            onPress={() => fullImageView && fullImageView.close()}
           />
         </Overlay.PopView>
       )
       Overlay.show(overlayView)
     })
   }
+
   render() {
+    const { thumbs } = this.state
     return (
       <View style={[styles.container]}>
         <View style={[styles.wrap]}>
-          {this.state.thumbs.map((item, index) => (
+          {thumbs.map((item, index) => (
             <View style={[styles.imageWrap]} key={index.toString()}>
               <TouchableOpacity
                 style={[styles.container]}

@@ -20,10 +20,12 @@ export default class ActionSheetScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('title', 'ActionSheet'),
   })
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   showActionSheet() {
     const items = [
       { title: 'Say hello', onPress: () => Alert.alert('Hello') },
@@ -33,6 +35,7 @@ export default class ActionSheetScreen extends Component {
     const cancelItem = { title: 'Cancel' }
     ActionSheet.show(items, cancelItem)
   }
+
   render() {
     return (
       <View style={styles.container}>
@@ -42,7 +45,9 @@ export default class ActionSheetScreen extends Component {
           onPress={() => { this.showActionSheet() }}
         >
           <Icon name="twitter" size={30} color="#fff">
-            <Text>twitter</Text>
+            <Text>
+              twitter
+            </Text>
           </Icon>
         </Button>
       </View>

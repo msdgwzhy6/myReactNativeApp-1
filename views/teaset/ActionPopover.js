@@ -20,10 +20,12 @@ export default class ActionPopoverScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('title', 'ActionPopover'),
   })
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   showActionPopover(view) {
     view.measure((x, y, width, height, pageX, pageY) => {
       const items = [
@@ -38,6 +40,7 @@ export default class ActionPopoverScreen extends Component {
       })
     })
   }
+
   render() {
     return (
       <View style={styles.container}>
@@ -49,7 +52,9 @@ export default class ActionPopoverScreen extends Component {
           onPress={() => this.showActionPopover(this.twitter)}
         >
           <Icon name="twitter" size={30} color="#fff">
-            <Text>Twitter</Text>
+            <Text>
+              Twitter
+            </Text>
           </Icon>
         </Button>
       </View>
