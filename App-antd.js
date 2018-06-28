@@ -1,8 +1,8 @@
 import React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import Theme from './assets/Theme'
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation'
 import AV from 'leancloud-storage/live-query'
+import Theme from './assets/Theme'
 import { Leancloud } from './assets/Dictionary'
 // Home
 import Home from './views/Home'
