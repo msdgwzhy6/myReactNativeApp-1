@@ -55,6 +55,10 @@ project.ext.vectoricons = [
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 ```
 
+- 所有字体一览
+
+![](https://i.loli.net/2018/06/28/5b34aaafed89c.png)
+
 ### 2、手动管理
 
 复制 Fonts folder 文件夹下的内容 到 `android/app/src/main/assets/fonts` (注意是小写的文件夹名)
