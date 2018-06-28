@@ -8,7 +8,7 @@ import {
 import RNFS from 'react-native-fs'
 import IMUI from 'aurora-imui-react-native'
 
-const AuroraIController = IMUI.AuroraIMUIController // the IMUI controller, use it to operate  messageList and ChatInput.
+const AuroraIMUIController = IMUI.AuroraIMUIController // the IMUI controller, use it to operate  messageList and ChatInput.
 const window = Dimensions.get('window')
 const MessageList = IMUI.MessageList
 const ChatInput = IMUI.ChatInput
@@ -55,7 +55,7 @@ export default class MyComponent extends Component {
     message.msgType = 'text'
     message.text = text
 
-    AuroraIController.appendMessages([message])
+    AuroraIMUIController.appendMessages([message])
   }
 
   render() {
