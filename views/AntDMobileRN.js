@@ -8,16 +8,6 @@ import { List } from 'antd-mobile-rn'
 const Item = List.Item
 const Brief = List.Item.Brief
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  btn: {
-    margin: 10,
-  },
-})
-
 export default class AntDMobileRN extends Component {
   static navigationOptions = ({ navigation }) => ({
     headerTitle: navigation.getParam('headerTitle', 'AntDMobileRN'),
@@ -231,3 +221,13 @@ export default class AntDMobileRN extends Component {
     )
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  btn: {
+    margin: 10,
+  },
+})

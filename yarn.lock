@@ -749,6 +749,10 @@ atob@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.1.tgz#ae2d5a729477f289d60dd7f96a6314a22dd6c22a"
 
+aurora-imui-react-native@^0.10.4:
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/aurora-imui-react-native/-/aurora-imui-react-native-0.10.4.tgz#31f25925e145bb26f95ce7bc7f02291cecd3ca5d"
+
 aws-sign2@~0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/aws-sign2/-/aws-sign2-0.7.0.tgz#b46e890934a9591f2d2f6f86d7e6a9f1b3fe76a8"

@@ -52,6 +52,17 @@
 		F2F049B2DA94426DB2323C1A /* libRCTBEEPickerManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A14CAECC2E9F490ABFB566E4 /* libRCTBEEPickerManager.a */; };
 		0262AA8C396C45E4A343CB39 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FFDF1C3CD864D4DA67A6529 /* libSplashScreen.a */; };
 		F282E0FE451B4162AD594760 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 122A2780AE2544119C8545FD /* libRNCamera.a */; };
+		AB07677155B04871943B77AB /* libAuroraIMUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D91CAF3CCCBE468295EAA3ED /* libAuroraIMUI.a */; };
+		C60B7FFA7442484EB686C243 /* RCTAuroraIMUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18D5558855D44B5BBD30109 /* RCTAuroraIMUI.framework */; };
+		7C50029403724140938B8774 /* RCTAuroraIMUITests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = E23BB7765D7646D49CD92C5F /* RCTAuroraIMUITests.xctest */; };
+		4D20C5AD32A14F07B2D9B9B8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 351DC017E30746E8AC9703D9 /* libz.tbd */; };
+		4F89410C06D04ED389ABA391 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A83F4956C649458D48BC95 /* CoreTelephony.framework */; };
+		79141A13AB5442CB9EF16A44 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD14EE979BA4CBB97C5D03F /* CFNetwork.framework */; };
+		278F6DD38D5D43ACBBA79797 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFCEDF214CC4BF486DF9025 /* CoreFoundation.framework */; };
+		B26AC5054BAA4A9CAB178FC4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55E4039E46E4D819520683D /* SystemConfiguration.framework */; };
+		660A83205604497DB7F42452 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71BE960FC84A78995AF5EB /* Foundation.framework */; };
+		448ACF2C0488416AB91F5C04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C08339B26FA4316A42731E7 /* UIKit.framework */; };
+		4A47A6B40853433FAEE6ECC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEFBC5432D440FA87ADECE8 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -376,6 +387,18 @@
 		1FFDF1C3CD864D4DA67A6529 /* libSplashScreen.a */ = {isa = PBXFileReference; name = "libSplashScreen.a"; path = "libSplashScreen.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		24229970DF26445C9A2C2429 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; name = "RNCamera.xcodeproj"; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		122A2780AE2544119C8545FD /* libRNCamera.a */ = {isa = PBXFileReference; name = "libRNCamera.a"; path = "libRNCamera.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		93D9C85911384A96AE805408 /* RCTAuroraIMUI.xcodeproj */ = {isa = PBXFileReference; name = "RCTAuroraIMUI.xcodeproj"; path = "../node_modules/aurora-imui-react-native/ReactNative/ios/RCTAuroraIMUI.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		D91CAF3CCCBE468295EAA3ED /* libAuroraIMUI.a */ = {isa = PBXFileReference; name = "libAuroraIMUI.a"; path = "libAuroraIMUI.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		C18D5558855D44B5BBD30109 /* RCTAuroraIMUI.framework */ = {isa = PBXFileReference; name = "RCTAuroraIMUI.framework"; path = "System/Library/Frameworks/RCTAuroraIMUI.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		E23BB7765D7646D49CD92C5F /* RCTAuroraIMUITests.xctest */ = {isa = PBXFileReference; name = "RCTAuroraIMUITests.xctest"; path = "RCTAuroraIMUITests.xctest"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.cfbundle; explicitFileType = undefined; includeInIndex = 0; };
+		351DC017E30746E8AC9703D9 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		84A83F4956C649458D48BC95 /* CoreTelephony.framework */ = {isa = PBXFileReference; name = "CoreTelephony.framework"; path = "System/Library/Frameworks/CoreTelephony.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		EDD14EE979BA4CBB97C5D03F /* CFNetwork.framework */ = {isa = PBXFileReference; name = "CFNetwork.framework"; path = "System/Library/Frameworks/CFNetwork.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		0EFCEDF214CC4BF486DF9025 /* CoreFoundation.framework */ = {isa = PBXFileReference; name = "CoreFoundation.framework"; path = "System/Library/Frameworks/CoreFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		F55E4039E46E4D819520683D /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		AC71BE960FC84A78995AF5EB /* Foundation.framework */ = {isa = PBXFileReference; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		7C08339B26FA4316A42731E7 /* UIKit.framework */ = {isa = PBXFileReference; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		BBEFBC5432D440FA87ADECE8 /* CoreGraphics.framework */ = {isa = PBXFileReference; name = "CoreGraphics.framework"; path = "System/Library/Frameworks/CoreGraphics.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +431,17 @@
 				F2F049B2DA94426DB2323C1A /* libRCTBEEPickerManager.a in Frameworks */,
 				0262AA8C396C45E4A343CB39 /* libSplashScreen.a in Frameworks */,
 				F282E0FE451B4162AD594760 /* libRNCamera.a in Frameworks */,
+				AB07677155B04871943B77AB /* libAuroraIMUI.a in Frameworks */,
+				C60B7FFA7442484EB686C243 /* RCTAuroraIMUI.framework in Frameworks */,
+				7C50029403724140938B8774 /* RCTAuroraIMUITests.xctest in Resources */,
+				4D20C5AD32A14F07B2D9B9B8 /* libz.tbd in Frameworks */,
+				4F89410C06D04ED389ABA391 /* CoreTelephony.framework in Frameworks */,
+				79141A13AB5442CB9EF16A44 /* CFNetwork.framework in Frameworks */,
+				278F6DD38D5D43ACBBA79797 /* CoreFoundation.framework in Frameworks */,
+				B26AC5054BAA4A9CAB178FC4 /* SystemConfiguration.framework in Frameworks */,
+				660A83205604497DB7F42452 /* Foundation.framework in Frameworks */,
+				448ACF2C0488416AB91F5C04 /* UIKit.framework in Frameworks */,
+				4A47A6B40853433FAEE6ECC3 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +591,14 @@
 			isa = PBXGroup;
 			children = (
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
+				351DC017E30746E8AC9703D9 /* libz.tbd */,
+				84A83F4956C649458D48BC95 /* CoreTelephony.framework */,
+				EDD14EE979BA4CBB97C5D03F /* CFNetwork.framework */,
+				0EFCEDF214CC4BF486DF9025 /* CoreFoundation.framework */,
+				F55E4039E46E4D819520683D /* SystemConfiguration.framework */,
+				AC71BE960FC84A78995AF5EB /* Foundation.framework */,
+				7C08339B26FA4316A42731E7 /* UIKit.framework */,
+				BBEFBC5432D440FA87ADECE8 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -598,6 +640,7 @@
 				9A3F56E12DB7499DACFAF263 /* RCTBEEPickerManager.xcodeproj */,
 				415F70067AC04D1FA2D548CA /* SplashScreen.xcodeproj */,
 				24229970DF26445C9A2C2429 /* RNCamera.xcodeproj */,
+				93D9C85911384A96AE805408 /* RCTAuroraIMUI.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1256,6 +1299,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1263,6 +1309,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-picker\ios\RCTBEEPickerManager",
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\aurora-imui-react-native\iOS\IMUIMessageCollectionView/**",
 				);
 			};
 			name = Debug;
@@ -1284,6 +1331,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1291,6 +1341,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-picker\ios\RCTBEEPickerManager",
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\aurora-imui-react-native\iOS\IMUIMessageCollectionView/**",
 				);
 			};
 			name = Release;
@@ -1316,6 +1367,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-picker\ios\RCTBEEPickerManager",
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\aurora-imui-react-native\iOS\IMUIMessageCollectionView/**",
 				);
 			};
 			name = Debug;
@@ -1340,6 +1392,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-picker\ios\RCTBEEPickerManager",
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\aurora-imui-react-native\iOS\IMUIMessageCollectionView/**",
 				);
 			};
 			name = Release;
@@ -1370,6 +1423,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1377,6 +1433,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-picker\ios\RCTBEEPickerManager",
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\aurora-imui-react-native\iOS\IMUIMessageCollectionView/**",
 				);
 			};
 			name = Debug;
@@ -1407,6 +1464,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1414,6 +1474,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-picker\ios\RCTBEEPickerManager",
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\aurora-imui-react-native\iOS\IMUIMessageCollectionView/**",
 				);
 			};
 			name = Release;
@@ -1443,6 +1504,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1450,6 +1514,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-picker\ios\RCTBEEPickerManager",
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\aurora-imui-react-native\iOS\IMUIMessageCollectionView/**",
 				);
 			};
 			name = Debug;
@@ -1479,6 +1544,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1486,6 +1554,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-picker\ios\RCTBEEPickerManager",
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 					"$(SRCROOT)\..\node_modules\react-native-camera\ios/**",
+					"$(SRCROOT)\..\node_modules\aurora-imui-react-native\iOS\IMUIMessageCollectionView/**",
 				);
 			};
 			name = Release;
