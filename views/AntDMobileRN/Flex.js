@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import { StyleSheet, Dimensions, View, ScrollView } from 'react-native'
+import {
+  StyleSheet, Dimensions, View, ScrollView,
+} from 'react-native'
 import { Flex } from 'antd-mobile-rn'
 
 const { height } = Dimensions.get('window')
@@ -13,10 +15,12 @@ export default class FlexScreen extends Component {
   static navigationOptions = {
     headerTitle: 'Flex布局',
   }
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   render() {
     return (
       <ScrollView>
