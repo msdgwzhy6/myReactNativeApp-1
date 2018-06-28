@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { ScrollView, Alert } from 'react-native'
-import { InputItem, List, Button } from 'antd-mobile-rn'
+import {
+  InputItem, List, Button, WhiteSpace,
+} from 'antd-mobile-rn'
 
 const Item = List.Item
 
@@ -8,13 +10,18 @@ export default class InputItemScreen extends Component {
   static navigationOptions = {
     headerTitle: 'InputItem',
   }
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   render() {
     return (
       <ScrollView>
+        <WhiteSpace
+          size="md" // xs,sm,md,lg,xl
+        />
         <List renderHeader="基本">
           <InputItem
             clear
