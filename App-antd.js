@@ -137,7 +137,7 @@ const PluginsStack = createStackNavigator(
   },
 )
 
-// 指定页面隐藏header
+// 指定页面隐藏tabbar
 const Stacks = [HomeStack, AntDMobileRNStack, PluginsStack]
 Stacks.forEach((item) => {
   item.navigationOptions = ({ navigation }) => {
