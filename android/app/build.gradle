@@ -151,6 +151,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-fs')
   implementation project(':aurora-imui-react-native')
   implementation project(':react-native-camera')
   implementation project(':react-native-splash-screen')

@@ -39,6 +39,7 @@ import ReactNativeModalDatetimePicker from './views/Plugins/ReactNativeModalDate
 import ReactNativeCalendars from './views/Plugins/ReactNativeCalendars'
 import ReactNativeAmap3d from './views/Plugins/ReactNativeAmap3d'
 import GiftedChat from './views/Plugins/GiftedChat'
+import AuroraImui from './views/Plugins/AuroraImui'
 import ReactNativeSwiper from './views/Plugins/ReactNativeSwiper'
 import echarts from './views/Plugins/Charts/Echarts'
 import secharts from './views/Plugins/Charts/SEcharts'
@@ -116,6 +117,7 @@ const PluginsStack = createStackNavigator(
     ReactNativeCalendars,
     ReactNativeAmap3d,
     GiftedChat,
+    AuroraImui,
     ReactNativeSwiper,
     HeaderButtons,
     Modal,

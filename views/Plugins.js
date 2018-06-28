@@ -113,6 +113,15 @@ export default class Home extends Component {
               💬 The most complete chat UI for React Native
             </Brief>
           </Item>
+          <Item
+            arrow="horizontal"
+            onClick={() => navigation.navigate('AuroraImui')}
+          >
+            aurora-imui-react-native
+            <Brief>
+              通用 IM 聊天 UI 组件，已经同时支持 Android/iOS/RN
+            </Brief>
+          </Item>
         </List>
         <List renderHeader="Map">
           <Item

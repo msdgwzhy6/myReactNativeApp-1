@@ -2,7 +2,9 @@ package com.myreactnativeapp;
 
 import android.app.Application;
 
+import cn.jiguang.imui.messagelist.ReactIMUIPackage;
 import com.facebook.react.ReactApplication;
+import com.rnfs.RNFSPackage;
 import org.reactnative.camera.RNCameraPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import cn.qiuxiang.react.amap3d.AMap3DPackage;
@@ -28,11 +30,13 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNFSPackage(),
             new RNCameraPackage(),
             new SplashScreenReactPackage(),
             new AMap3DPackage(),
             new PickerViewPackage(),
-            new VectorIconsPackage()
+            new VectorIconsPackage(),
+            new ReactIMUIPackage()
       );
     }
 
