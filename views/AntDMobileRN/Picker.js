@@ -5,7 +5,9 @@ import {
   StyleSheet,
 } from 'react-native'
 import { Picker, List } from 'antd-mobile-rn'
-import { p, pc, pca, pcas } from 'antd-mobile-area-data'
+import {
+  p, pc, pca, pcas,
+} from 'antd-mobile-area-data'
 
 const Item = List.Item
 const styles = StyleSheet.create({
@@ -18,6 +20,7 @@ export default class MyComponent extends Component {
   static navigationOptions = {
     headerTitle: 'Picker',
   }
+
   constructor(props) {
     super(props)
     this.state = {
@@ -31,14 +34,17 @@ export default class MyComponent extends Component {
       pcasValue: [],
     }
   }
+
   onClick = () => {
     setTimeout(() => {
       this.setState({ pc })
     }, 500)
   }
+
   onChange = (value) => {
     this.setState({ value })
   }
+
   render() {
     return (
       <View style={styles.container}>

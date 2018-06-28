@@ -42,17 +42,20 @@ export default class PopoverScreen extends Component {
   static navigationOptions = {
     headerTitle: 'Popover',
   }
+
   constructor(props) {
     super(props)
     this.state = {
       selected: '',
     }
   }
+
   onSelect = (value) => {
     this.setState({
       selected: value,
     })
   }
+
   render() {
     const overlay = [
       <Popover.Item key="1" value="disabled" disabled>

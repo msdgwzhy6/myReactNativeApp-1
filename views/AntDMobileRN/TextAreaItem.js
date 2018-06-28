@@ -11,15 +11,18 @@ export default class TextareaItemScreen extends Component {
   static navigationOptions = {
     headerTitle: 'TextareaItem',
   }
+
   constructor(props) {
     super(props)
     this.state = {
       val: '默认带value',
     }
   }
+
   onChange = (val) => {
     this.setState({ val })
   }
+
   render() {
     return (
       <ScrollView

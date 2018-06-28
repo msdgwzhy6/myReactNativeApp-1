@@ -15,6 +15,7 @@ export default class SideBar extends Component {
     super(props)
     this.state = {}
   }
+
   render() {
     return (
       <Flex justify="center" align="center" style={[styles.sidebar]}>

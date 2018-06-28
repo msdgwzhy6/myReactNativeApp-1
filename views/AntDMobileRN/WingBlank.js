@@ -13,10 +13,12 @@ export default class WingBlankScreen extends Component {
   static navigationOptions = {
     headerTitle: 'WingBlank',
   }
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   render() {
     return (
       <WingBlank style={[styles.container]}>

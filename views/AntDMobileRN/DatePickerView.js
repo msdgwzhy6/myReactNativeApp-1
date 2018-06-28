@@ -20,13 +20,16 @@ export default class DatePickerViewScreen extends Component {
       value: null,
     }
   }
+
   handleChange = (value) => {
     console.log(value)
     this.setState({ value })
   }
+
   handleValueChange = (value) => {
     console.log(value)
   }
+
   render() {
     return (
       <View style={styles.container}>

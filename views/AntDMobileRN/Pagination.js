@@ -9,10 +9,12 @@ export default class PaginationScreen extends Component {
   static navigationOptions = {
     headerTitle: 'Pagination',
   }
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   render() {
     return (
       <WingBlank size="lg">

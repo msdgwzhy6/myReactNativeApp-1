@@ -5,17 +5,20 @@ export default class SwitchScreen extends Component {
   static navigationOptions = {
     headerTitle: 'Switch',
   }
+
   constructor(props) {
     super(props)
     this.state = {
       checked: false,
     }
   }
+
   onSwitchChange = (value: any) => {
     this.setState({
       checked: value,
     })
   }
+
   render() {
     return (
       <List style={{ marginTop: 20 }}>
@@ -28,12 +31,12 @@ export default class SwitchScreen extends Component {
         >Off(controlled)
         </List.Item>
         <List.Item
-          extra={
+          extra={(
             <Switch
               checked={this.state.checked}
               onChange={this.onSwitchChange}
             />
-          }
+)}
         >onChange event, switch status: {this.state.checked ? 'open' : 'close'}
         </List.Item>
         <List.Item

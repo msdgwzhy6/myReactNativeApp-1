@@ -35,17 +35,20 @@ export default class PickerViewScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('title', 'PickerView'),
   })
+
   constructor(props) {
     super(props)
     this.state = {
       value: null,
     }
   }
+
   onChange = (value) => {
     this.setState({
       value,
     })
   }
+
   render() {
     return (
       <PickerView

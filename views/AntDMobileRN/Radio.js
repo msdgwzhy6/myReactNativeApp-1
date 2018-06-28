@@ -17,10 +17,12 @@ export default class RadioScreen extends Component {
   static navigationOptions = {
     headerTitle: 'Radio',
   }
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   render() {
     return (
       <View style={styles.container}>

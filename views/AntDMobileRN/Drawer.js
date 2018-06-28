@@ -13,14 +13,17 @@ export default class DrawerScreen extends Component {
   static navigationOptions = {
     headerTitle: 'Drawer',
   }
+
   constructor(props) {
     super(props)
     this.state = {}
     this.handleCloseDrawer = this.handleCloseDrawer.bind(this)
   }
+
   handleCloseDrawer() {
     this.leftDrawer.closeDrawer()
   }
+
   render() {
     return (
       <View style={[styles.container]}>

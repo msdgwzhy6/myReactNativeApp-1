@@ -3,7 +3,9 @@ import {
   View,
   StyleSheet,
 } from 'react-native'
-import { Checkbox, WhiteSpace, List, Text } from 'antd-mobile-rn'
+import {
+  Checkbox, WhiteSpace, List, Text,
+} from 'antd-mobile-rn'
 
 const AgreeItem = Checkbox.AgreeItem
 const CheckboxItem = Checkbox.CheckboxItem
@@ -19,6 +21,7 @@ export default class CheckboxScreen extends Component {
   static navigationOptions = {
     headerTitle: 'CheckBox',
   }
+
   constructor(props) {
     super(props)
     this.country = [
@@ -36,15 +39,18 @@ export default class CheckboxScreen extends Component {
       agree: false,
     }
   }
+
   handleChange(e, key) {
     this.country[key].checked = e.target.checked
   }
+
   handleAgree(e) {
     const checked = e.target.checked
     this.setState({
       agree: checked,
     })
   }
+
   render() {
     return (
       <View style={styles.container}>

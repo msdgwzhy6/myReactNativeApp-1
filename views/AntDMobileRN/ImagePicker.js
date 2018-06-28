@@ -18,6 +18,7 @@ export default class ImagePickerScreen extends Component {
   static navigationOptions = {
     headerTitle: 'ImgaePicker',
   }
+
   constructor(props) {
     super(props)
     this.state = {
@@ -38,12 +39,15 @@ export default class ImagePickerScreen extends Component {
       files2: [],
     }
   }
+
   handleFileChange = (files) => {
     this.setState({ files })
   }
+
   handleFile2Change = (files2) => {
     this.setState({ files2 })
   }
+
   render() {
     return (
       <View style={styles.container}>
