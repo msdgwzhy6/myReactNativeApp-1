@@ -21,100 +21,139 @@ export default class Home extends Component {
   static navigationOptions = ({ navigation }) => ({
     headerTitle: navigation.getParam('headerTitle', '第三方插件'),
   })
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   render() {
+    const { navigation } = this.props
     return (
       <ScrollView style={[styles.container]}>
         <List renderHeader="React Navigation">
           <Item
             arrow="horizontal"
             align="bottom"
-            onClick={() => this.props.navigation.navigate('HeaderButtons')}
-          >react-navigation-header-buttons
-            <Brief>Easily render header buttons for react-navigation.</Brief>
+            onClick={() => navigation.navigate('HeaderButtons')}
+          >
+            react-navigation-header-buttons
+            <Brief>
+              Easily render header buttons for react-navigation.
+            </Brief>
           </Item>
           <Item
             arrow="horizontal"
             align="bottom"
-            onClick={() => this.props.navigation.navigate('Modal')}
-          >打开全屏模式
-            <Brief>通过创建一个modal堆栈，来打开全屏模式</Brief>
+            onClick={() => navigation.navigate('Modal')}
+          >
+            打开全屏模式
+            <Brief>
+              通过创建一个modal堆栈，来打开全屏模式
+            </Brief>
           </Item>
           <Item
             arrow="horizontal"
             align="bottom"
-            onClick={() => this.props.navigation.navigate('MaterialTopTabNavigator')}
-          >createMaterialTopTabNavigator
-            <Brief>屏幕顶部的材料设计主题标签栏, 可通过点击路线或水平滑动来切换不同的路由</Brief>
+            onClick={() => navigation.navigate('MaterialTopTabNavigator')}
+          >
+            createMaterialTopTabNavigator
+            <Brief>
+              屏幕顶部的材料设计主题标签栏, 可通过点击路线或水平滑动来切换不同的路由
+            </Brief>
           </Item>
         </List>
         <List renderHeader="QrCode 二维码扫描">
           <Item
             arrow="horizontal"
-            onClick={() => this.props.navigation.navigate('acQrcode')}
-          >ac-qrcode
-            <Brief>A highly customizable QR code scanning component for React Native</Brief>
+            onClick={() => navigation.navigate('acQrcode')}
+          >
+            ac-qrcode
+            <Brief>
+              A highly customizable QR code scanning component for React Native
+            </Brief>
           </Item>
         </List>
         <List renderHeader="Picker">
           <Item
             arrow="horizontal"
-            onClick={() => { this.props.navigation.navigate('ReactNativePicker') }}
-          >ReactNativePicker
-            <Brief>A Native Picker with high performance.</Brief>
+            onClick={() => { navigation.navigate('ReactNativePicker') }}
+          >
+            ReactNativePicker
+            <Brief>
+              A Native Picker with high performance.
+            </Brief>
           </Item>
           <Item
             arrow="horizontal"
-            onClick={() => this.props.navigation.navigate('ReactNativeModalDatetimePicker')}
-          >react-native-modal-datetime-picker
-            <Brief>A React-Native datetime-picker for Android and iOS</Brief>
+            onClick={() => navigation.navigate('ReactNativeModalDatetimePicker')}
+          >
+            react-native-modal-datetime-picker
+            <Brief>
+              A React-Native datetime-picker for Android and iOS
+            </Brief>
           </Item>
           <Item
             arrow="horizontal"
-            onClick={() => this.props.navigation.navigate('ReactNativeCalendars')}
-          >react-native-calendars
-            <Brief>React Native Calendar Components 📆</Brief>
+            onClick={() => navigation.navigate('ReactNativeCalendars')}
+          >
+            react-native-calendars
+            <Brief>
+              React Native Calendar Components 📆
+            </Brief>
           </Item>
         </List>
         <List renderHeader="IM">
           <Item
             arrow="horizontal"
-            onClick={() => this.props.navigation.navigate('GiftedChat')}
-          >react-native-gifted-chat
-            <Brief>💬 The most complete chat UI for React Native</Brief>
+            onClick={() => navigation.navigate('GiftedChat')}
+          >
+            react-native-gifted-chat
+            <Brief>
+              💬 The most complete chat UI for React Native
+            </Brief>
           </Item>
         </List>
         <List renderHeader="Map">
           <Item
             arrow="horizontal"
-            onClick={() => this.props.navigation.navigate('ReactNativeAmap3d')}
-          >react-native-amap3d
-            <Brief>react-native 高德地图组件，使用最新 3D SDK，支持 Android + iOS</Brief>
+            onClick={() => navigation.navigate('ReactNativeAmap3d')}
+          >
+            react-native-amap3d
+            <Brief>
+              react-native 高德地图组件，使用最新 3D SDK，支持 Android + iOS
+            </Brief>
           </Item>
         </List>
         <List renderHeader="Swiper">
           <Item
             arrow="horizontal"
-            onClick={() => this.props.navigation.navigate('ReactNativeSwiper')}
-          >react-native-swiper
-            <Brief>The best Swiper component for React Native.</Brief>
+            onClick={() => navigation.navigate('ReactNativeSwiper')}
+          >
+            react-native-swiper
+            <Brief>
+              The best Swiper component for React Native.
+            </Brief>
           </Item>
         </List>
         <List renderHeader="Data Visualization">
           <Item
             arrow="horizontal"
-            onClick={() => this.props.navigation.navigate('echarts')}
-          >youngjuning-native-echarts
-            <Brief>修复了 native-echarts 部分BUG</Brief>
+            onClick={() => navigation.navigate('echarts')}
+          >
+            youngjuning-native-echarts
+            <Brief>
+              修复了 native-echarts 部分BUG
+            </Brief>
           </Item>
           <Item
             arrow="horizontal"
-            onClick={() => this.props.navigation.navigate('secharts')}
-          >react-native-secharts
-            <Brief>目前最好用的图标插件</Brief>
+            onClick={() => navigation.navigate('secharts')}
+          >
+            react-native-secharts
+            <Brief>
+              目前最好用的图标插件
+            </Brief>
           </Item>
         </List>
       </ScrollView>

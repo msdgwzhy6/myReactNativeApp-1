@@ -5,7 +5,9 @@ import {
   StyleSheet,
 } from 'react-native'
 import { ModalIndicator } from 'teaset'
-import { InputItem, List, Button, Toast } from 'antd-mobile-rn'
+import {
+  InputItem, List, Button, Toast,
+} from 'antd-mobile-rn'
 import AV from 'leancloud-storage/live-query'
 
 const styles = StyleSheet.create({
@@ -36,17 +38,20 @@ export default class Login extends Component {
       password: '',
     }
   }
+
   componentDidMount() {
     const { navigation } = this.props
     Toast.info(navigation.getParam('msg'), 2)
   }
+
   login() {
+    const { username, password, navigation } = this.state
     Toast.loading('登陆中')
-    AV.User.logIn(this.state.username, this.state.password).then(() => {
+    AV.User.logIn(username, password).then(() => {
       Toast.success('登录成功')
       ModalIndicator.hide()
-      this.props.navigation.navigate('Home', {
-        username: this.state.username,
+      navigation.navigate('Home', {
+        username,
       })
     }).catch((err) => {
       if (err.code == 210) {
@@ -59,7 +64,9 @@ export default class Login extends Component {
       Toast.hide()
     })
   }
+
   render() {
+    const { username, password } = this.state
     return (
       <ScrollView style={[styles.container]}>
         <Image
@@ -68,18 +75,20 @@ export default class Login extends Component {
         />
         <List>
           <InputItem
-            value={this.state.username}
+            value={username}
             placeholder="请输入用户名"
             onChange={(value) => { this.setState({ username: value }) }}
-          >用户名
+          >
+            用户名
           </InputItem>
           <InputItem
             type="password"
-            value={this.state.password}
+            value={password}
             placeholder="请输入密码"
             onChange={(value) => { this.setState({ password: value }) }}
             onBlur={() => this.login()}
-          >用户名
+          >
+            用户名
           </InputItem>
         </List>
         <Button
@@ -87,7 +96,8 @@ export default class Login extends Component {
           type="primary"
           size="large"
           onClick={() => { this.login() }}
-        >登录
+        >
+          登录
         </Button>
       </ScrollView>
     )

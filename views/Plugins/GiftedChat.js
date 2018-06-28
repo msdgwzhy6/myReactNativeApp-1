@@ -13,12 +13,14 @@ export default class GiftedChatScreen extends Component {
   static navigationOptions = {
     headerTitle: 'GiftedChat',
   }
+
   constructor(props) {
     super(props)
     this.state = {
       messages: [],
     }
   }
+
   componentWillMount() {
     this.setState({
       messages: [
@@ -36,11 +38,13 @@ export default class GiftedChatScreen extends Component {
       ],
     })
   }
+
   onSend(messages = []) {
     this.setState(previousState => ({
       messages: GiftedChat.append(previousState.messages, messages),
     }))
   }
+
   renderBubble(props) {
     return (
       <Bubble
@@ -56,12 +60,14 @@ export default class GiftedChatScreen extends Component {
       />
     )
   }
+
   render() {
+    const { messages } = this.state
     return (
       <View style={[styles.container]}>
         <GiftedChat
-          messages={this.state.messages}
-          onSend={messages => this.onSend(messages)}
+          messages={messages}
+          onSend={message => this.onSend(message)}
           onPressAvatar={() => Alert.alert('点击了头像')}
           user={{
             _id: 1,

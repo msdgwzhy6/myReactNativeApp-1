@@ -20,37 +20,41 @@ export default class Home extends Component {
   static navigationOptions = ({ navigation }) => ({
     headerTitle: navigation.getParam('headerTitle', '首页'),
   })
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   componentDidMount() {
     setTimeout(() => {
       SplashScreen.hide()
     }, 3000)
   }
+
   render() {
+    const { navigation } = this.props
     return (
       <ScrollView style={[styles.container]}>
         <Button
           style={[styles.btn]}
           size="lg"
           title="登录"
-          onPress={() => this.props.navigation.navigate('Login', { msg: '来自首页的消息' })}
+          onPress={() => navigation.navigate('Login', { msg: '来自首页的消息' })}
         />
         <Button
           style={[styles.btn]}
           type="secondary"
           size="lg"
           title="ArticleList"
-          onPress={() => this.props.navigation.navigate('ArticleList')}
+          onPress={() => navigation.navigate('ArticleList')}
         />
         <Button
           style={[styles.btn]}
           type="danger"
           size="lg"
           title="Face++"
-          onPress={() => this.props.navigation.navigate('Face')}
+          onPress={() => navigation.navigate('Face')}
         />
       </ScrollView>
     )
