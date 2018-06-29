@@ -8,7 +8,7 @@ import { Leancloud } from './assets/Dictionary'
 import Home from './views/Home'
 import ArticleList from './views/ArticleList'
 import Login from './views/Login'
-import Face from './views/face++/Face'
+import Face from './views/Face++/Face'
 // AntDMobileRN
 import AntDMobileRN from './views/AntDMobileRN'
 import Flex from './views/AntDMobileRN/Flex'
