@@ -9,6 +9,7 @@ export default class MyComponent extends Component {
     headerTitle: 'MaterialTopTabNavigator',
     // header: null,
   }
+
   render() {
     return (
       <RocketStack />
