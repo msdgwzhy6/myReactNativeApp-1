@@ -21,10 +21,12 @@ export default class StepperScreen extends Component {
   static navigationOptions = {
     headerTitle: 'Stepper',
   }
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   render() {
     const readOnly = (
       <Stepper
@@ -41,7 +43,7 @@ export default class StepperScreen extends Component {
       <View style={styles.container}>
         <List renderHeader="Stepper 必须在 List 中，建议不使用这个也可以">
           <List.Item
-            extra={
+            extra={(
               <Stepper
                 key="0"
                 max={10}
@@ -49,12 +51,12 @@ export default class StepperScreen extends Component {
                 defaultValue={3}
                 onChange={onChange}
               />
-            }
+)}
           >readOnly: true
           </List.Item>
           <List.Item extra={readOnly}>readOnly: false</List.Item>
           <List.Item
-            extra={
+            extra={(
               <Stepper
                 key="2"
                 disabled
@@ -63,7 +65,7 @@ export default class StepperScreen extends Component {
                 defaultValue={3}
                 onChange={onChange}
               />
-            }
+)}
           >Disabled
           </List.Item>
         </List>

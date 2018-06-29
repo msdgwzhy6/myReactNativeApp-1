@@ -6,14 +6,17 @@ export default class MyComponent extends Component {
   static navigationOptions = {
     headerTitle: 'Button',
   }
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   handleButtonClick = (e) => {
     console.log(e)
     Alert.alert('点击了按钮')
   }
+
   render() {
     return (
       <ScrollView size="lg">

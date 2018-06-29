@@ -18,10 +18,12 @@ export default class WhiteSpaceScreen extends Component {
   static navigationOptions = {
     headerTitle: 'WhiteSpace',
   }
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   render() {
     return (
       <ScrollView style={styles.container}>

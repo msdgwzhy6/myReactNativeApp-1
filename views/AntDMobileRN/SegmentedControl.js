@@ -20,10 +20,12 @@ export default class SegmentedControlScreen extends Component {
   static navigationOptions = {
     headerTitle: 'SegmentedControl 分段器',
   }
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   onChange = (e) => {
     const selectedIndex = e.nativeEvent.selectedSegmentIndex + 1
     const selectedValue = e.nativeEvent.value
@@ -33,6 +35,7 @@ export default class SegmentedControlScreen extends Component {
   onValueChange = (value) => {
     Alert.alert(value)
   }
+
   render() {
     return (
       <View style={[styles.container]}>

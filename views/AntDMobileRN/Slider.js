@@ -18,6 +18,7 @@ export default class SliderScreen extends Component {
   static navigationOptions = {
     headerTitle: 'Slider',
   }
+
   constructor(props) {
     super(props)
     this.state = {
@@ -26,21 +27,25 @@ export default class SliderScreen extends Component {
       minMaxValue: 0,
     }
   }
+
   onAfterChange = (value) => {
     this.setState({
       changedValue: value,
     })
   }
+
   handleChange = (value) => {
     this.setState({
       changingValue: value,
     })
   }
+
   minMaxChange = (value) => {
     this.setState({
       minMaxValue: value,
     })
   }
+
   render() {
     return (
       <View style={styles.container}>

@@ -22,6 +22,7 @@ export default class SearchScreen extends Component {
       value: '美食',
     }
   }
+
   onChange = (value: any) => {
     this.setState({ value })
   }
@@ -29,6 +30,7 @@ export default class SearchScreen extends Component {
   clear = () => {
     this.setState({ value: '' })
   }
+
   render() {
     return (
       <View style={styles.container}>

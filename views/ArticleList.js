@@ -70,9 +70,7 @@ export default class ArticleListScreen extends Component {
           // item渲染器
           renderItem={({ item, index }) => (
             <Text style={styles.item}>
-              {index + 1}
-、
-              {item.title}
+              {index + 1}、{item.title}
             </Text>
           )}
           // key提取器
