@@ -4,7 +4,9 @@ import {
   Image,
   StyleSheet,
 } from 'react-native'
-import { Button, ListRow, ModalIndicator, Toast } from 'teaset'
+import {
+  Button, ListRow, ModalIndicator, Toast,
+} from 'teaset'
 import { FacePlusPlus } from '../../assets/Dictionary'
 
 const styles = StyleSheet.create({
@@ -24,6 +26,7 @@ export default class Face extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('title', 'Face++'),
   })
+
   constructor(props) {
     super(props)
     this.state = {
@@ -33,6 +36,7 @@ export default class Face extends Component {
       ],
     }
   }
+
   async detectFace() {
     const returnAttributes = 'gender,age,ethnicity,beauty'
     try {
@@ -49,6 +53,7 @@ export default class Face extends Component {
       return err
     }
   }
+
   detect() {
     ModalIndicator.show('识别中')
     this.detectFace().then((res) => {
@@ -73,6 +78,7 @@ export default class Face extends Component {
       Toast.fail('识别失败，请重试')
     })
   }
+
   render() {
     return (
       <ScrollView style={styles.container}>
