@@ -14,11 +14,14 @@ export default class TabViewScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('title', 'TabView'),
   })
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   componentDidMount() {}
+
   render() {
     return (
       <TabView style={styles.container} type="carousel">
