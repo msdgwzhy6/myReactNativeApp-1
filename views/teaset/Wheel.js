@@ -19,12 +19,15 @@ export default class WheelScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('title', 'Wheel'),
   })
+
   constructor(props) {
     super(props)
     this.items = [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
     this.state = {}
   }
+
   componentDidMount() {}
+
   render() {
     return (
       <View style={styles.container}>
