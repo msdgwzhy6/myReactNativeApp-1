@@ -152,3 +152,7 @@ $ react-native link react-native-fs
 1. [AuroraIMUIController](./aurora-imui/AuroraIMUIController.md)：插入，更新，增加消息到 MessageList, 你需要使用 AuroraIMUIController (Native Module) 来发送事件到 Native。
 2. [MessageList](./aurora-imui/MessageList.md)
 3. [ChatInput](./aurora-imui/ChatInput.md)
+
+## 消息发送
+
+### 发送文本消息

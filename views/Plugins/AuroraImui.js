@@ -6,6 +6,7 @@ import {
   StyleSheet,
 } from 'react-native'
 import IMUI from 'aurora-imui-react-native'
+import Model from './ChatModel'
 
 const InputView = IMUI.ChatInput
 const MessageListView = IMUI.MessageList
@@ -29,10 +30,11 @@ export default class ChatScreen extends Component {
 
     this.state = {
       inputLayoutHeight: initHeight,
-      messageListLayout: { flex: 1, width: window.width, margin: 0 },
+      messageListLayout: {
+        flex: 1, width: window.width, margin: 0, marginTop: 10,
+      },
       inputViewLayout: { width: window.width, height: initHeight },
       isAllowPullToRefresh: true,
-      navigationBar: {},
     }
   }
 
@@ -64,19 +66,12 @@ export default class ChatScreen extends Component {
     })
   }
 
-  /**
-   * Switch to record video mode or not
-   */
-  switchCameraMode = (isRecordVideoMode) => {
-    console.log(`Switching camera mode: isRecordVideoMode: ${isRecordVideoMode}`)
-    // If record video mode, then set to full screen.
-    if (isRecordVideoMode) {
-      this.setState({
-        messageListLayout: { flex: 0, width: 0, height: 0 },
-        inputViewLayout: { flex: 1, width: window.width, height: window.height },
-        navigationBar: { height: 0 },
-      })
-    }
+  onSendText = (text) => {
+    const message = Model.constructNormalMessage({
+      msgType: 'text',
+      text,
+    })
+    AuroraIMUIController.appendMessages([message])
   }
 
   render() {
@@ -84,13 +79,14 @@ export default class ChatScreen extends Component {
       <View style={styles.container}>
         <MessageListView
           style={this.state.messageListLayout}
+          isShowDisplayName
         />
         <InputView
           style={this.state.inputViewLayout}
           ref={(c) => { this.ChatInput = c }}
           onSizeChange={this.onInputViewSizeChange}
           onFullScreen={this.onFullScreen}
-          switchCameraMode={this.switchCameraMode}
+          onSendText={this.onSendText}
         />
       </View>
     )
