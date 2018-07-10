@@ -27,6 +27,9 @@ export default class Model {
     } else if (jsonParams.msgType == 'voice') { // 语音消息
       message.duration = jsonParams.duration // 注意这个值是由用户自己设置时长，单位秒
       message.mediaPath = jsonParams.mediaPath
+    } else if (jsonParams.msgType == 'video') { // 视频消息
+      message.mediaPath = jsonParams.mediaPath
+      message.duration = jsonParams.duration // 注意这个值是由用户自己设置时长，单位秒
     } else if (jsonParams.msgType == 'custom') { // 自定义消息
       message.contentSize = jsonParams.contentSize
       message.content = jsonParams.content
