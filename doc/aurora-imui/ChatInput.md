@@ -22,6 +22,7 @@
 | onSizeChange             | ` ({width: number, height: number}) => {} ` | 输入组件尺寸变更时触发。                                     |
 | onClickSelectAlbum       |                 `() => {}`                  | 点击选择相册按钮触发(选择相册按钮默认是可见的，可以通过 [showSelectAlbumBtn](https://github.com/jpush/aurora-imui/blob/master/ReactNative/docs/APIs_zh.md#showSelectAlbumBtn) 改变 ) |
 | onTouchEditText          |              （Android only）               | 点击输入框触发。                                             |
+| onFullScreen             |                 `() => {}`                  | 点击视频全屏时触发                                           |
 
 ## props
 
