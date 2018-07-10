@@ -217,6 +217,15 @@ export default class AntDMobileRN extends Component {
             </Brief>
           </Item>
         </List>
+        <List renderHeader="FeedBack 反馈">
+          <Item
+            arrow="horizontal"
+            onClick={() => navigation.navigate('ActivityIndicator')}
+          >
+            ActivityIndicator 活动指示器
+            <Brief>活动指示器。 表明某个任务正在进行中。</Brief>
+          </Item>
+        </List>
       </ScrollView>
     )
   }

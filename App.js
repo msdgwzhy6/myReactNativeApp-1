@@ -32,6 +32,7 @@ import Slider from './views/AntDMobileRN/Slider'
 import Stepper from './views/AntDMobileRN/Stepper'
 import Switch from './views/AntDMobileRN/Switch'
 import TextareaItem from './views/AntDMobileRN/TextAreaItem'
+import ActivityIndicator from './views/AntDMobileRN/ActivityIndicator'
 // Plugins
 import ReactNativePicker from './views/Plugins/ReactNativePicker'
 import Plugins from './views/Plugins'
@@ -89,7 +90,7 @@ const HomeStack = createStackNavigator(
 // antd-mobile-rn 页面栈
 const AntDMobileRNStack = createStackNavigator(
   {
-    AntDMobileRN, Flex, WhingBlank, WhiteSpace, Drawer, Popover, Pagination, SegmentedControl, Button, Checkbox, DatePicker, DatePickerView, InputItem, ImagePicker, Picker, PickerView, Radio, SearchBar, Slider, tStepper, Switch, TextareaItem,
+    AntDMobileRN, Flex, WhingBlank, WhiteSpace, Drawer, Popover, Pagination, SegmentedControl, Button, Checkbox, DatePicker, DatePickerView, InputItem, ImagePicker, Picker, PickerView, Radio, SearchBar, Slider, tStepper, Switch, TextareaItem, ActivityIndicator,
   },
   {
     initialRouteName: 'AntDMobileRN',
