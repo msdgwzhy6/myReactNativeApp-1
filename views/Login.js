@@ -9,21 +9,7 @@ import {
   InputItem, List, Button, Toast,
 } from 'antd-mobile-rn'
 import AV from 'leancloud-storage/live-query'
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  logo: {
-    marginTop: 20,
-    marginRight: 'auto',
-    marginBottom: 20,
-    marginLeft: 'auto',
-    width: 160,
-    height: 160,
-  },
-})
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default class Login extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -77,18 +63,19 @@ export default class Login extends Component {
           <InputItem
             value={username}
             placeholder="请输入用户名"
+            labelNumber={2}
             onChange={(value) => { this.setState({ username: value }) }}
           >
-            用户名
+            <Icon name="user-circle-o" size={30} color="#000" />
           </InputItem>
           <InputItem
             type="password"
             value={password}
             placeholder="请输入密码"
+            labelNumber={2}
             onChange={(value) => { this.setState({ password: value }) }}
-            onBlur={() => this.login()}
           >
-            用户名
+            <Icon name="key" size={30} color="#000" />
           </InputItem>
         </List>
         <Button
@@ -103,3 +90,19 @@ export default class Login extends Component {
     )
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    paddingHorizontal: 20,
+  },
+  logo: {
+    marginTop: 20,
+    marginRight: 'auto',
+    marginBottom: 20,
+    marginLeft: 'auto',
+    width: 160,
+    height: 160,
+  },
+})
