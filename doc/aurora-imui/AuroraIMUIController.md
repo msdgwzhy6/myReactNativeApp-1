@@ -164,3 +164,14 @@ AuroraIMUIController.addMessageListDidLoadListener(()=> {
 ```js
 AuroraIMUIController.removeMessageListDidLoadListener(cb)
 ```
+
+### scrollToBottom(true)
+
+跳到会话列表底部
+
+**Example：**
+
+```
+AuroraIMUIController.scrollToBottom(true)
+```
+
