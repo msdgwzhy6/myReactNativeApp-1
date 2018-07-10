@@ -16,7 +16,7 @@
     "no-param-reassign": 0,
     "import/first": 0,
     "max-len": [
-      1, {
+      0, {
         "code": 200
       }
     ],

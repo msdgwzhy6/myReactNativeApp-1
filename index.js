@@ -1,6 +1,5 @@
 import { YellowBox, AppRegistry } from 'react-native'
-// import TeasetApp from './App-teaset'
-import AntdApp from './App-antd'
+import App from './App'
 
 YellowBox.ignoreWarnings([
   'Warning: isMounted(...) is deprecated',
@@ -9,4 +8,4 @@ YellowBox.ignoreWarnings([
   '',
 ])
 
-AppRegistry.registerComponent('myReactNativeApp', () => AntdApp)
+AppRegistry.registerComponent('myReactNativeApp', () => App)
