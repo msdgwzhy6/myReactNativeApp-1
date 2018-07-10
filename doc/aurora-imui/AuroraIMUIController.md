@@ -123,7 +123,7 @@ AuroraIMUIController.removeMessage(msgId)
 AuroraIMUIController.removeAllMessage()
 ```
 
-## hideFeatureView
+## hidenFeatureView
 
 > 隐藏 inputView 的展开视图
 

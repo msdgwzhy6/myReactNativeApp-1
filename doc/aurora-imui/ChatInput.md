@@ -21,8 +21,9 @@
 | onSwitchToEmojiMode      |                 `() => {}`                  | 点击菜单栏表情按钮触发。                                     |
 | onSizeChange             | ` ({width: number, height: number}) => {} ` | 输入组件尺寸变更时触发。                                     |
 | onClickSelectAlbum       |                 `() => {}`                  | 点击选择相册按钮触发(选择相册按钮默认是可见的，可以通过 [showSelectAlbumBtn](https://github.com/jpush/aurora-imui/blob/master/ReactNative/docs/APIs_zh.md#showSelectAlbumBtn) 改变 ) |
-| onTouchEditText          |              （Android only）               | 点击输入框触发。                                             |
+| onTouchEditText          |              （Android only）               | 点击输入框触发，安卓需要这个时间来唤起 onSizeChanged         |
 | onFullScreen             |                 `() => {}`                  | 点击视频全屏时触发                                           |
+| closeCamera              |                 `() => {}`                  | 关闭视频组件时触发                                           |
 
 ## props
 
@@ -56,3 +57,7 @@ customLayoutItems={{
 - **inputTextColor**：【string】`inputTextColor={"#808080"}`，设置输入框文字颜色。
 - **inputTextSize**：【number】`inputTextSize={14}`，设置输入框文字大小。
 - **inputTextLineHeight**：【number】，设置输入框行间距。
+
+## Android ChatInput 实例方法
+
+- **showMenu(boolean)**：显示和隐藏菜单
