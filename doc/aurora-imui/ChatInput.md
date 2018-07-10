@@ -24,6 +24,7 @@
 | onTouchEditText          |              （Android only）               | 点击输入框触发，安卓需要这个时间来唤起 onSizeChanged         |
 | onFullScreen             |                 `() => {}`                  | 点击视频全屏时触发                                           |
 | closeCamera              |                 `() => {}`                  | 关闭视频组件时触发                                           |
+| onShowKeyboard           |          `(keyboardHeight) => {}`           | 显示键盘时触发                                               |
 
 ## props
 
