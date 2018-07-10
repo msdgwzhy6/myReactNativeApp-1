@@ -3,6 +3,7 @@ import {
   Image,
   ScrollView,
   StyleSheet,
+  Text,
 } from 'react-native'
 import { ModalIndicator } from 'teaset'
 import {
@@ -64,6 +65,7 @@ export default class Login extends Component {
             value={username}
             placeholder="请输入用户名"
             labelNumber={2}
+            extra={<Text>@sishuxuefu.com</Text>}
             onChange={(value) => { this.setState({ username: value }) }}
           >
             <Icon name="user-circle-o" size={30} color="#000" />

@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { ScrollView, Alert } from 'react-native'
+import { ScrollView, Alert, Text } from 'react-native'
 import {
   InputItem, List, Button, WhiteSpace,
 } from 'antd-mobile-rn'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 const Item = List.Item
 
@@ -54,6 +55,14 @@ export default class InputItemScreen extends Component {
             placeholder="点击下方按钮该输入框会获取光标"
             ref={(c) => { this.inputRef = c }}
           >标题
+          </InputItem>
+          <InputItem
+            value="1003719811"
+            placeholder="请输入用户名"
+            labelNumber={2}
+            extra={<Text>@sishuxuefu.com</Text>}
+          >
+            <Icon name="user-circle-o" size={30} color="#000" />
           </InputItem>
           <Item>
             <Button
