@@ -31,7 +31,31 @@ componentDidMount() {
 
 1. 打开 **android/app/src/main/java/com/.../MainActivity.java**  按照下图1，2，3步骤添加启动屏包以及方法：
 
-![](https://pic2.zhimg.com/80/v2-016217108625bcc11a7fb1fc4dcd40ad_hd.jpg)
+```js
+package com.myreactnativeapp;
+
+import android.os.Bundle; // 1. Bundle
+import com.facebook.react.ReactActivity;
+import org.devio.rn.splashscreen.SplashScreenReactPackage; // 2. 导入启动包
+
+public class MainActivity extends ReactActivity {
+
+  /**
+  * Returns the name of the main component registered from JavaScript.
+  * This is used to schedule rendering of the component.
+  */
+  @Override
+  protected String getMainComponentName() {
+    return "myReactNativeApp";
+  }
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) { // 3. 显示启动方式
+    SplashScreen.show(this);
+    super.onCreate(savedInstanceState);
+  }
+}
+```
 
 2. 在 **android/app/src/mian/res** 目录下创建 **layout** 文件夹，并在创建的 **layout** 文件夹中创建 `launch_screen.xml`
 
