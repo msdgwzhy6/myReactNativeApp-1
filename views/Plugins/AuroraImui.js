@@ -238,6 +238,7 @@ export default class ChatScreen extends Component {
         <InputView
           style={this.state.layout.inputViewLayout}
           ref={(c) => { this.ChatInput = c }}
+          hideCameraButton
           onTouchEditText={this.onTouchEditText}
           onSizeChange={this.onSizeChange}
           onFullScreen={this.onFullScreen}
