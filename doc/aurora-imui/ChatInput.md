@@ -58,6 +58,7 @@ customLayoutItems={{
 - **inputTextColor**：【string】`inputTextColor={"#808080"}`，设置输入框文字颜色。
 - **inputTextSize**：【number】`inputTextSize={14}`，设置输入框文字大小。
 - **inputTextLineHeight**：【number】，设置输入框行间距。
+- **hideCameraButton**：【Boolean】，设置是否隐藏Camera按钮。
 
 ## Android ChatInput 实例方法
 
