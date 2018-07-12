@@ -23,11 +23,11 @@ export default class SearchScreen extends Component {
     }
   }
 
-  onChange = (value: any) => {
+  onChange = (value) => {
     this.setState({ value })
   }
 
-  clear = () => {
+  onCancel = () => {
     this.setState({ value: '' })
   }
 
@@ -38,8 +38,8 @@ export default class SearchScreen extends Component {
         <SearchBar
           value={this.state.value}
           placeholder="搜索"
-          onSubmit={(value: any) => Alert.alert(value)}
-          onCancel={this.clear}
+          onSubmit={value => Alert.alert(value)}
+          onCancel={this.onCancel}
           onChange={this.onChange}
           showCancelButton
         />
