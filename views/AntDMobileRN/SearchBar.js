@@ -28,6 +28,8 @@ export default class SearchScreen extends Component {
   }
 
   onCancel = () => {
+    const { inputRef } = this.SearchBar
+    inputRef.blur()
     this.setState({ value: '' })
   }
 
@@ -36,6 +38,7 @@ export default class SearchScreen extends Component {
       <View style={styles.container}>
         <SearchBar defaultValue="初始值" placeholder="搜索" />
         <SearchBar
+          ref={(c) => { this.SearchBar = c }}
           value={this.state.value}
           placeholder="搜索"
           onSubmit={value => Alert.alert(value)}
