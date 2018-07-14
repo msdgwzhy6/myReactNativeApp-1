@@ -35,10 +35,12 @@ export default class HeaderButton extends Component {
       </HeaderButtons>
     ),
   })
+
   constructor(props) {
     super(props)
     this.state = {}
   }
+
   render() {
     return (
       <ScrollView style={styles.container}>
