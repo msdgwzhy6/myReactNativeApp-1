@@ -47,24 +47,7 @@ import secharts from './views/Plugins/Charts/SEcharts'
 import HeaderButtons from './views/Plugins/ReactNavigation/HeaderButtons'
 import MaterialTopTabNavigator from './views/Plugins/ReactNavigation/MaterialTopTabNavigator'
 import acQrcode from './views/Plugins/Qrcode/acQrcode'
-// Teaset
-import Teaset from './views/Teaset'
-import tLogin from './views/Teaset/Login'
-import ActionPopover from './views/Teaset/ActionPopover'
-import ActionSheet from './views/Teaset/ActionSheet'
-import AlbumView from './views/Teaset/AlbumView'
-import Badge from './views/Teaset/Badge'
-import Carousel from './views/Teaset/Carousel'
-import tDrawer from './views/Teaset/Drawer'
-import tCheckbox from './views/Teaset/CheckBox'
-import ListRow from './views/Teaset/ListRow'
-import Menu from './views/Teaset/Menu'
-import tPopover from './views/Teaset/Popover'
-import PullPicker from './views/Teaset/PullPicker'
-import PopoverPicker from './views/Teaset/PopoverPicker'
-import SearchInput from './views/Teaset/SearchInput'
-import Select from './views/Teaset/Select'
-import tStepper from './views/Teaset/Stepper'
+
 // 初始化leancloud
 AV.init({
   appId: Leancloud.APP_ID,
@@ -89,7 +72,7 @@ const HomeStack = createStackNavigator(
 // antd-mobile-rn 页面栈
 const AntDMobileRNStack = createStackNavigator(
   {
-    AntDMobileRN, Flex, WhingBlank, WhiteSpace, Drawer, Popover, Pagination, SegmentedControl, Button, Checkbox, DatePicker, DatePickerView, InputItem, ImagePicker, Picker, PickerView, Radio, SearchBar, Slider, tStepper, Switch, TextareaItem, ActivityIndicator,
+    AntDMobileRN, Flex, WhingBlank, WhiteSpace, Drawer, Popover, Pagination, SegmentedControl, Button, Checkbox, DatePicker, DatePickerView, InputItem, ImagePicker, Picker, PickerView, Radio, SearchBar, Slider, Stepper, Switch, TextareaItem, ActivityIndicator,
   },
   {
     initialRouteName: 'AntDMobileRN',
@@ -116,20 +99,7 @@ const PluginsStack = createStackNavigator(
     },
   },
 )
-// Teaset页面栈
-const TeasetStack = createStackNavigator(
-  {
-    Teaset, tLogin, ActionPopover, ActionSheet, AlbumView, Badge, Carousel, tDrawer, tCheckbox, ListRow, Menu, tPopover, PullPicker, PopoverPicker, SearchInput, Select, Stepper,
-  },
-  {
-    navigationOptions: {
-      headerStyle: {
-        backgroundColor: Theme.primaryColor,
-      },
-      headerTintColor: 'rgb(255,255,255)',
-    },
-  },
-)
+
 // 指定页面隐藏tabbar
 const Stacks = [HomeStack, AntDMobileRNStack, PluginsStack]
 Stacks.forEach((item) => {
@@ -149,7 +119,6 @@ export default createBottomTabNavigator(
   {
     Home: HomeStack,
     AntDMobile: AntDMobileRNStack,
-    Teaset: TeasetStack,
     Plugins: PluginsStack,
   },
   {
@@ -166,8 +135,6 @@ export default createBottomTabNavigator(
           iconName = 'home'
         } else if (routeName === 'AntDMobile') {
           iconName = 'at'
-        } else if (routeName === 'Teaset') {
-          iconName = 'thumbs-up'
         } else if (routeName === 'Plugins') {
           iconName = 'th-list'
         }
