@@ -36,7 +36,7 @@ package com.myreactnativeapp;
 
 import android.os.Bundle; // 1. Bundle
 import com.facebook.react.ReactActivity;
-import org.devio.rn.splashscreen.SplashScreenReactPackage; // 2. 导入启动包
+import org.devio.rn.splashscreen.SplashScreen; // 2. 导入启动包
 
 public class MainActivity extends ReactActivity {
 
