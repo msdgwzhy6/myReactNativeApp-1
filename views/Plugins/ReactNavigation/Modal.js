@@ -28,7 +28,7 @@ class Modal extends Component {
   }
 }
 
-class ModalModal extends React.Component {
+class ModalModal extends Component {
   render() {
     return (
       <WingBlank style={[styles.container]} size="sm">
@@ -60,6 +60,7 @@ export default class MyComponent extends Component {
     headerTitle: '全屏模式',
     // header: null,
   }
+
   render() {
     return (
       <RootStack />
