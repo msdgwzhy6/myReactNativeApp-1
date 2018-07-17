@@ -45,16 +45,6 @@ export default class Home extends Component {
           <Item
             arrow="horizontal"
             align="bottom"
-            onClick={() => navigation.navigate('Modal')}
-          >
-            打开全屏模式
-            <Brief>
-              通过创建一个modal堆栈，来打开全屏模式
-            </Brief>
-          </Item>
-          <Item
-            arrow="horizontal"
-            align="bottom"
             onClick={() => navigation.navigate('MaterialTopTabNavigator')}
           >
             createMaterialTopTabNavigator
