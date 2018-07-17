@@ -45,7 +45,6 @@ import ReactNativeSwiper from './views/Plugins/ReactNativeSwiper'
 import echarts from './views/Plugins/Charts/Echarts'
 import secharts from './views/Plugins/Charts/SEcharts'
 import HeaderButtons from './views/Plugins/ReactNavigation/HeaderButtons'
-import Modal from './views/Plugins/ReactNavigation/Modal'
 import MaterialTopTabNavigator from './views/Plugins/ReactNavigation/MaterialTopTabNavigator'
 import acQrcode from './views/Plugins/Qrcode/acQrcode'
 // Teaset
@@ -105,7 +104,7 @@ const AntDMobileRNStack = createStackNavigator(
 // 插件页面栈
 const PluginsStack = createStackNavigator(
   {
-    Plugins, ReactNativePicker, ReactNativeModalDatetimePicker, ReactNativeCalendars, ReactNativeAmap3d, GiftedChat, AuroraImui, ReactNativeSwiper, HeaderButtons, Modal, MaterialTopTabNavigator, echarts, secharts, acQrcode,
+    Plugins, ReactNativePicker, ReactNativeModalDatetimePicker, ReactNativeCalendars, ReactNativeAmap3d, GiftedChat, AuroraImui, ReactNativeSwiper, HeaderButtons, MaterialTopTabNavigator, echarts, secharts, acQrcode,
   },
   {
     initialRouteName: 'Plugins',

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Alert, ScrollView } from 'react-native'
+import { Alert, ScrollView, Text } from 'react-native'
 import { Button, WhiteSpace, WingBlank } from 'antd-mobile-rn'
 
 export default class MyComponent extends Component {
@@ -21,7 +21,7 @@ export default class MyComponent extends Component {
     return (
       <ScrollView size="lg">
         <WhiteSpace size="lg" />
-        <Button>default</Button>
+        <Button><Text style={{ color: 'blue' }}>default</Text></Button>
         <WhiteSpace size="lg" />
         <Button type="primary">
           primary
