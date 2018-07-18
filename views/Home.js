@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import {
   ScrollView,
   StyleSheet,
+  View,
 } from 'react-native'
-import { Button } from 'teaset'
 import SplashScreen from 'react-native-splash-screen'
 import { List } from 'antd-mobile-rn'
 
@@ -39,8 +39,7 @@ export default class Home extends Component {
     const { navigation } = this.props
     return (
       <ScrollView style={[styles.container]}>
-
-        <List>
+        <List style={{ borderBottomWidth: 0 }}>
           <Item
             arrow="horizontal"
             onClick={() => navigation.navigate('Login', { msg: '来自首页的消息' })}
@@ -62,6 +61,16 @@ export default class Home extends Component {
             Face++
             <Brief>基于Face++的人脸识别</Brief>
           </Item>
+          <View style={{
+            backgroundColor: '#fff',
+            height: 1,
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            zIndex: 999,
+          }}
+          />
         </List>
       </ScrollView>
     )
