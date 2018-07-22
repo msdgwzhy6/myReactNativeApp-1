@@ -73,7 +73,10 @@ export default class MyComponent extends Component {
             data={this.state.pca}
             cols={3}
             value={this.state.pcaValue}
-            onChange={(value) => { this.setState({ pcaValue: value }) }}
+            onChange={(value) => {
+              console.log(value)
+              this.setState({ pcaValue: value })
+            }}
           >
             <Item arrow="horizontal" last onClick={() => this.setState({ pca })}>
               省市区
