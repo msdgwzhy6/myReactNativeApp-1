@@ -6,7 +6,7 @@ import {
   Alert,
   StyleSheet,
 } from 'react-native'
-import { Button } from 'teaset'
+import { Button } from 'antd-mobile-rn'
 import Article from '../LeanCloud/Article'
 
 const styles = StyleSheet.create({
@@ -60,7 +60,7 @@ export default class ArticleListScreen extends Component {
     return (
       <View style={[styles.container]}>
         <Button
-          onPress={() => this.handlePressLearnMore()}
+          onClick={() => this.handlePressLearnMore()}
           title="发布文章"
           type="primary"
         />

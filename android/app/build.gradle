@@ -137,7 +137,7 @@ android {
       useProguard false // 启用 Android 插件压缩器
       shrinkResources=true // 删除无用资源
       zipAlignEnabled=true // Zipalign优化
-      minifyEnabled enableProguardInReleaseBuilds // 混淆编译
+      minifyEnabled true
       proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro" // 加载默认混淆配置文件
       signingConfig signingConfigs.release // 签名
     }
