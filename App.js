@@ -69,6 +69,7 @@ const HomeStack = createStackNavigator(
     },
   },
 )
+
 // antd-mobile-rn 页面栈
 const AntDMobileRNStack = createStackNavigator(
   {
@@ -84,6 +85,7 @@ const AntDMobileRNStack = createStackNavigator(
     },
   },
 )
+
 // 插件页面栈
 const PluginsStack = createStackNavigator(
   {

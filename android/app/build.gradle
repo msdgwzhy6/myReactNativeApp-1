@@ -93,6 +93,10 @@ def enableSeparateBuildPerCPUArchitecture = false
 */
 def enableProguardInReleaseBuilds = false
 
+def releaseTime() {
+  return new Date().format("yyyyMMdd-HHmmss", TimeZone.getTimeZone("GMT+08:00"))
+}
+
 android {
   compileSdkVersion 27
   defaultConfig {
@@ -131,23 +135,22 @@ android {
       aaptOptions.cruncherEnabled=false // 禁用 PNG 检查
       zipAlignEnabled true // 对包进行压缩
       useProguard false // 启用 Android 插件压缩器
-      minifyEnabled enableProguardInReleaseBuilds
-      proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-      signingConfig signingConfigs.release
+      shrinkResources=true // 删除无用资源
+      zipAlignEnabled=true // Zipalign优化
+      minifyEnabled enableProguardInReleaseBuilds // 混淆编译
+      proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro" // 加载默认混淆配置文件
+      signingConfig signingConfigs.release // 签名
     }
   }
   // applicationVariants are e.g. debug, release
-  applicationVariants.all { variant ->
-    variant.outputs.each { output ->
-      // For each separate APK per architecture, set a unique version code as described here:
-      // http://tools.android.com/tech-docs/new-build-system/user-guide/apk-splits
-      def versionCodes = ["armeabi-v7a":1, "x86":2]
-      def abi = output.getFilter(OutputFile.ABI)
-      if (abi != null) {  // null for the universal-debug, universal-release variants
-        output.versionCodeOverride = versionCodes.get(abi) * 1048576 + defaultConfig.versionCode
+  // 自定义 APK 名称
+  android.applicationVariants.all { variant ->
+      variant.outputs.all {
+          // 输出apk名称为sishucloudapp_v1.0_2018-07-19.apk
+          outputFileName = "sishucloudapp_${defaultConfig.versionName}_${releaseTime()}.apk"
       }
-    }
   }
+
 }
 
 dependencies {
