@@ -135,22 +135,19 @@ android {
       aaptOptions.cruncherEnabled=false // 禁用 PNG 检查
       zipAlignEnabled true // 对包进行压缩
       useProguard false // 启用 Android 插件压缩器
-      shrinkResources=true // 删除无用资源
-      zipAlignEnabled=true // Zipalign优化
-      minifyEnabled true
-      proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro" // 加载默认混淆配置文件
-      signingConfig signingConfigs.release // 签名
+      minifyEnabled enableProguardInReleaseBuilds
+      proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+      signingConfig signingConfigs.release
     }
   }
   // applicationVariants are e.g. debug, release
   // 自定义 APK 名称
   android.applicationVariants.all { variant ->
       variant.outputs.all {
-          // 输出apk名称为sishucloudapp_v1.0_2018-07-19.apk
-          outputFileName = "sishucloudapp_${defaultConfig.versionName}_${releaseTime()}.apk"
+        // 输出apk名称为丹歌惊鸿_v1.0_2018-07-19.apk
+        outputFileName = "丹歌惊鸿_${defaultConfig.versionName}_${releaseTime()}.apk"
       }
   }
-
 }
 
 dependencies {
