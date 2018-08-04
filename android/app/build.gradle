@@ -135,6 +135,7 @@ android {
       aaptOptions.cruncherEnabled=false // 禁用 PNG 检查
       zipAlignEnabled true // 对包进行压缩
       useProguard false // 启用 Android 插件压缩器
+      buildConfigField "boolean", "LOG_DEBUG", "false" // 不显示Log
       minifyEnabled enableProguardInReleaseBuilds
       proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
       signingConfig signingConfigs.release
